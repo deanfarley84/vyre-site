@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Payment leakage audit for cross-border merchants | Vyre</title>
-<meta name="description" content="Vyre finds the 1 to 3% of revenue leaking from your payment stack: auth rate, FX, routing, retries, chargebacks. Free audit, indicative estimate in 48 hours.">
+<meta name="description" content="Vyre finds the 1 to 3% of revenue leaking from your payment stack: auth rate, FX, routing, retries, chargebacks. Free audit, report in 48 hours.">
 <link rel="canonical" href="https://www.vyrehq.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.vyrehq.com/">
 <meta property="og:site_name" content="Vyre">
-<meta property="og:title" content="Vyre · Find what your payment stack is leaking">
-<meta property="og:description" content="Your PSP's auth rate isn't the rate you're getting. We tell you the difference. Free initial audit, indicative leakage estimate in 48 hours. Independent payments intelligence for cross-border B2C merchants.">
+<meta property="og:title" content="Vyre — Find what your payment stack is leaking">
+<meta property="og:description" content="Your PSP's auth rate isn't the rate you're getting. We tell you the difference. Free initial audit, board-ready report in 48 hours. Independent payments intelligence for cross-border B2C merchants.">
 <meta property="og:image" content="https://www.vyrehq.com/og-image.png">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Vyre · Find what your payment stack is leaking">
-<meta name="twitter:description" content="Independent payments intelligence. Free initial audit, indicative leakage estimate in 48 hours.">
+<meta name="twitter:title" content="Vyre — Find what your payment stack is leaking">
+<meta name="twitter:description" content="Independent payments intelligence. Free initial audit, board-ready report in 48 hours.">
 <meta name="twitter:image" content="https://www.vyrehq.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -138,21 +138,6 @@
 
   /* LEAKAGE MAP */
   .leakage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-  .trust-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 24px; }
-  .trust-card { background: white; border: 1px solid var(--vyre-line); border-radius: 12px; padding: 32px; }
-  .trust-card h3 { font-size: 20px; color: var(--vyre-navy); margin-bottom: 16px; }
-  .trust-card p { font-size: 15px; color: var(--vyre-muted); line-height: 1.65; margin-bottom: 12px; }
-  .trust-card ul { padding-left: 20px; margin-bottom: 12px; }
-  .trust-card li { font-size: 15px; color: var(--vyre-muted); line-height: 1.65; margin-bottom: 8px; }
-  .trust-card li strong { color: var(--vyre-ink); font-weight: 600; }
-  .trust-note { font-size: 13px; color: var(--vyre-muted); font-style: italic; line-height: 1.6; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--vyre-line); }
-  .trust-note a { color: var(--vyre-orange); text-decoration: underline; text-underline-offset: 2px; }
-  .trust-note a:hover { opacity: 0.8; }
-  .founder-card { background: var(--vyre-navy); border-radius: 12px; padding: 40px; color: var(--vyre-cream); }
-  .founder-card h3 { font-size: 22px; color: var(--vyre-cream); margin-bottom: 6px; }
-  .founder-role { font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--vyre-orange); font-weight: 700; margin-bottom: 20px; }
-  .founder-card p { font-size: 15px; color: rgba(245,240,232,0.75); line-height: 1.7; margin-bottom: 14px; }
-  @media (max-width: 900px) { .trust-grid { grid-template-columns: 1fr; } }
   .leakage-card { background: rgba(245,240,232,0.04); border: 1px solid rgba(245,240,232,0.12); border-radius: 12px; padding: 28px; transition: all 0.2s; }
   .leakage-card:hover { border-color: rgba(232,116,60,0.5); background: rgba(245,240,232,0.06); transform: translateY(-2px); }
   .leakage-cat { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--vyre-orange); font-weight: 700; margin-bottom: 12px; }
@@ -190,9 +175,6 @@
   .pattern-stat-val { font-size: 32px; font-weight: 800; color: var(--vyre-cream); font-variant-numeric: tabular-nums; letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; }
   .pattern-stat-val .accent { color: var(--vyre-orange); }
   .pattern-stat-lbl { font-size: 13px; color: rgba(245,240,232,0.6); line-height: 1.4; }
-  .pattern-stat-total { margin-top: 8px; border-top: 2px solid var(--vyre-orange); border-bottom: none; padding-top: 20px; }
-  .pattern-stat-total .pattern-stat-val { font-size: 38px; }
-  .pattern-stat-total .pattern-stat-lbl { color: rgba(245,240,232,0.85); font-weight: 600; }
   .pattern-disclaimer { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(245,240,232,0.1); font-size: 12px; color: rgba(245,240,232,0.5); font-style: italic; line-height: 1.5; position: relative; }
 
   /* INDEPENDENCE */
@@ -375,7 +357,7 @@
         "@type": "BusinessAudience",
         "audienceType": "B2C merchants processing over £8m in card volume"
       },
-      "description": "A free initial audit that quantifies revenue leakage across seven categories in pounds, benchmarked against the merchant's vertical, delivered within 48 hours as an indicative estimate modelled from the volume ranges the merchant submits. The board-ready version follows from the deep audit, which works from actual settlement and decline data. Deep audit and recovery work carry a small fixed fee credited against validated recovery.",
+      "description": "A free initial audit that quantifies revenue leakage across seven categories in pounds, benchmarked against the merchant's vertical, delivered as a board-ready report within 48 hours. Deep audit and recovery work carry a small fixed fee credited against validated recovery.",
       "offers": {
         "@type": "Offer",
         "name": "Free initial audit",
@@ -401,7 +383,7 @@
           "name": "What does the free Vyre audit include?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "An indicative estimate within 48 hours that quantifies leakage across seven categories in pounds, gives the reason behind each figure with sources and confidence levels, and ranks fixes by impact and time to deploy. It is modelled from the volume ranges you submit, so every figure is labelled inferred rather than observed; the board-ready version comes from the deep audit, which works from your actual data. No call, no card, no commitment."
+            "text": "A board-ready report within 48 hours that quantifies leakage across seven categories in pounds, gives the reason behind each figure with sources and confidence levels, and ranks fixes by impact and time to deploy. No call, no card, no commitment."
           }
         },
         {
@@ -453,7 +435,6 @@
       <a href="#method">Methodology</a>
       <a href="#audiences">For you</a>
       <a href="#pattern">What we find</a>
-      <a href="#trust">Report &amp; security</a>
       <a href="#compare">Compare</a>
       <a href="#cta" class="btn-primary">Get my diagnostic →</a>
     </div>
@@ -475,7 +456,7 @@
         <a href="#cta" class="btn-primary btn-primary-lg">Get my free diagnostic →</a>
         <a href="#method" class="btn-ghost">See the methodology</a>
       </div>
-      <p class="hero-note">No call required. No credit card. Indicative estimate in 48 hours, from the ranges you submit.</p>
+      <p class="hero-note">No call required. No credit card. Report in 48 hours.</p>
     </div>
 
     <div class="outcome-stats reveal">
@@ -489,7 +470,7 @@
       </div>
       <div class="stat">
         <div class="stat-value tabular">48<span class="unit">H</span></div>
-        <div class="stat-label">From submission to your<br>indicative estimate</div>
+        <div class="stat-label">From submission<br>to your report</div>
       </div>
       <div class="stat">
         <div class="stat-value tabular">£0</div>
@@ -543,7 +524,7 @@
           </div>
         </div>
         <p class="step-outcome">Every gap traced. Observed inputs separated from inferred assumptions.</p>
-        <p class="step-detail">Every figure has a source and every benchmark a citation. The free estimate is modelled from the ranges you give us, so it is labelled as inferred throughout. Once the deep audit works from your real data, the observed figures replace the inferred ones and the report becomes something you can put in front of a board.</p>
+        <p class="step-detail">Every figure on your report has a source. Every benchmark has a citation. Every inference has a confidence level. Defensible to your board.</p>
       </div>
 
       <div class="step reveal reveal-d2">
@@ -643,7 +624,7 @@
         <div class="audience-body">You've raised this two or three times. The response is always &ldquo;interesting, send numbers, we'll review.&rdquo; The data you have comes from the PSP that benefits from the status quo. That's not a credibility issue with the data. It's a credibility issue with the source.</div>
         <div class="audience-outcome">
           <div class="audience-outcome-label">What you get</div>
-          <div class="audience-outcome-val">An independent second opinion, with its workings shown.</div>
+          <div class="audience-outcome-val">A source your CFO will defend to the board.</div>
         </div>
         <div class="audience-link">See more →</div>
       </a>
@@ -651,10 +632,10 @@
       <a href="#cta" class="audience-card reveal reveal-d1">
         <div class="audience-role">CFO</div>
         <div class="audience-pain">Payments is a P&amp;L line you can't see clearly.</div>
-        <div class="audience-body">Your processing costs sit in three places. The leakage sits in seven more: auth rate, FX, routing, retries, chargebacks, payment method gaps, settlement timing. Most of it is invisible from the PSP dashboard. Most of it compounds.</div>
+        <div class="audience-body">Your processing costs sit in three places. The leakage sits in seven more — auth rate, FX, routing, retries, chargebacks, payment method gaps, settlement timing. Most of it is invisible from the PSP dashboard. Most of it compounds.</div>
         <div class="audience-outcome">
           <div class="audience-outcome-label">What you get</div>
-          <div class="audience-outcome-val">Every leakage line in pounds, with observed and inferred marked separately.</div>
+          <div class="audience-outcome-val">Every leakage line in pounds. Audit-trail-ready.</div>
         </div>
         <div class="audience-link">See more →</div>
       </a>
@@ -662,7 +643,7 @@
       <a href="#cta" class="audience-card reveal reveal-d2">
         <div class="audience-role">Founder</div>
         <div class="audience-pain">Payments is becoming a tax you didn't budget for.</div>
-        <div class="audience-body">You picked a PSP early. It worked. You moved on. By the time you're at £20m+ in processing, the leakage compounds. Nothing breaks loudly, it just bleeds quietly until someone with experience looks at it.</div>
+        <div class="audience-body">You picked a PSP early. It worked. You moved on. By the time you're at £20m+ in processing, the leakage compounds. Nothing breaks loudly — it just bleeds quietly until someone with experience looks at it.</div>
         <div class="audience-outcome">
           <div class="audience-outcome-label">What you get</div>
           <div class="audience-outcome-val">A directional read in 48 hours. No commitment.</div>
@@ -681,29 +662,25 @@
         <div class="block-eyebrow">The typical pattern</div>
         <p class="pattern-intro">Most cross-border merchants we look at show leakage clustered in the same three places.</p>
         <p class="pattern-context">Cross-border auth rate gaps on subscription renewals. FX spread buried in settlement. Recoverable declines that never get retried. Different businesses, same shape. Different numbers, same story.</p>
-        <p class="pattern-context">The example below is a modelled scenario, not a client result. It is built on an assumed £40m volume and shown with its arithmetic so you can check it. Your numbers will be specific to your stack and your geography.</p>
+        <p class="pattern-context">The ranges below are a modelled scenario of typical findings for a £30–50m cross-border processor, modelled from industry benchmarks. Your numbers will be specific to your stack and your geography.</p>
         <span class="pattern-tag">Modelled scenario · not a case study</span>
       </div>
       <div class="pattern-numbers reveal reveal-d1">
         <div class="pattern-numbers-eyebrow">Modelled findings</div>
-        <div class="pattern-numbers-sub">Worked example: £40m annual processing volume, of which £20m is converted to another currency. Every figure below is that stated base multiplied by the stated rate. Check the arithmetic.</div>
+        <div class="pattern-numbers-sub">Modelled for a £40m cross-border subscription business</div>
         <div class="pattern-stat">
-          <div class="pattern-stat-val tabular">£<span class="accent">400k</span></div>
-          <div class="pattern-stat-lbl">Auth rate gap on cross-border renewals: 1.0% &times; £40m</div>
-        </div>
-        <div class="pattern-stat">
-          <div class="pattern-stat-val tabular">£<span class="accent">300k</span></div>
-          <div class="pattern-stat-lbl">FX spread above interbank: 1.5% &times; £20m converted volume</div>
+          <div class="pattern-stat-val tabular">~£<span class="accent">800k</span></div>
+          <div class="pattern-stat-lbl">Auth rate gap on cross-border renewals (2% of cross-border volume)</div>
         </div>
         <div class="pattern-stat">
-          <div class="pattern-stat-val tabular">£<span class="accent">400k</span></div>
-          <div class="pattern-stat-lbl">Declines recovered by intelligent retry: 1.0% &times; £40m</div>
+          <div class="pattern-stat-val tabular">~£<span class="accent">320k</span></div>
+          <div class="pattern-stat-lbl">FX spread above interbank, modelled at 1.5% of FX volume</div>
         </div>
-        <div class="pattern-stat pattern-stat-total">
-          <div class="pattern-stat-val tabular">£<span class="accent">1.1m</span></div>
-          <div class="pattern-stat-lbl">Total modelled leakage: 2.75% of £40m, inside the 1&ndash;3% industry band quoted above</div>
+        <div class="pattern-stat">
+          <div class="pattern-stat-val tabular">~£<span class="accent">200k</span></div>
+          <div class="pattern-stat-lbl">Recoverable declines with intelligent retry, 1.5% of volume uplift</div>
         </div>
-        <p class="pattern-disclaimer">These are modelled figures on an assumed volume, not a client result. Each rate is the low end of the per-category range published in the methodology section above, so the example is deliberately conservative. Your report replaces every assumption here with your actual figures, and labels which are observed and which are inferred.</p>
+        <p class="pattern-disclaimer">Modelled estimates against industry benchmarks. Real diagnostic numbers are specific to each merchant's stack and confirmed during the analysis phase.</p>
       </div>
     </div>
   </div>
@@ -718,7 +695,7 @@
         <h2 class="indep-h2">We work for you.<br>We earn when you recover.</h2>
         <div class="indep-text">
           <p>The initial audit is free. The deep audit and the resolution work carry a small fixed fee, credited in full against your validated recovery.</p>
-          <p>We work for the merchant. Nothing else. The recommendation tracks your data, your stack, your geography, and is operator-reviewed before release.</p>
+          <p>We work for the merchant. Nothing else. The recommendation tracks your data, your stack, your geography — and is operator-reviewed before release.</p>
           <p class="strong">If you don't recover, we don't earn. That's the alignment.</p>
         </div>
       </div>
@@ -789,7 +766,7 @@
     <div class="compare-block reveal">
       <div class="block-eyebrow">Where we sit</div>
       <h2><span class="strike">Not Primer. Not Gr4vy. Not Spreedly.</span><br>Different layer. Different incentive.</h2>
-      <p class="lead">Orchestrators are infrastructure: they move money. Vyre is intelligence: we tell you what your existing stack, orchestrator included, is costing you. You probably need both.</p>
+      <p class="lead">Orchestrators are infrastructure — they move money. Vyre is intelligence — we tell you what your existing stack, orchestrator included, is costing you. You probably need both.</p>
       <a href="#method" class="btn-ghost">See the methodology →</a>
     </div>
   </div>
@@ -803,8 +780,8 @@
         <div class="block-eyebrow">How we work</div>
         <h2 class="block-h2" style="font-size:clamp(36px,4.5vw,52px); margin-bottom:32px;">Free to know. Small fixed fee to resolve. Credited against recovery.</h2>
         <div class="how-content">
-          <p>The initial audit is free. You submit ranges, we model against benchmarks, and within 48 hours you get an indicative estimate of where your leakage sits and roughly what it is worth. It is a directional read, not an audited figure, and it says so on the front page. The board-ready version comes from the deep audit, once we have worked from your actual settlement and decline data.</p>
-          <p>If the numbers warrant it, the deep audit and the resolution work carry a small fixed fee, credited in full against the recovery you validate. The deep audit identifies every pound, builds the resolution playbook, and runs the recovery alongside you.</p>
+          <p>The initial audit is free. You submit, we analyse, you receive a board-ready report in 48 hours. No card, no commitment.</p>
+          <p>If the numbers warrant it, the deep audit and the resolution work carry a small fixed fee — credited in full against the recovery you validate. The deep audit identifies every pound, builds the resolution playbook, and runs the recovery alongside you.</p>
           <p class="strong">The only cheque comes from you, against measured recovery. If you don't recover, we don't earn.</p>
         </div>
       </div>
@@ -814,7 +791,7 @@
         <p style="font-size: 13px; color: rgba(245,240,232,0.6); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; margin-top: 24px;">Free</p>
         <ul>
           <li>The initial audit</li>
-          <li>An indicative PDF estimate, assumptions listed</li>
+          <li>The board-ready PDF report</li>
           <li>The ranked findings</li>
           <li>Operator review and sign-off</li>
         </ul>
@@ -826,46 +803,6 @@
         </ul>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- TRUST: REPORT CONTENTS, SECURITY, FOUNDER -->
-<section class="block white" id="trust">
-  <div class="container">
-    <div class="reveal">
-      <div class="block-eyebrow">Before you send us anything</div>
-      <h2 class="block-h2">What you get, and what<br>we do with your data.</h2>
-      <p class="block-lead">Two questions any finance team should ask a supplier they have not met. Answered here rather than on a call. Who we are is <a href="#about" style="color:var(--vyre-orange)">further up the page</a>.</p>
-    </div>
-
-    <div class="trust-grid">
-      <div class="trust-card reveal">
-        <h3>What is actually in the report</h3>
-        <p>Roughly eight to ten pages. No consultancy padding.</p>
-        <ul>
-          <li><strong>Summary:</strong> your estimated total leakage as a range, in pounds, with the assumptions it rests on listed on the same page.</li>
-          <li><strong>Category breakdown:</strong> each of the seven categories, the benchmark rate applied, the base it was applied to, and the resulting figure. The arithmetic is shown so you can rerun it.</li>
-          <li><strong>Observed vs inferred:</strong> every figure tagged. At the free stage almost everything is inferred from your ranges, and the report says so plainly.</li>
-          <li><strong>Ranked fix list:</strong> what to fix this quarter, this year, and what to architect for next year, with the estimated recovery and rough effort against each.</li>
-          <li><strong>Sources:</strong> the scheme, regulator and industry publications behind each benchmark, cited so you can check them.</li>
-        </ul>
-        <p class="trust-note">We do not yet publish a redacted sample report. Until we do, this list is the specification, and you are welcome to hold us to it.</p>
-      </div>
-
-      <div class="trust-card reveal reveal-d1">
-        <h3>What happens to your data</h3>
-        <ul>
-          <li><strong>We ask for ranges, not raw data.</strong> The form takes volume bands and a cross-border share. No transaction files, no card data. Vyre sits outside your cardholder data environment by design.</li>
-          <li><strong>Encrypted in transit.</strong> The site is served over TLS and submissions are encrypted to our relay provider, FormSubmit, and on to our inbox. FormSubmit is named in the privacy policy as a processor.</li>
-          <li><strong>Access is limited</strong> to the people preparing your report, behind multi-factor authentication.</li>
-          <li><strong>Deleted on request,</strong> confirmed in writing. If you do not proceed, we delete it anyway.</li>
-          <li><strong>Never sold, never reused</strong> for anything other than the diagnostic you asked for.</li>
-          <li><strong>Before a deep audit,</strong> where real data would change hands, we agree scope, transfer method and retention in writing first, under an NDA and a data processing agreement.</li>
-        </ul>
-        <p class="trust-note">We are not ISO 27001 or SOC 2 certified and do not claim to be. Full detail in the <a href="privacy.html">privacy policy</a>.</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -881,7 +818,7 @@
       </div>
       <div class="faq-item reveal">
         <h3>What does the free Vyre audit include?</h3>
-        <p>An indicative estimate within 48 hours that quantifies leakage across seven categories in pounds, gives the reason behind each figure with sources and confidence levels, and ranks fixes by impact and time to deploy. It is modelled from the volume ranges you submit, so every figure is labelled inferred rather than observed; the board-ready version comes from the deep audit, which works from your actual data. No call, no card, no commitment.</p>
+        <p>A board-ready report within 48 hours that quantifies leakage across seven categories in pounds, gives the reason behind each figure with sources and confidence levels, and ranks fixes by impact and time to deploy. No call, no card, no commitment.</p>
       </div>
       <div class="faq-item reveal">
         <h3>How does Vyre get paid?</h3>
@@ -917,9 +854,9 @@
   <div class="container">
     <div class="reveal">
       <h2>Find out what your<br>stack is costing you.<br><span class="accent">It's free to know.</span></h2>
-      <p class="final-cta-sub">Ten minutes of your time. No call, no card, no commitment. Free indicative estimate within 48 hours. The deep audit and resolution work come next if the numbers warrant it: small fixed fee, credited against what you recover.</p>
+      <p class="final-cta-sub">Ten minutes of your time. No call, no card, no commitment. Free initial audit in 48 hours. The deep audit and resolution work come next if the numbers warrant it — small fixed fee, credited against what you recover.</p>
       <form class="diag-form" action="https://formsubmit.co/hello@vyrehq.com" method="POST">
-        <input type="hidden" name="_subject" value="Vyre diagnostic request: new lead">
+        <input type="hidden" name="_subject" value="Vyre diagnostic request — new lead">
         <input type="hidden" name="_template" value="table">
   <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://www.vyrehq.com/thank-you.html">
@@ -936,8 +873,8 @@
         </div>
         <div class="form-row">
           <div>
-            <label for="df-phone">Contact number <span style="opacity:.5">(optional)</span></label>
-            <input id="df-phone" type="tel" name="contact_number" placeholder="+44 7xxx xxxxxx">
+            <label for="df-phone">Contact number</label>
+            <input id="df-phone" type="tel" name="contact_number" placeholder="+44 7xxx xxxxxx" required>
           </div>
           <div>
             <label for="df-volume">Annual processing volume</label>
@@ -955,8 +892,8 @@
         </div>
         <div class="form-row">
           <div>
-            <label for="df-txns">Transactions per annum <span style="opacity:.5">(optional)</span></label>
-            <select id="df-txns" name="transactions_per_annum">
+            <label for="df-txns">Transactions per annum</label>
+            <select id="df-txns" name="transactions_per_annum" required>
               <option value="" disabled selected>Select range</option>
               <option>Under 500k</option>
               <option>500k – 2m</option>
@@ -987,7 +924,7 @@
           <label for="df-consent">I agree to Vyre processing these details to prepare my diagnostic, as described in the <a href="privacy.html">privacy policy</a>.</label>
         </div>
         <button type="submit" class="btn-primary btn-primary-lg">Get my free diagnostic →</button>
-        <p class="form-note">We work with B2C merchants across the UK, EU, Hong Kong and Singapore. Indicative estimate within 48 hours. No call, no card.</p>
+        <p class="form-note">We work with B2C merchants across the UK, EU, Hong Kong and Singapore. Report in 48 hours. No call, no card.</p>
       </form>
       <p class="final-cta-foot">BRITISH-BUILT · INDEPENDENT · CROSS-BORDER BY DESIGN</p>
     </div>
@@ -1024,7 +961,6 @@
         <div class="footer-h">Company</div>
         <ul class="footer-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#trust">Report &amp; security</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="https://www.linkedin.com/company/vyrehq/" rel="noopener">LinkedIn</a></li>
           <li><a href="mailto:hello@vyrehq.com">Contact</a></li>

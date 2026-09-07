@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
+
+# Accidental upload of a staging copy of the site (duplicate content, superseded
+# figures). Blocked from indexing until the folder is removed from the repo.
+Disallow: /github%20drop/
+Disallow: /github drop/
+
 Sitemap: https://www.vyrehq.com/sitemap.xml
