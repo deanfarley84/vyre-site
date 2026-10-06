@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payments revenue recovery for merchants and payment providers | Vyre</title>
-<meta name="description" content="Vyre finds the revenue a payment estate should have earned and didn't. VYRE OS for merchants. VYRE Embedded for gateways, PSPs and acquirers.">
-<link rel="canonical" href="https://www.vyrehq.com/">
+<title>VYRE OS: payment leakage audit for cross-border merchants | Vyre</title>
+<meta name="description" content="Vyre finds the 1 to 3% of revenue leaking from your payment stack: auth rate, FX, routing, retries, chargebacks. Free audit, report in 48 hours.">
+<link rel="canonical" href="https://www.vyrehq.com/os.html">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.vyrehq.com/">
+<meta property="og:url" content="https://www.vyrehq.com/os.html">
 <meta property="og:site_name" content="Vyre">
-<meta property="og:title" content="Vyre — Revenue doesn't lie. Systems do.">
-<meta property="og:description" content="Payments revenue recovery. VYRE OS for merchants, VYRE Embedded for payment providers.">
+<meta property="og:title" content="VYRE OS — Find what your payment stack is leaking">
+<meta property="og:description" content="Your PSP's auth rate isn't the rate you're getting. We tell you the difference. Free initial audit, board-ready report in 48 hours. Independent payments intelligence for cross-border B2C merchants.">
 <meta property="og:image" content="https://www.vyrehq.com/og-image.png">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Vyre — Revenue doesn't lie. Systems do.">
-<meta name="twitter:description" content="Payments revenue recovery. VYRE OS for merchants, VYRE Embedded for payment providers.">
+<meta name="twitter:title" content="VYRE OS — Find what your payment stack is leaking">
+<meta name="twitter:description" content="Independent payments intelligence. Free initial audit, board-ready report in 48 hours.">
 <meta name="twitter:image" content="https://www.vyrehq.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -325,46 +325,25 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://www.vyrehq.com/#organization",
-      "name": "Vyre",
-      "alternateName": ["Vyre HQ", "VYRE"],
-      "url": "https://www.vyrehq.com/",
-      "logo": "https://www.vyrehq.com/og-image.png",
-      "description": "Payments revenue recovery. VYRE OS finds revenue leaking from a merchant's payment stack and shows how to recover it. VYRE Embedded licenses the same intelligence layer to payment gateways, PSPs and acquirers for their own merchants.",
-      "email": "hello@vyrehq.com",
-      "foundingDate": "2026",
-      "founder": {"@id": "https://www.vyrehq.com/#founder"},
+      "@type": "Service",
+      "@id": "https://www.vyrehq.com/os.html#service",
+      "name": "VYRE OS payment leakage diagnostic",
+      "serviceType": "Payments revenue recovery audit",
+      "provider": {"@id": "https://www.vyrehq.com/#organization"},
       "areaServed": ["GB", "EU", "HK", "SG"],
-      "knowsAbout": ["payment authorisation rates", "cross-border payments", "FX spread", "payment routing", "chargebacks", "network tokenisation", "payment orchestration"],
-      "sameAs": ["https://www.linkedin.com/company/vyrehq/"]
-    },
-    {
-      "@type": "Person",
-      "@id": "https://www.vyrehq.com/#founder",
-      "name": "Dean Farley",
-      "jobTitle": "Founder",
-      "image": "https://www.vyrehq.com/dean-farley.jpg",
-      "worksFor": {"@id": "https://www.vyrehq.com/#organization"},
-      "description": "Global payments specialist with over 11 years across acquiring, orchestration, tokenisation, FX and cross-border payments.",
-      "sameAs": ["https://www.linkedin.com/in/df2024/"]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.vyrehq.com/#website",
-      "url": "https://www.vyrehq.com/",
-      "name": "Vyre",
-      "publisher": {"@id": "https://www.vyrehq.com/#organization"},
-      "inLanguage": "en-GB"
+      "audience": {"@type": "BusinessAudience", "audienceType": "B2C merchants processing over £8m in card volume"},
+      "description": "A free initial audit that quantifies revenue leakage across seven categories in pounds, benchmarked against the merchant's vertical, delivered as a board-ready report within 48 hours. Deep audit and recovery work carry a small fixed fee credited against validated recovery.",
+      "offers": {"@type": "Offer", "name": "Free initial audit", "price": "0", "priceCurrency": "GBP", "url": "https://www.vyrehq.com/os.html#cta"}
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.vyrehq.com/#faq",
+      "@id": "https://www.vyrehq.com/os.html#faq",
       "mainEntity": [
-        {"@type": "Question", "name": "What is the difference between VYRE OS and VYRE Embedded?", "acceptedAnswer": {"@type": "Answer", "text": "VYRE OS is for merchants: it reviews your own payment estate, quantifies what you are losing and shows how to recover it. VYRE Embedded is for payment providers: the same intelligence layer, licensed so a gateway, PSP or acquirer can advise its own merchants within its own remit."}},
-        {"@type": "Question", "name": "What is payment leakage?", "acceptedAnswer": {"@type": "Answer", "text": "Payment leakage is revenue a merchant should have received on transactions that were attempted, but did not receive because of avoidable declines, hidden FX spread, poor routing, missing retries, unchallenged chargebacks or absent local payment methods. Industry benchmarks put it at 1 to 3% of revenue for cross-border merchants."}},
-        {"@type": "Question", "name": "Is Vyre independent?", "acceptedAnswer": {"@type": "Answer", "text": "On merchant reviews, yes. Vyre takes no fees, kickbacks or referral payments from PSPs, acquirers or orchestrators; the merchant pays, against recovery. VYRE Embedded is a separate line, licensed to payment providers for use with their own merchants, and the two are never mixed on the same engagement."}},
-        {"@type": "Question", "name": "Does Vyre change anything in my payment flow?", "acceptedAnswer": {"@type": "Answer", "text": "No. Vyre does not reroute transactions or change your stack. It validates the data, tells you what is not working, where volume should go instead, why, how to make the change and what the recovery is worth, then verifies the result once you make it."}}
+        {"@type": "Question", "name": "What does the free Vyre audit include?", "acceptedAnswer": {"@type": "Answer", "text": "A board-ready report within 48 hours that quantifies leakage across seven categories in pounds, gives the reason behind each figure with sources and confidence levels, and ranks fixes by impact and time to deploy. No call, no card, no commitment."}},
+        {"@type": "Question", "name": "How does VYRE OS get paid?", "acceptedAnswer": {"@type": "Answer", "text": "The initial audit is free. The deep audit and recovery work carry a small fixed fee that is credited in full against the recovery the merchant validates. On merchant reviews Vyre takes no fees, kickbacks or referral payments from PSPs, acquirers or orchestrators."}},
+        {"@type": "Question", "name": "Do I need to change my PSP or orchestrator?", "acceptedAnswer": {"@type": "Answer", "text": "No. Vyre works inside the merchant's existing stack. Orchestrators such as Primer, Gr4vy and Spreedly are infrastructure that moves money; Vyre is the intelligence layer that shows what the existing stack, orchestrator included, is costing."}},
+        {"@type": "Question", "name": "Which merchants is VYRE OS for?", "acceptedAnswer": {"@type": "Answer", "text": "B2C merchants in the UK, EU, Hong Kong and Singapore processing more than £8m a year in card volume, particularly cross-border e-commerce, subscription, travel, digital goods and regulated iGaming operators."}},
+        {"@type": "Question", "name": "Which seven leakage categories does Vyre measure?", "acceptedAnswer": {"@type": "Answer", "text": "Authorisation rate, cross-border drag, FX spread, routing, retry logic, chargebacks, and payment method coverage. Each is quantified with low, mid and high estimates in pounds."}}
       ]
     }
   ]
@@ -378,138 +357,471 @@
   <div class="container nav-inner">
     <a href="/"><img class="logo-img" src="/logo.png" alt="Vyre" width="400" height="167"></a>
     <div class="nav-links">
-      <a href="/os.html">VYRE OS</a>
+      <a href="/os.html" class="nav-active">VYRE OS</a>
       <a href="/embedded.html">VYRE Embedded</a>
       <a href="/os.html#method">Methodology</a>
       <a href="/#about">About</a>
-      <a href="/os.html#cta" class="btn-primary">Get my free diagnostic →</a>
+      <a href="#cta" class="btn-primary">Get my free diagnostic →</a>
     </div>
   </div>
 </nav>
 </header>
 <main>
 
-<!-- HERO: the fork -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-bg-1"></div>
   <div class="hero-bg-2"></div>
   <div class="container hero-inner">
     <div class="reveal in">
-      <div class="eyebrow">Payments revenue recovery</div>
-      <h1>Revenue doesn't lie.<br><span class="accent">Systems do.</span></h1>
-      <p class="hero-sub">Every payment estate earns less than it should. Declines that could have been approved, FX spread no one priced, routing decided for you rather than by you. Vyre finds it, proves it in pounds, shows you how to recover it, then verifies that you did.</p>
-      <p class="hero-note">Two ways in, depending on who you are.</p>
+      <div class="eyebrow">VYRE OS · For merchants</div>
+      <h1>Your PSP's auth rate isn't<br>the rate you're getting.<br><span class="accent">We tell you the difference.</span></h1>
+      <p class="hero-sub">Industry data shows cross-border merchants typically leak 1–3% of revenue across seven categories they can't see from a PSP dashboard. We find it. We tell you why. We show you what to fix. The initial audit is free. The deep audit and recovery work carry a small fixed fee, credited against what you recover.</p>
+      <div class="hero-ctas">
+        <a href="#cta" class="btn-primary btn-primary-lg">Get my free diagnostic →</a>
+        <a href="#method" class="btn-ghost">See the methodology</a>
+      </div>
+      <p class="hero-note">No call required. No credit card. Report in 48 hours.</p>
     </div>
 
-    <div class="fork-grid reveal">
-      <a class="fork-card" href="/os.html">
-        <div class="fork-who">I take card payments</div>
-        <div class="fork-name">VYRE OS</div>
-        <p class="fork-line">For merchants processing £8m+ a year. A free initial audit shows what your stack is leaking across seven categories. Then a ranked fix list and a recovery you can measure.</p>
-        <span class="fork-cta">See how it works for merchants →</span>
-      </a>
-      <a class="fork-card navy" href="/embedded.html">
-        <div class="fork-who">I process payments for merchants</div>
-        <div class="fork-name">VYRE Embedded</div>
-        <p class="fork-line">For gateways, PSPs and acquirers. The same intelligence layer, embedded in your own offer, so you can show every merchant on your book what they are losing and help them recover it.</p>
-        <span class="fork-cta">See how it works for providers →</span>
-      </a>
+    <div class="outcome-stats reveal">
+      <div class="stat">
+        <div class="stat-value tabular">7</div>
+        <div class="stat-label">Leakage categories<br>we measure</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value tabular">1–3<span class="unit">%</span></div>
+        <div class="stat-label">Typical revenue leakage<br>(industry benchmark)</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value tabular">48<span class="unit">H</span></div>
+        <div class="stat-label">From submission<br>to your report</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value tabular">£0</div>
+        <div class="stat-label">What the initial<br>audit costs you</div>
+      </div>
     </div>
-    <p class="fork-note">Not sure which you are? If payments run through you on behalf of someone else, you want Embedded. Otherwise, start with OS.</p>
   </div>
 </section>
 
-<!-- SHARED METHOD -->
-<section class="block white" id="method-summary">
+<!-- EMPATHY BRIDGE -->
+<section class="block white empathy">
   <div class="container">
     <div class="reveal">
-      <div class="block-eyebrow">One method behind both</div>
-      <h2 class="block-h2" style="font-size:clamp(36px,4.5vw,52px);">Detect. Quantify. Fix. Verify.</h2>
-      <p class="block-lead">Vyre never touches the payment flow. It reads what already happened, works out what should have happened, and tells you the gap in pounds, with the reason and the fix attached. Then it checks the fix landed.</p>
+      <div class="block-eyebrow">You already know</div>
+      <h2>It sounds like the problem isn't cost.<br>It's not knowing what cost actually means.</h2>
+      <div class="empathy-body">
+        <p>You can read your MDR. You can see your scheme fees. You probably know your chargeback ratio.</p>
+        <p>What you can't see is the revenue that never lands. The auth rate gap your PSP doesn't flag. The FX spread buried in settlement. The retries you never built. The routing decisions made for you, not by you.</p>
+        <p class="strong">That's the part that compounds. That's the part we measure.</p>
+      </div>
     </div>
-    <div class="method-mini reveal reveal-d1">
-      <div><div class="k">01</div><div class="v">Detect</div><div class="d">Seven leakage categories, read from your existing data. Nothing installed in the flow.</div></div>
-      <div><div class="k">02</div><div class="v">Quantify</div><div class="d">Every gap in pounds, benchmarked to your vertical and geography, with a confidence level.</div></div>
-      <div><div class="k">03</div><div class="v">Fix</div><div class="d">What to change, where, why and in what order. Ranked by value and time to deploy.</div></div>
-      <div><div class="k">04</div><div class="v">Verify</div><div class="d">Recovery measured against a frozen baseline once the change is live. No claimed numbers.</div></div>
-    </div>
-    <div style="margin-top:40px;"><a href="/os.html#method" class="btn-ghost">Read the full methodology →</a></div>
   </div>
 </section>
 
-<!-- ABOUT (shared) -->
-<section class="block" id="about">
+<!-- FOUR STEPS - OUTCOME LED -->
+<section class="block" id="how">
   <div class="container">
-    <div class="about-grid">
+    <div class="reveal">
+      <div class="block-eyebrow">The Vyre method</div>
+      <h2 class="block-h2">Four outcomes. Not four sales calls.</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step reveal">
+        <div class="step-header">
+          <div class="step-num-box">01</div>
+          <div>
+            <div class="step-stage">Stage one</div>
+            <h3>You see exactly where you're bleeding</h3>
+          </div>
+        </div>
+        <p class="step-outcome">Seven leakage categories, benchmarked against your vertical, in pounds.</p>
+        <p class="step-detail">Auth rate, cross-border drag, FX spread, routing, retries, chargebacks, payment method coverage. Each one quantified with low, mid, and high estimates.</p>
+      </div>
+
+      <div class="step reveal reveal-d1">
+        <div class="step-header">
+          <div class="step-num-box">02</div>
+          <div>
+            <div class="step-stage">Stage two</div>
+            <h3>You get the reason behind every number</h3>
+          </div>
+        </div>
+        <p class="step-outcome">Every gap traced. Observed inputs separated from inferred assumptions.</p>
+        <p class="step-detail">Every figure on your report has a source. Every benchmark has a citation. Every inference has a confidence level. Defensible to your board.</p>
+      </div>
+
+      <div class="step reveal reveal-d2">
+        <div class="step-header">
+          <div class="step-num-box">03</div>
+          <div>
+            <div class="step-stage">Stage three</div>
+            <h3>You walk away with a ranked fix list</h3>
+          </div>
+        </div>
+        <p class="step-outcome">Recoveries ranked by impact and time-to-deploy. Immediate, mid-term, structural.</p>
+        <p class="step-detail">No 40-page consultancy deck. A clear sequence: what to fix this quarter, what to fix this year, what to architect for next year. Pound figures attached.</p>
+      </div>
+
+      <div class="step reveal reveal-d3">
+        <div class="step-header">
+          <div class="step-num-box">04</div>
+          <div>
+            <div class="step-stage">Stage four</div>
+            <h3>You decide whether to go deeper</h3>
+          </div>
+        </div>
+        <p class="step-outcome">If the initial numbers warrant it, move into the deep audit. Small fixed fee, credited against what you recover.</p>
+        <p class="step-detail">The deep audit maps every pound, builds the resolution playbook, and runs the recovery alongside you. The fee is small, fixed up front, and credited in full against your validated recovery. We earn when you do.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAKAGE MAP - WITH NUMBERS, SOURCED -->
+<section class="block navy" id="method">
+  <div class="container">
+    <div class="reveal">
+      <div class="block-eyebrow">What we measure</div>
+      <h2 class="block-h2">Seven categories.<br>Every pound traced.</h2>
+      <p class="block-lead">Most diagnostics surface one number. We show you where every pound is leaking, and which fix recovers the most for the least effort.</p>
+    </div>
+    <div class="leakage-grid">
+      <div class="leakage-card reveal">
+        <div class="leakage-cat">01</div>
+        <div class="leakage-name">Authorisation rate</div>
+        <div class="leakage-eg">Soft declines never retried. Network tokenisation absent.</div>
+        <div class="leakage-loss"><span class="leakage-loss-val">1–4%</span><span class="leakage-loss-lbl">of volume</span></div>
+      </div>
+      <div class="leakage-card reveal reveal-d1">
+        <div class="leakage-cat">02</div>
+        <div class="leakage-name">Cross-border drag</div>
+        <div class="leakage-eg">Local acquiring missing in key markets. BIN routing flat.</div>
+        <div class="leakage-loss"><span class="leakage-loss-val">2–5%</span><span class="leakage-loss-lbl">cross-border</span></div>
+      </div>
+      <div class="leakage-card reveal reveal-d2">
+        <div class="leakage-cat">03</div>
+        <div class="leakage-name">FX spread</div>
+        <div class="leakage-eg">Hidden spread above interbank. Settlement currency mismatch.</div>
+        <div class="leakage-loss"><span class="leakage-loss-val">1–3%</span><span class="leakage-loss-lbl">of FX volume</span></div>
+      </div>
+      <div class="leakage-card reveal reveal-d1">
+        <div class="leakage-cat">04</div>
+        <div class="leakage-name">Routing</div>
+        <div class="leakage-eg">Single PSP, no failover, no least-cost routing.</div>
+        <div class="leakage-loss"><span class="leakage-loss-val">1–3%</span><span class="leakage-loss-lbl">of volume</span></div>
+      </div>
+      <div class="leakage-card reveal reveal-d2">
+        <div class="leakage-cat">05</div>
+        <div class="leakage-name">Retry logic</div>
+        <div class="leakage-eg">No retry rules. Or rules too aggressive, hitting hard declines.</div>
+        <div class="leakage-loss"><span class="leakage-loss-val">1–3%</span><span class="leakage-loss-lbl">of volume</span></div>
+      </div>
+      <div class="leakage-card reveal reveal-d3">
+        <div class="leakage-cat">06</div>
+        <div class="leakage-name">Chargebacks</div>
+        <div class="leakage-eg">Weak representment. Admin cost compounding monthly.</div>
+        <div class="leakage-loss"><span class="leakage-loss-val">0.3–1%</span><span class="leakage-loss-lbl">of volume</span></div>
+      </div>
+      <div class="leakage-card reveal reveal-d2">
+        <div class="leakage-cat">07</div>
+        <div class="leakage-name">Payment methods</div>
+        <div class="leakage-eg">Local methods absent in markets where they dominate.</div>
+        <div class="leakage-loss"><span class="leakage-loss-val">3–15%</span><span class="leakage-loss-lbl">regional conversion</span></div>
+      </div>
+    </div>
+    <p class="leakage-source">Ranges drawn from scheme reports (Visa, Mastercard), regulator publications (FCA, PSR, ECB), and industry research. Updated quarterly.</p>
+  </div>
+</section>
+
+<!-- AUDIENCES - PAIN + COST + OUTCOME -->
+<section class="block white" id="audiences">
+  <div class="container">
+    <div class="reveal">
+      <div class="block-eyebrow">Built for operators</div>
+      <h2 class="block-h2">Written for the people<br>who own the P&amp;L.</h2>
+    </div>
+    <div class="audiences-grid">
+      <a href="#cta" class="audience-card reveal">
+        <div class="audience-role">Head of Payments</div>
+        <div class="audience-pain">You already know there's leakage. You can't get budget to prove it.</div>
+        <div class="audience-body">You've raised this two or three times. The response is always &ldquo;interesting, send numbers, we'll review.&rdquo; The data you have comes from the PSP that benefits from the status quo. That's not a credibility issue with the data. It's a credibility issue with the source.</div>
+        <div class="audience-outcome">
+          <div class="audience-outcome-label">What you get</div>
+          <div class="audience-outcome-val">A source your CFO will defend to the board.</div>
+        </div>
+        <div class="audience-link">See more →</div>
+      </a>
+
+      <a href="#cta" class="audience-card reveal reveal-d1">
+        <div class="audience-role">CFO</div>
+        <div class="audience-pain">Payments is a P&amp;L line you can't see clearly.</div>
+        <div class="audience-body">Your processing costs sit in three places. The leakage sits in seven more — auth rate, FX, routing, retries, chargebacks, payment method gaps, settlement timing. Most of it is invisible from the PSP dashboard. Most of it compounds.</div>
+        <div class="audience-outcome">
+          <div class="audience-outcome-label">What you get</div>
+          <div class="audience-outcome-val">Every leakage line in pounds. Audit-trail-ready.</div>
+        </div>
+        <div class="audience-link">See more →</div>
+      </a>
+
+      <a href="#cta" class="audience-card reveal reveal-d2">
+        <div class="audience-role">Founder</div>
+        <div class="audience-pain">Payments is becoming a tax you didn't budget for.</div>
+        <div class="audience-body">You picked a PSP early. It worked. You moved on. By the time you're at £20m+ in processing, the leakage compounds. Nothing breaks loudly — it just bleeds quietly until someone with experience looks at it.</div>
+        <div class="audience-outcome">
+          <div class="audience-outcome-label">What you get</div>
+          <div class="audience-outcome-val">A directional read in 48 hours. No commitment.</div>
+        </div>
+        <div class="audience-link">See more →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE FIND (replaces fake proof case study) -->
+<section class="block" id="pattern">
+  <div class="container">
+    <div class="pattern-grid">
       <div class="reveal">
-        <a href="https://www.linkedin.com/in/df2024/" rel="me author" aria-label="Dean Farley on LinkedIn"><img class="about-photo" src="/dean-farley.jpg" width="480" height="600" alt="Dean Farley, founder of Vyre" loading="lazy"></a>
-        <p class="about-photo-cap">Dean Farley, Founder<br><a href="https://www.linkedin.com/in/df2024/" rel="me author">Connect on LinkedIn →</a></p>
+        <div class="block-eyebrow">The typical pattern</div>
+        <p class="pattern-intro">Most cross-border merchants we look at show leakage clustered in the same three places.</p>
+        <p class="pattern-context">Cross-border auth rate gaps on subscription renewals. FX spread buried in settlement. Recoverable declines that never get retried. Different businesses, same shape. Different numbers, same story.</p>
+        <p class="pattern-context">The ranges below are a modelled scenario of typical findings for a £30–50m cross-border processor, modelled from industry benchmarks. Your numbers will be specific to your stack and your geography.</p>
+        <span class="pattern-tag">Modelled scenario · not a case study</span>
+      </div>
+      <div class="pattern-numbers reveal reveal-d1">
+        <div class="pattern-numbers-eyebrow">Modelled findings</div>
+        <div class="pattern-numbers-sub">Modelled for a £40m cross-border subscription business</div>
+        <div class="pattern-stat">
+          <div class="pattern-stat-val tabular">~£<span class="accent">800k</span></div>
+          <div class="pattern-stat-lbl">Auth rate gap on cross-border renewals (2% of cross-border volume)</div>
+        </div>
+        <div class="pattern-stat">
+          <div class="pattern-stat-val tabular">~£<span class="accent">320k</span></div>
+          <div class="pattern-stat-lbl">FX spread above interbank, modelled at 1.5% of FX volume</div>
+        </div>
+        <div class="pattern-stat">
+          <div class="pattern-stat-val tabular">~£<span class="accent">200k</span></div>
+          <div class="pattern-stat-lbl">Recoverable declines with intelligent retry, 1.5% of volume uplift</div>
+        </div>
+        <p class="pattern-disclaimer">Modelled estimates against industry benchmarks. Real diagnostic numbers are specific to each merchant's stack and confirmed during the analysis phase.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDEPENDENCE - FLIPPED -->
+<section class="block white">
+  <div class="container">
+    <div class="indep-grid">
+      <div class="reveal">
+        <div class="block-eyebrow">Why this works</div>
+        <h2 class="indep-h2">We work for you.<br>We earn when you recover.</h2>
+        <div class="indep-text">
+          <p>The initial audit is free. The deep audit and the resolution work carry a small fixed fee, credited in full against your validated recovery.</p>
+          <p>On your review, we work for you and no one else. No fees, kickbacks or referral payments from PSPs, acquirers or orchestrators. The recommendation tracks your data, your stack, your geography, and is operator-reviewed before release.</p>
+          <p class="strong">If you don't recover, we don't earn. That's the alignment.</p>
+        </div>
       </div>
       <div class="reveal reveal-d1">
-        <div class="block-eyebrow">Who is behind Vyre</div>
-        <h2 class="indep-h2">Built by an operator.<br>Not an agency.</h2>
-        <div class="about-text">
-          <p>Vyre was founded by Dean Farley after more than eleven years in global payments, working across acquiring, orchestration, tokenisation, FX and cross-border flows for merchants and payment providers in the UK, EU and Asia.</p>
-          <p>The methodology is the one he used inside the industry to find where merchant revenue was going. VYRE OS puts it to work for the merchant. VYRE Embedded puts it inside the payment providers who serve them.</p>
-          <p>Every merchant report is reviewed and signed off by Dean before it is released.</p>
-        </div>
-        <div class="about-links">
-          <a href="https://www.linkedin.com/in/df2024/" rel="me author">Dean Farley on LinkedIn →</a>
-          <a href="https://www.linkedin.com/company/vyrehq/">Vyre on LinkedIn →</a>
-        </div>
-      </div>
-      <div class="reveal reveal-d2 about-facts-col">
-        <div class="about-facts">
-          <div class="about-fact"><div class="about-fact-k">Experience</div><div class="about-fact-v">11+ years in global payments: acquiring, orchestration, tokenisation, FX, cross-border.</div></div>
-          <div class="about-fact"><div class="about-fact-k">Independence</div><div class="about-fact-v">On merchant reviews, Vyre takes no fees, kickbacks or referral payments from PSPs, acquirers or orchestrators. The merchant pays, against recovery. VYRE Embedded is a separate line, licensed to providers for their own merchants.</div></div>
-          <div class="about-fact"><div class="about-fact-k">Coverage</div><div class="about-fact-v">UK, EU, Hong Kong and Singapore. Based between Marbella and Nottingham.</div></div>
-          <div class="about-fact"><div class="about-fact-k">Contact</div><div class="about-fact-v"><a href="mailto:hello@vyrehq.com" style="color:var(--vyre-navy);">hello@vyrehq.com</a></div></div>
+        <div class="indep-pillars">
+          <div class="indep-pillar">
+            <div class="indep-pillar-num">01</div>
+            <div class="indep-pillar-title">Free initial audit</div>
+            <div class="indep-pillar-desc">No fee. No invoice. No card required.</div>
+          </div>
+          <div class="indep-pillar">
+            <div class="indep-pillar-num">02</div>
+            <div class="indep-pillar-title">Small fixed fee, credited</div>
+            <div class="indep-pillar-desc">Deep audit fee is fully offset by your validated recovery.</div>
+          </div>
+          <div class="indep-pillar">
+            <div class="indep-pillar-num">03</div>
+            <div class="indep-pillar-title">Aligned with your P&amp;L</div>
+            <div class="indep-pillar-desc">On your review, the only cheque comes from you. No provider pays us to steer the recommendation.</div>
+          </div>
+          <div class="indep-pillar">
+            <div class="indep-pillar-num">04</div>
+            <div class="indep-pillar-title">Operator-reviewed</div>
+            <div class="indep-pillar-desc">Every report is signed off by a Vyre operator before release.</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ (shared, cross-product) -->
+
+<!-- COMPARE - SHARPENED -->
+<section class="block" id="compare">
+  <div class="container">
+    <div class="compare-block reveal">
+      <div class="block-eyebrow">Where we sit</div>
+      <h2><span class="strike">Not Primer. Not Gr4vy. Not Spreedly.</span><br>Different layer. Different incentive.</h2>
+      <p class="lead">Orchestrators are infrastructure — they move money. Vyre is intelligence — we tell you what your existing stack, orchestrator included, is costing you. You probably need both.</p>
+      <a href="#method" class="btn-ghost">See the methodology →</a>
+      <p style="margin-top:28px; font-size:15px; color:var(--vyre-muted);">Run payments for merchants rather than taking them yourself? That is <a href="/embedded.html" style="color:var(--vyre-navy); font-weight:600; border-bottom:2px solid var(--vyre-orange); text-decoration:none;">VYRE Embedded</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK (TRANSPARENCY) -->
+<section class="block white">
+  <div class="container">
+    <div class="how-grid">
+      <div class="reveal">
+        <div class="block-eyebrow">How we work</div>
+        <h2 class="block-h2" style="font-size:clamp(36px,4.5vw,52px); margin-bottom:32px;">Free to know. Small fixed fee to resolve. Credited against recovery.</h2>
+        <div class="how-content">
+          <p>The initial audit is free. You submit, we analyse, you receive a board-ready report in 48 hours. No card, no commitment.</p>
+          <p>If the numbers warrant it, the deep audit and the resolution work carry a small fixed fee — credited in full against the recovery you validate. The deep audit identifies every pound, builds the resolution playbook, and runs the recovery alongside you.</p>
+          <p class="strong">The only cheque comes from you, against measured recovery. If you don't recover, we don't earn.</p>
+        </div>
+      </div>
+      <div class="how-callout reveal reveal-d1">
+        <div class="how-callout-eb">Your side of the deal</div>
+        <h3>Free to find it. Small fee to fix it. Credited if you recover.</h3>
+        <p style="font-size: 13px; color: rgba(245,240,232,0.6); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; margin-top: 24px;">Free</p>
+        <ul>
+          <li>The initial audit</li>
+          <li>The board-ready PDF report</li>
+          <li>The ranked findings</li>
+          <li>Operator review and sign-off</li>
+        </ul>
+        <p style="font-size: 13px; color: rgba(245,240,232,0.6); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; margin-top: 24px;">Small fixed fee, credited against recovery</p>
+        <ul>
+          <li>Deep audit and resolution playbook</li>
+          <li>Implementation support</li>
+          <li>Ongoing recovery engagement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
 <section class="block white" id="faq">
   <div class="container">
     <div class="block-eyebrow reveal">Common questions</div>
-    <h2 class="block-h2 reveal" style="font-size:clamp(36px,4.5vw,52px);">Straight answers first.</h2>
+    <h2 class="block-h2 reveal" style="font-size:clamp(36px,4.5vw,52px);">Straight answers before you submit.</h2>
     <div class="faq-list">
       <div class="faq-item reveal">
-        <h3>What is the difference between VYRE OS and VYRE Embedded?</h3>
-        <p>VYRE OS is for merchants: it reviews your own payment estate, quantifies what you are losing and shows how to recover it. VYRE Embedded is for payment providers: the same intelligence layer, licensed so a gateway, PSP or acquirer can advise its own merchants within its own remit.</p>
+        <h3>What does the free Vyre audit include?</h3>
+        <p>A board-ready report within 48 hours that quantifies leakage across seven categories in pounds, gives the reason behind each figure with sources and confidence levels, and ranks fixes by impact and time to deploy. No call, no card, no commitment.</p>
       </div>
       <div class="faq-item reveal">
-        <h3>What is payment leakage?</h3>
-        <p>Payment leakage is revenue a merchant should have received on transactions that were attempted, but did not receive because of avoidable declines, hidden FX spread, poor routing, missing retries, unchallenged chargebacks or absent local payment methods. Industry benchmarks put it at 1 to 3% of revenue for cross-border merchants.</p>
+        <h3>How does VYRE OS get paid?</h3>
+        <p>The initial audit is free. The deep audit and recovery work carry a small fixed fee that is credited in full against the recovery the merchant validates. On merchant reviews Vyre takes no fees, kickbacks or referral payments from PSPs, acquirers or orchestrators.</p>
       </div>
       <div class="faq-item reveal">
-        <h3>Is Vyre independent?</h3>
-        <p>On merchant reviews, yes. Vyre takes no fees, kickbacks or referral payments from PSPs, acquirers or orchestrators; the merchant pays, against recovery. VYRE Embedded is a separate line, licensed to payment providers for use with their own merchants, and the two are never mixed on the same engagement.</p>
+        <h3>Do I need to change my PSP or orchestrator?</h3>
+        <p>No. Vyre works inside the merchant's existing stack. Orchestrators such as Primer, Gr4vy and Spreedly are infrastructure that moves money; Vyre is the intelligence layer that shows what the existing stack, orchestrator included, is costing.</p>
       </div>
       <div class="faq-item reveal">
-        <h3>Does Vyre change anything in my payment flow?</h3>
-        <p>No. Vyre does not reroute transactions or change your stack. It validates the data, tells you what is not working, where volume should go instead, why, how to make the change and what the recovery is worth, then verifies the result once you make it.</p>
+        <h3>Which merchants is VYRE OS for?</h3>
+        <p>B2C merchants in the UK, EU, Hong Kong and Singapore processing more than £8m a year in card volume, particularly cross-border e-commerce, subscription, travel, digital goods and regulated iGaming operators.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Which seven leakage categories does Vyre measure?</h3>
+        <p>Authorisation rate, cross-border drag, FX spread, routing, retry logic, chargebacks, and payment method coverage. Each is quantified with low, mid and high estimates in pounds.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL FORK -->
-<section class="final-cta" id="cta" style="padding:100px 0 120px;">
+<!-- URGENCY -->
+<section class="urgency">
   <div class="container">
     <div class="reveal">
-      <h2 style="font-size:clamp(36px,5vw,64px);">Find out what the estate<br><span class="accent">should have earned.</span></h2>
-      <p class="final-cta-sub">Merchants start with a free initial audit. Providers start with a partner briefing.</p>
-      <div class="hero-ctas" style="justify-content:center;">
-        <a href="/os.html#cta" class="btn-primary btn-primary-lg">Merchants: get my free diagnostic →</a>
-        <a href="/embedded.html#briefing" class="btn-ghost" style="color:var(--vyre-cream); border-color:rgba(245,240,232,.3);">Providers: book a partner briefing →</a>
-      </div>
+      <p class="urgency-line">Every month without a diagnostic is leakage you can't recover. <span class="orange">Doing nothing is a decision.</span></p>
     </div>
   </div>
 </section>
 
+<!-- FINAL CTA -->
+<section class="final-cta" id="cta">
+  <div class="container">
+    <div class="reveal">
+      <h2>Find out what your<br>stack is costing you.<br><span class="accent">It's free to know.</span></h2>
+      <p class="final-cta-sub">Ten minutes of your time. No call, no card, no commitment. Free initial audit in 48 hours. The deep audit and resolution work come next if the numbers warrant it — small fixed fee, credited against what you recover.</p>
+      <form class="diag-form" action="https://formsubmit.co/hello@vyrehq.com" method="POST">
+        <input type="hidden" name="_subject" value="Vyre diagnostic request — new lead">
+        <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.vyrehq.com/thank-you.html">
+        <input type="text" name="_honey" style="display:none">
+        <div class="form-row">
+          <div>
+            <label for="df-company">Company name</label>
+            <input id="df-company" type="text" name="company" placeholder="Your company" required>
+          </div>
+          <div>
+            <label for="df-email">Work email</label>
+            <input id="df-email" type="email" name="work_email" placeholder="you@company.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="df-phone">Contact number</label>
+            <input id="df-phone" type="tel" name="contact_number" placeholder="+44 7xxx xxxxxx" required>
+          </div>
+          <div>
+            <label for="df-volume">Annual processing volume</label>
+            <select id="df-volume" name="annual_volume" required>
+              <option value="" disabled selected>Select range</option>
+              <option>Under £8m</option>
+              <option>£8m – £20m</option>
+              <option>£20m – £50m</option>
+              <option>£50m – £100m</option>
+              <option>£100m – £200m</option>
+              <option>£200m – £300m</option>
+              <option>£300m+</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="df-txns">Transactions per annum</label>
+            <select id="df-txns" name="transactions_per_annum" required>
+              <option value="" disabled selected>Select range</option>
+              <option>Under 500k</option>
+              <option>500k – 2m</option>
+              <option>2m – 10m</option>
+              <option>10m – 25m</option>
+              <option>25m+</option>
+            </select>
+          </div>
+          <div>
+            <label for="df-xb">Cross-border share</label>
+            <select id="df-xb" name="cross_border_share" required>
+              <option value="" disabled selected>Select range</option>
+              <option>Under 10%</option>
+              <option>10% – 30%</option>
+              <option>30% – 60%</option>
+              <option>60%+</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row single">
+          <div>
+            <label for="df-notes">Anything we should know? <span style="opacity:.5">(optional)</span></label>
+            <textarea id="df-notes" name="notes" rows="3" placeholder="PSP, markets, known pain points…"></textarea>
+          </div>
+        </div>
+        <div class="consent">
+          <input id="df-consent" type="checkbox" name="consent" value="agreed" required>
+          <label for="df-consent">I agree to Vyre processing these details to prepare my diagnostic, as described in the <a href="/privacy.html">privacy policy</a>.</label>
+        </div>
+        <button type="submit" class="btn-primary btn-primary-lg">Get my free diagnostic →</button>
+        <p class="form-note">We work with B2C merchants across the UK, EU, Hong Kong and Singapore. Report in 48 hours. No call, no card.</p>
+      </form>
+      <p class="final-cta-foot">BRITISH-BUILT · INDEPENDENT · CROSS-BORDER BY DESIGN</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 </main>
 
 <footer>

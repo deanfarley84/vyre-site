@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payments revenue recovery for merchants and payment providers | Vyre</title>
-<meta name="description" content="Vyre finds the revenue a payment estate should have earned and didn't. VYRE OS for merchants. VYRE Embedded for gateways, PSPs and acquirers.">
-<link rel="canonical" href="https://www.vyrehq.com/">
+<title>VYRE Embedded: revenue recovery intelligence for payment providers | Vyre</title>
+<meta name="description" content="License Vyre's revenue recovery layer inside your own offer. Show every merchant on your book what it is losing and help it recover, without touching the payment flow.">
+<link rel="canonical" href="https://www.vyrehq.com/embedded.html">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.vyrehq.com/">
+<meta property="og:url" content="https://www.vyrehq.com/embedded.html">
 <meta property="og:site_name" content="Vyre">
-<meta property="og:title" content="Vyre — Revenue doesn't lie. Systems do.">
-<meta property="og:description" content="Payments revenue recovery. VYRE OS for merchants, VYRE Embedded for payment providers.">
+<meta property="og:title" content="VYRE Embedded — Revenue recovery, inside your offer">
+<meta property="og:description" content="For gateways, PSPs and acquirers. Attach revenue on your installed base. Never reroutes, never touches the flow.">
 <meta property="og:image" content="https://www.vyrehq.com/og-image.png">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Vyre — Revenue doesn't lie. Systems do.">
-<meta name="twitter:description" content="Payments revenue recovery. VYRE OS for merchants, VYRE Embedded for payment providers.">
+<meta name="twitter:title" content="VYRE Embedded — Revenue recovery, inside your offer">
+<meta name="twitter:description" content="For gateways, PSPs and acquirers. Attach revenue on your installed base. Never reroutes, never touches the flow.">
 <meta name="twitter:image" content="https://www.vyrehq.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -325,46 +325,22 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://www.vyrehq.com/#organization",
-      "name": "Vyre",
-      "alternateName": ["Vyre HQ", "VYRE"],
-      "url": "https://www.vyrehq.com/",
-      "logo": "https://www.vyrehq.com/og-image.png",
-      "description": "Payments revenue recovery. VYRE OS finds revenue leaking from a merchant's payment stack and shows how to recover it. VYRE Embedded licenses the same intelligence layer to payment gateways, PSPs and acquirers for their own merchants.",
-      "email": "hello@vyrehq.com",
-      "foundingDate": "2026",
-      "founder": {"@id": "https://www.vyrehq.com/#founder"},
+      "@type": "Service",
+      "@id": "https://www.vyrehq.com/embedded.html#service",
+      "name": "VYRE Embedded",
+      "serviceType": "OEM payments revenue recovery intelligence layer",
+      "provider": {"@id": "https://www.vyrehq.com/#organization"},
       "areaServed": ["GB", "EU", "HK", "SG"],
-      "knowsAbout": ["payment authorisation rates", "cross-border payments", "FX spread", "payment routing", "chargebacks", "network tokenisation", "payment orchestration"],
-      "sameAs": ["https://www.linkedin.com/company/vyrehq/"]
-    },
-    {
-      "@type": "Person",
-      "@id": "https://www.vyrehq.com/#founder",
-      "name": "Dean Farley",
-      "jobTitle": "Founder",
-      "image": "https://www.vyrehq.com/dean-farley.jpg",
-      "worksFor": {"@id": "https://www.vyrehq.com/#organization"},
-      "description": "Global payments specialist with over 11 years across acquiring, orchestration, tokenisation, FX and cross-border payments.",
-      "sameAs": ["https://www.linkedin.com/in/df2024/"]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.vyrehq.com/#website",
-      "url": "https://www.vyrehq.com/",
-      "name": "Vyre",
-      "publisher": {"@id": "https://www.vyrehq.com/#organization"},
-      "inLanguage": "en-GB"
+      "audience": {"@type": "BusinessAudience", "audienceType": "Payment gateways, PSPs and acquirers"},
+      "description": "VYRE Embedded licenses Vyre's revenue recovery intelligence layer to payment providers so they can show each merchant on their book what it is losing, how to recover it and what the recovery was worth, within the provider's own remit. It never reroutes or changes the payment flow."
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.vyrehq.com/#faq",
+      "@id": "https://www.vyrehq.com/embedded.html#faq",
       "mainEntity": [
-        {"@type": "Question", "name": "What is the difference between VYRE OS and VYRE Embedded?", "acceptedAnswer": {"@type": "Answer", "text": "VYRE OS is for merchants: it reviews your own payment estate, quantifies what you are losing and shows how to recover it. VYRE Embedded is for payment providers: the same intelligence layer, licensed so a gateway, PSP or acquirer can advise its own merchants within its own remit."}},
-        {"@type": "Question", "name": "What is payment leakage?", "acceptedAnswer": {"@type": "Answer", "text": "Payment leakage is revenue a merchant should have received on transactions that were attempted, but did not receive because of avoidable declines, hidden FX spread, poor routing, missing retries, unchallenged chargebacks or absent local payment methods. Industry benchmarks put it at 1 to 3% of revenue for cross-border merchants."}},
-        {"@type": "Question", "name": "Is Vyre independent?", "acceptedAnswer": {"@type": "Answer", "text": "On merchant reviews, yes. Vyre takes no fees, kickbacks or referral payments from PSPs, acquirers or orchestrators; the merchant pays, against recovery. VYRE Embedded is a separate line, licensed to payment providers for use with their own merchants, and the two are never mixed on the same engagement."}},
-        {"@type": "Question", "name": "Does Vyre change anything in my payment flow?", "acceptedAnswer": {"@type": "Answer", "text": "No. Vyre does not reroute transactions or change your stack. It validates the data, tells you what is not working, where volume should go instead, why, how to make the change and what the recovery is worth, then verifies the result once you make it."}}
+        {"@type": "Question", "name": "Does VYRE Embedded change routing or touch the payment flow?", "acceptedAnswer": {"@type": "Answer", "text": "No. It never reroutes or changes anything automatically. It validates data integrity, then tells the merchant what is not working, where volume should go instead, why, how to make the change and what the recovery is worth, and verifies the result once live."}},
+        {"@type": "Question", "name": "Does Vyre see card numbers?", "acceptedAnswer": {"@type": "Answer", "text": "No. VYRE Embedded does not ingest PAN. It accepts BIN and other non-PAN fields only."}},
+        {"@type": "Question", "name": "Can one merchant see another merchant's data?", "acceptedAnswer": {"@type": "Answer", "text": "No. Each customer runs in an isolated instance with hard data separation. Vyre's control plane receives only signed aggregate metering records, never transaction data."}}
       ]
     }
   ]
@@ -379,133 +355,180 @@
     <a href="/"><img class="logo-img" src="/logo.png" alt="Vyre" width="400" height="167"></a>
     <div class="nav-links">
       <a href="/os.html">VYRE OS</a>
-      <a href="/embedded.html">VYRE Embedded</a>
+      <a href="/embedded.html" class="nav-active">VYRE Embedded</a>
       <a href="/os.html#method">Methodology</a>
       <a href="/#about">About</a>
-      <a href="/os.html#cta" class="btn-primary">Get my free diagnostic →</a>
+      <a href="#briefing" class="btn-primary">Book a partner briefing →</a>
     </div>
   </div>
 </nav>
 </header>
 <main>
 
-<!-- HERO: the fork -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-bg-1"></div>
   <div class="hero-bg-2"></div>
   <div class="container hero-inner">
     <div class="reveal in">
-      <div class="eyebrow">Payments revenue recovery</div>
-      <h1>Revenue doesn't lie.<br><span class="accent">Systems do.</span></h1>
-      <p class="hero-sub">Every payment estate earns less than it should. Declines that could have been approved, FX spread no one priced, routing decided for you rather than by you. Vyre finds it, proves it in pounds, shows you how to recover it, then verifies that you did.</p>
-      <p class="hero-note">Two ways in, depending on who you are.</p>
+      <div class="eyebrow">VYRE Embedded · For payment providers</div>
+      <h1>Your merchants are leaking revenue<br>on your rails.<br><span class="accent">Be the one who tells them.</span></h1>
+      <p class="hero-sub">VYRE Embedded puts Vyre's revenue recovery layer inside your own offer. Every merchant on your book sees what it is losing, how to recover it and what the recovery was worth, delivered by you, within your remit. It never reroutes a transaction or touches the flow.</p>
+      <div class="hero-ctas">
+        <a href="#briefing" class="btn-primary btn-primary-lg">Book a partner briefing →</a>
+        <a href="#what" class="btn-ghost">See what it does</a>
+      </div>
+      <p class="hero-note">Gateways, PSPs and acquirers. Read-only. No PAN. One isolated instance per customer.</p>
     </div>
-
-    <div class="fork-grid reveal">
-      <a class="fork-card" href="/os.html">
-        <div class="fork-who">I take card payments</div>
-        <div class="fork-name">VYRE OS</div>
-        <p class="fork-line">For merchants processing £8m+ a year. A free initial audit shows what your stack is leaking across seven categories. Then a ranked fix list and a recovery you can measure.</p>
-        <span class="fork-cta">See how it works for merchants →</span>
-      </a>
-      <a class="fork-card navy" href="/embedded.html">
-        <div class="fork-who">I process payments for merchants</div>
-        <div class="fork-name">VYRE Embedded</div>
-        <p class="fork-line">For gateways, PSPs and acquirers. The same intelligence layer, embedded in your own offer, so you can show every merchant on your book what they are losing and help them recover it.</p>
-        <span class="fork-cta">See how it works for providers →</span>
-      </a>
-    </div>
-    <p class="fork-note">Not sure which you are? If payments run through you on behalf of someone else, you want Embedded. Otherwise, start with OS.</p>
   </div>
 </section>
 
-<!-- SHARED METHOD -->
-<section class="block white" id="method-summary">
+<!-- WHO IT'S FOR -->
+<section class="block white" id="who">
   <div class="container">
     <div class="reveal">
-      <div class="block-eyebrow">One method behind both</div>
-      <h2 class="block-h2" style="font-size:clamp(36px,4.5vw,52px);">Detect. Quantify. Fix. Verify.</h2>
-      <p class="block-lead">Vyre never touches the payment flow. It reads what already happened, works out what should have happened, and tells you the gap in pounds, with the reason and the fix attached. Then it checks the fix landed.</p>
+      <div class="block-eyebrow">Who it's for</div>
+      <h2 class="block-h2" style="font-size:clamp(36px,4.5vw,52px);">Built for the people who run payments for other people.</h2>
+      <p class="block-lead">If merchants process through you, you already hold the data that shows where their revenue is going. What you lack is a way to turn it into advice they will act on, and into a service you can be paid for.</p>
+      <div class="pill-row">
+        <span class="pill">Payment gateways</span><span class="pill">PSPs</span><span class="pill">Acquirers</span><span class="pill">Vertical platforms with embedded payments</span>
+      </div>
     </div>
-    <div class="method-mini reveal reveal-d1">
-      <div><div class="k">01</div><div class="v">Detect</div><div class="d">Seven leakage categories, read from your existing data. Nothing installed in the flow.</div></div>
-      <div><div class="k">02</div><div class="v">Quantify</div><div class="d">Every gap in pounds, benchmarked to your vertical and geography, with a confidence level.</div></div>
-      <div><div class="k">03</div><div class="v">Fix</div><div class="d">What to change, where, why and in what order. Ranked by value and time to deploy.</div></div>
-      <div><div class="k">04</div><div class="v">Verify</div><div class="d">Recovery measured against a frozen baseline once the change is live. No claimed numbers.</div></div>
-    </div>
-    <div style="margin-top:40px;"><a href="/os.html#method" class="btn-ghost">Read the full methodology →</a></div>
   </div>
 </section>
 
-<!-- ABOUT (shared) -->
-<section class="block" id="about">
+<!-- WHAT IT DOES -->
+<section class="block navy" id="what">
   <div class="container">
-    <div class="about-grid">
+    <div class="reveal">
+      <div class="block-eyebrow">What it does</div>
+      <h2 class="block-h2">It tells the merchant what is not working, and what it is worth to fix.</h2>
+      <p class="block-lead">VYRE Embedded reads the transaction data you already hold, validates its integrity, then works through each merchant's estate and reports back in plain terms. You decide how it is surfaced: inside your portal, in your account reviews, or as a paid service of its own.</p>
+    </div>
+    <div class="flow reveal reveal-d1">
+      <div><div class="n">01</div><div class="t">Validate</div><div class="d">Checks the data is complete and consistent before anything is counted.</div></div>
+      <div><div class="n">02</div><div class="t">What</div><div class="d">Which parts of the estate are underperforming, by severity.</div></div>
+      <div><div class="n">03</div><div class="t">Where</div><div class="d">Where volume should go instead, within your rails and products.</div></div>
+      <div><div class="n">04</div><div class="t">Why</div><div class="d">The reason, with the evidence and the benchmark behind it.</div></div>
+      <div><div class="n">05</div><div class="t">How</div><div class="d">The change to make, in order, and what it is worth in pounds.</div></div>
+      <div><div class="n">06</div><div class="t">Verify</div><div class="d">Recovery measured against the frozen baseline once the change is live.</div></div>
+    </div>
+    <div class="boundary reveal reveal-d2"><strong style="color:var(--vyre-cream);">The boundary.</strong> VYRE Embedded does not reroute, retry, or change anything automatically. It never sits in the payment flow. Every change is made by the merchant or by you, and only then verified.</div>
+  </div>
+</section>
+
+<!-- WHAT YOU GAIN -->
+<section class="block" id="gain">
+  <div class="container">
+    <div class="reveal">
+      <div class="block-eyebrow">What you gain</div>
+      <h2 class="block-h2" style="font-size:clamp(36px,4.5vw,52px);">Attach revenue. Keep merchants. Win wallet share without discounting.</h2>
+    </div>
+    <div class="emb-grid reveal reveal-d1">
+      <div class="emb-card"><div class="n">01</div><h3>Attach revenue on your installed base</h3><p>A value-added service your existing merchants will pay for, priced by you, running on data you already hold. No new acquisition cost.</p></div>
+      <div class="emb-card"><div class="n">02</div><h3>Retention you can show</h3><p>The provider that shows a merchant what it recovered is the provider it keeps. Verified recovery, in pounds, in your account review.</p></div>
+      <div class="emb-card"><div class="n">03</div><h3>Wallet share on merit</h3><p>Where volume on other providers would perform better on your rails, the merchant sees the evidence. You win it on numbers, not on price.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY -->
+<section class="block white" id="security">
+  <div class="container">
+    <div class="how-grid">
       <div class="reveal">
-        <a href="https://www.linkedin.com/in/df2024/" rel="me author" aria-label="Dean Farley on LinkedIn"><img class="about-photo" src="/dean-farley.jpg" width="480" height="600" alt="Dean Farley, founder of Vyre" loading="lazy"></a>
-        <p class="about-photo-cap">Dean Farley, Founder<br><a href="https://www.linkedin.com/in/df2024/" rel="me author">Connect on LinkedIn →</a></p>
-      </div>
-      <div class="reveal reveal-d1">
-        <div class="block-eyebrow">Who is behind Vyre</div>
-        <h2 class="indep-h2">Built by an operator.<br>Not an agency.</h2>
-        <div class="about-text">
-          <p>Vyre was founded by Dean Farley after more than eleven years in global payments, working across acquiring, orchestration, tokenisation, FX and cross-border flows for merchants and payment providers in the UK, EU and Asia.</p>
-          <p>The methodology is the one he used inside the industry to find where merchant revenue was going. VYRE OS puts it to work for the merchant. VYRE Embedded puts it inside the payment providers who serve them.</p>
-          <p>Every merchant report is reviewed and signed off by Dean before it is released.</p>
-        </div>
-        <div class="about-links">
-          <a href="https://www.linkedin.com/in/df2024/" rel="me author">Dean Farley on LinkedIn →</a>
-          <a href="https://www.linkedin.com/company/vyrehq/">Vyre on LinkedIn →</a>
+        <div class="block-eyebrow">Security and data</div>
+        <h2 class="block-h2" style="font-size:clamp(36px,4.5vw,52px); margin-bottom:32px;">Built for a procurement review, not around one.</h2>
+        <div class="how-content">
+          <p>VYRE Embedded is designed so that Vyre never holds your merchants' transaction data centrally and no merchant can ever see another's.</p>
+          <p>Each customer runs in its own isolated instance, hosted in the EU first and deployable into your own cloud. Vyre's control plane receives only signed, aggregate metering records per verified period. Never a transaction.</p>
+          <p class="strong">No PAN is ingested. BIN and non-PAN fields only.</p>
         </div>
       </div>
-      <div class="reveal reveal-d2 about-facts-col">
-        <div class="about-facts">
-          <div class="about-fact"><div class="about-fact-k">Experience</div><div class="about-fact-v">11+ years in global payments: acquiring, orchestration, tokenisation, FX, cross-border.</div></div>
-          <div class="about-fact"><div class="about-fact-k">Independence</div><div class="about-fact-v">On merchant reviews, Vyre takes no fees, kickbacks or referral payments from PSPs, acquirers or orchestrators. The merchant pays, against recovery. VYRE Embedded is a separate line, licensed to providers for their own merchants.</div></div>
-          <div class="about-fact"><div class="about-fact-k">Coverage</div><div class="about-fact-v">UK, EU, Hong Kong and Singapore. Based between Marbella and Nottingham.</div></div>
-          <div class="about-fact"><div class="about-fact-k">Contact</div><div class="about-fact-v"><a href="mailto:hello@vyrehq.com" style="color:var(--vyre-navy);">hello@vyrehq.com</a></div></div>
-        </div>
+      <div class="how-callout reveal reveal-d1">
+        <div class="how-callout-eb">Operating model</div>
+        <h3>What a security team will ask, answered.</h3>
+        <ul>
+          <li>Read-only. Nothing in the payment flow.</li>
+          <li>No PAN. BIN and non-PAN fields only.</li>
+          <li>One isolated instance per customer. Hard data separation.</li>
+          <li>EU hosting first. Customer-cloud deployment available.</li>
+          <li>Control plane sees signed aggregate metering only.</li>
+          <li>Provider retains approve, pause and stop controls per merchant.</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ (shared, cross-product) -->
-<section class="block white" id="faq">
+<!-- FAQ -->
+<section class="block white" id="faq" style="padding-top:0;">
   <div class="container">
     <div class="block-eyebrow reveal">Common questions</div>
-    <h2 class="block-h2 reveal" style="font-size:clamp(36px,4.5vw,52px);">Straight answers first.</h2>
+    <h2 class="block-h2 reveal" style="font-size:clamp(32px,4vw,44px);">Before the briefing.</h2>
     <div class="faq-list">
-      <div class="faq-item reveal">
-        <h3>What is the difference between VYRE OS and VYRE Embedded?</h3>
-        <p>VYRE OS is for merchants: it reviews your own payment estate, quantifies what you are losing and shows how to recover it. VYRE Embedded is for payment providers: the same intelligence layer, licensed so a gateway, PSP or acquirer can advise its own merchants within its own remit.</p>
-      </div>
-      <div class="faq-item reveal">
-        <h3>What is payment leakage?</h3>
-        <p>Payment leakage is revenue a merchant should have received on transactions that were attempted, but did not receive because of avoidable declines, hidden FX spread, poor routing, missing retries, unchallenged chargebacks or absent local payment methods. Industry benchmarks put it at 1 to 3% of revenue for cross-border merchants.</p>
-      </div>
-      <div class="faq-item reveal">
-        <h3>Is Vyre independent?</h3>
-        <p>On merchant reviews, yes. Vyre takes no fees, kickbacks or referral payments from PSPs, acquirers or orchestrators; the merchant pays, against recovery. VYRE Embedded is a separate line, licensed to payment providers for use with their own merchants, and the two are never mixed on the same engagement.</p>
-      </div>
-      <div class="faq-item reveal">
-        <h3>Does Vyre change anything in my payment flow?</h3>
-        <p>No. Vyre does not reroute transactions or change your stack. It validates the data, tells you what is not working, where volume should go instead, why, how to make the change and what the recovery is worth, then verifies the result once you make it.</p>
-      </div>
+      <div class="faq-item reveal"><h3>Does VYRE Embedded change routing or touch the payment flow?</h3><p>No. It never reroutes or changes anything automatically. It validates data integrity, then tells the merchant what is not working, where volume should go instead, why, how to make the change and what the recovery is worth, and verifies the result once live.</p></div>
+      <div class="faq-item reveal"><h3>Does Vyre see card numbers?</h3><p>No. VYRE Embedded does not ingest PAN. It accepts BIN and other non-PAN fields only.</p></div>
+      <div class="faq-item reveal"><h3>Can one merchant see another merchant's data?</h3><p>No. Each customer runs in an isolated instance with hard data separation. Vyre's control plane receives only signed aggregate metering records, never transaction data.</p></div>
+      <div class="faq-item reveal"><h3>How is this different from the merchant service, VYRE OS?</h3><p>Same method, different buyer. VYRE OS is sold to the merchant and paid for by the merchant alone. VYRE Embedded is licensed to you, the provider, for use with your own merchants within your remit. The two are never mixed on the same engagement.</p></div>
     </div>
   </div>
 </section>
 
-<!-- FINAL FORK -->
-<section class="final-cta" id="cta" style="padding:100px 0 120px;">
+<!-- BRIEFING CTA -->
+<section class="final-cta" id="briefing">
   <div class="container">
     <div class="reveal">
-      <h2 style="font-size:clamp(36px,5vw,64px);">Find out what the estate<br><span class="accent">should have earned.</span></h2>
-      <p class="final-cta-sub">Merchants start with a free initial audit. Providers start with a partner briefing.</p>
-      <div class="hero-ctas" style="justify-content:center;">
-        <a href="/os.html#cta" class="btn-primary btn-primary-lg">Merchants: get my free diagnostic →</a>
-        <a href="/embedded.html#briefing" class="btn-ghost" style="color:var(--vyre-cream); border-color:rgba(245,240,232,.3);">Providers: book a partner briefing →</a>
-      </div>
+      <h2 style="font-size:clamp(36px,5vw,64px);">Book a partner briefing.<br><span class="accent">Forty minutes. Your book, your numbers.</span></h2>
+      <p class="final-cta-sub">We walk through how VYRE Embedded would sit inside your offer, what it would surface for a typical merchant on your book, and what a design partnership looks like. No deck of slides, no commitment.</p>
+      <form class="diag-form" action="https://formsubmit.co/hello@vyrehq.com" method="POST">
+        <input type="hidden" name="_subject" value="VYRE Embedded partner briefing request">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.vyrehq.com/thank-you.html">
+        <input type="text" name="_honey" style="display:none">
+        <div class="form-row">
+          <div><label for="pb-company">Company</label><input id="pb-company" type="text" name="company" placeholder="Your company" required></div>
+          <div><label for="pb-name">Your name</label><input id="pb-name" type="text" name="name" placeholder="First and last name" required></div>
+        </div>
+        <div class="form-row">
+          <div><label for="pb-email">Work email</label><input id="pb-email" type="email" name="work_email" placeholder="you@company.com" required></div>
+          <div><label for="pb-role">Your role</label><input id="pb-role" type="text" name="role" placeholder="Partnerships, Product, CFO…" required></div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="pb-type">Type of provider</label>
+            <select id="pb-type" name="provider_type" required>
+              <option value="" disabled selected>Select one</option>
+              <option>Payment gateway</option>
+              <option>PSP</option>
+              <option>Acquirer</option>
+              <option>Orchestrator</option>
+              <option>Vertical platform with embedded payments</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="pb-book">Merchants on your book</label>
+            <select id="pb-book" name="merchant_count" required>
+              <option value="" disabled selected>Select range</option>
+              <option>Under 100</option>
+              <option>100 – 1,000</option>
+              <option>1,000 – 10,000</option>
+              <option>10,000+</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row single">
+          <div><label for="pb-notes">What prompted this? <span style="opacity:.5">(optional)</span></label><textarea id="pb-notes" name="notes" rows="3" placeholder="Retention, attach revenue, a specific merchant segment…"></textarea></div>
+        </div>
+        <div class="consent">
+          <input id="pb-consent" type="checkbox" name="consent" value="agreed" required>
+          <label for="pb-consent">I agree to Vyre processing these details to arrange a briefing, as described in the <a href="/privacy.html">privacy policy</a>.</label>
+        </div>
+        <button type="submit" class="btn-primary btn-primary-lg">Book a partner briefing →</button>
+        <p class="form-note">Or email <a href="mailto:hello@vyrehq.com" style="color:var(--vyre-orange);">hello@vyrehq.com</a>. We reply within one working day.</p>
+      </form>
     </div>
   </div>
 </section>
