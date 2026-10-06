@@ -339,6 +339,7 @@
       "@type": "FAQPage",
       "@id": "https://www.vyrehq.com/os.html#faq",
       "mainEntity": [
+        {"@type": "Question", "name": "I already have a dashboard. Why do I need Vyre?", "acceptedAnswer": {"@type": "Answer", "text": "You have level 1: a dashboard that ingests your data and shows it back to you. If your provider also retries or re-routes failed transactions, that is level 2. Vyre is levels 3 and 4. Level 3 tells you what is actually wrong, what it is costing the business in pounds, and exactly how to fix it. Level 4 verifies the recovery once the fix is live. Data on its own is not a decision. There is also an incentive question: a provider's routing and retry logic is built around its own rails and margins, not your P&L. VYRE OS is fully agnostic and independent. It takes no money, referral fee or revenue share from any provider, so the recommendation only ever tracks your numbers."}},
         {"@type": "Question", "name": "What does the free Vyre audit include?", "acceptedAnswer": {"@type": "Answer", "text": "A board-ready report within 48 hours that quantifies leakage across seven categories in pounds, gives the reason behind each figure with sources and confidence levels, and ranks fixes by impact and time to deploy. No call, no card, no commitment."}},
         {"@type": "Question", "name": "How does VYRE OS get paid?", "acceptedAnswer": {"@type": "Answer", "text": "The initial audit is free. The deep audit and recovery work carry a small fixed fee that is credited in full against the recovery the merchant validates. On merchant reviews Vyre takes no fees, kickbacks or referral payments from PSPs, acquirers or orchestrators."}},
         {"@type": "Question", "name": "Do I need to change my PSP or orchestrator?", "acceptedAnswer": {"@type": "Answer", "text": "No. Vyre works inside the merchant's existing stack. Orchestrators such as Primer, Gr4vy and Spreedly are infrastructure that moves money; Vyre is the intelligence layer that shows what the existing stack, orchestrator included, is costing."}},
@@ -658,8 +659,16 @@
   <div class="container">
     <div class="compare-block reveal">
       <div class="block-eyebrow">Where we sit</div>
-      <h2><span class="strike">Not Primer. Not Gr4vy. Not Spreedly.</span><br>Different layer. Different incentive.</h2>
+      <h2><span class="strike">Not a dashboard. Not an orchestrator.</span><br>Different layer. Different incentive.</h2>
       <p class="lead">Orchestrators are infrastructure — they move money. Vyre is intelligence — we tell you what your existing stack, orchestrator included, is costing you. You probably need both.</p>
+      <div class="method-mini reveal reveal-d1" style="margin-top:40px;">
+        <div><div class="k">Level 1</div><div class="v">Dashboard</div><div class="d">Ingests your data and shows it back to you. You already have this.</div></div>
+        <div><div class="k">Level 2</div><div class="v">Routing</div><div class="d">Your provider may retry or re-route failed transactions. On its rails, to its logic.</div></div>
+        <div style="border-top:3px solid var(--vyre-orange);"><div class="k">Level 3 · Vyre</div><div class="v">Intelligence</div><div class="d">What is wrong, what it costs you in pounds, and exactly how to fix it.</div></div>
+        <div style="border-top:3px solid var(--vyre-orange);"><div class="k">Level 4 · Vyre</div><div class="v">Verification</div><div class="d">Recovery measured against a frozen baseline once the fix is live.</div></div>
+      </div>
+      <p style="margin-top:28px; font-size:17px; color:var(--vyre-ink); max-width:820px; line-height:1.6;"><strong>Already have a dashboard?</strong> Good. That is level 1. Having the data is not the same as knowing what to do with it, what it is costing the business, or how to fix it. And a provider's routing logic is built around its own rails and margins, not your P&amp;L. VYRE OS is fully agnostic and independent: no money, referral fee or revenue share from any provider, ever.</p>
+
       <a href="#method" class="btn-ghost">See the methodology →</a>
       <p style="margin-top:28px; font-size:15px; color:var(--vyre-muted);">Run payments for merchants rather than taking them yourself? That is <a href="/embedded.html" style="color:var(--vyre-navy); font-weight:600; border-bottom:2px solid var(--vyre-orange); text-decoration:none;">VYRE Embedded</a>.</p>
     </div>
@@ -706,6 +715,10 @@
     <div class="block-eyebrow reveal">Common questions</div>
     <h2 class="block-h2 reveal" style="font-size:clamp(36px,4.5vw,52px);">Straight answers before you submit.</h2>
     <div class="faq-list">
+      <div class="faq-item reveal">
+        <h3>I already have a dashboard. Why do I need Vyre?</h3>
+        <p>You have level 1: a dashboard that ingests your data and shows it back to you. If your provider also retries or re-routes failed transactions, that is level 2. Vyre is levels 3 and 4. Level 3 tells you what is actually wrong, what it is costing the business in pounds, and exactly how to fix it. Level 4 verifies the recovery once the fix is live. Data on its own is not a decision. There is also an incentive question: a provider's routing and retry logic is built around its own rails and margins, not your P&L. VYRE OS is fully agnostic and independent. It takes no money, referral fee or revenue share from any provider, so the recommendation only ever tracks your numbers.</p>
+      </div>
       <div class="faq-item reveal">
         <h3>What does the free Vyre audit include?</h3>
         <p>A board-ready report within 48 hours that quantifies leakage across seven categories in pounds, gives the reason behind each figure with sources and confidence levels, and ranks fixes by impact and time to deploy. No call, no card, no commitment.</p>
