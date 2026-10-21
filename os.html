@@ -312,6 +312,7 @@
   .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
   .pill { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--vyre-line); background: white; font-size: 13px; font-weight: 600; color: var(--vyre-navy); }
   @media (max-width: 900px) {
+    .flow[style*="repeat(3"] { grid-template-columns: 1fr !important; }
     .fork-grid { grid-template-columns: 1fr; margin-top: 48px; }
     .fork-card { padding: 32px; }
     .method-mini { grid-template-columns: 1fr 1fr; }
@@ -617,6 +618,26 @@
   </div>
 </section>
 
+<!-- TECHNICAL CAPABILITIES -->
+<section class="block navy" id="capabilities">
+  <div class="container">
+    <div class="reveal">
+      <div class="block-eyebrow">Technical capabilities</div>
+      <h2 class="block-h2">Connected in days. Nothing installed in your flow.</h2>
+      <p class="block-lead">VYRE OS is designed to be adopted without an engineering project. It reads what your estate already reports, in an instance that is yours alone, and never touches a card number.</p>
+    </div>
+    <div class="flow reveal reveal-d1" style="grid-template-columns: repeat(3, 1fr);">
+      <div><div class="n">No-code integration</div><div class="t">Connect without a build</div><div class="d">Authorised reporting exports from your existing providers, or a read-only reporting connection. No SDK in your checkout, no change to your providers, no engineering sprint to get started.</div></div>
+      <div><div class="n">Isolated profiles</div><div class="t">Your instance, your data</div><div class="d">Each customer runs in its own isolated instance with its own commercial profile: providers, contracted pricing, markets and processing lanes. No shared pool, no cross-customer visibility.</div></div>
+      <div><div class="n">Read-only by design</div><div class="t">Analyse, never execute</div><div class="d">VYRE OS cannot route, retry, refund or change a provider setting. It holds no credentials that could. Your team keeps every control.</div></div>
+      <div><div class="n">No card details</div><div class="t">PAN, CVV and tokens never ingested</div><div class="d">Card numbers are rejected at the point of ingestion and are not stored. Analysis runs on BIN, outcomes, fees and settlement data only.</div></div>
+      <div><div class="n">Continuous cadence</div><div class="t">Scheduled agent review</div><div class="d">Daily, weekly or monthly review runs across every provider and lane, with open findings re-tested on each run and new ones surfaced as they appear.</div></div>
+      <div><div class="n">Reporting</div><div class="t">Executive and operator views</div><div class="d">Board-level summaries for the CFO, an opportunity ledger for the payments team, and verified outcomes reported against a frozen baseline.</div></div>
+    </div>
+    <div class="boundary reveal reveal-d2"><strong style="color:var(--vyre-cream);">Hosting.</strong> VYRE-managed, isolated per customer, in an agreed region. The deployment model, hosting region and the controls that apply are confirmed in writing during the security review for each engagement.</div>
+  </div>
+</section>
+
 <!-- SYNTHETIC DEMONSTRATION -->
 <section class="block" id="example">
   <div class="container">
@@ -870,6 +891,7 @@
           <li><a href="/os.html">For merchants</a></li>
           <li><a href="/os.html#how">How it works</a></li>
           <li><a href="/os.html#method">What we analyse</a></li>
+          <li><a href="/os.html#capabilities">Technical capabilities</a></li>
           <li><a href="/os.html#cta">Request a free audit</a></li>
         </ul>
       </div>
