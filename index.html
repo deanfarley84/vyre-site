@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payments revenue recovery for merchants and payment providers | Vyre</title>
-<meta name="description" content="Vyre finds the revenue a payment estate should have earned and didn't. VYRE OS for merchants. VYRE Embedded for gateways, PSPs and acquirers.">
+<title>The independent intelligence layer for payments | Vyre</title>
+<meta name="description" content="Vyre helps merchants and payment providers understand where payment performance breaks down, what to change and whether those changes deliver measurable value. VYRE OS for merchants. VYRE Embedded for payment providers.">
 <link rel="canonical" href="https://www.vyrehq.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.vyrehq.com/">
 <meta property="og:site_name" content="Vyre">
-<meta property="og:title" content="Vyre — Revenue doesn't lie. Systems do.">
-<meta property="og:description" content="Payments revenue recovery. VYRE OS for merchants, VYRE Embedded for payment providers.">
+<meta property="og:title" content="Vyre: the independent intelligence layer for payments">
+<meta property="og:description" content="Diagnose the cause. Prescribe the fix. Verify the value. Independent, AI-native payment intelligence for merchants and payment providers.">
 <meta property="og:image" content="https://www.vyrehq.com/og-image.png">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Vyre — Revenue doesn't lie. Systems do.">
-<meta name="twitter:description" content="Payments revenue recovery. VYRE OS for merchants, VYRE Embedded for payment providers.">
+<meta name="twitter:title" content="Vyre: the independent intelligence layer for payments">
+<meta name="twitter:description" content="Diagnose the cause. Prescribe the fix. Verify the value. Independent, AI-native payment intelligence for merchants and payment providers.">
 <meta name="twitter:image" content="https://www.vyrehq.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -320,6 +320,45 @@
   }
 </style>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+  /* --- positioning update (Oct 2026) --- */
+  .nav-toggle { display: none; background: transparent; border: 1px solid var(--vyre-line); border-radius: 6px; padding: 10px 14px; font: inherit; font-size: 14px; font-weight: 600; color: var(--vyre-navy); cursor: pointer; }
+  .nav-right { display: flex; align-items: center; gap: 12px; }
+  .ledger { display: grid; gap: 1px; background: rgba(245,240,232,0.12); border: 1px solid rgba(245,240,232,0.12); border-radius: 12px; overflow: hidden; position: relative; }
+  .ledger-row { display: grid; grid-template-columns: 180px 1fr; gap: 16px; background: var(--vyre-navy); padding: 16px 20px; align-items: baseline; }
+  .ledger-k { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--vyre-orange); font-weight: 700; }
+  .ledger-v { font-size: 15px; color: var(--vyre-cream); line-height: 1.5; }
+  .ledger-v .tag { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: rgba(232,116,60,0.18); color: var(--vyre-orange); vertical-align: middle; }
+  .ledger-v .tag.ok { background: rgba(47,125,91,0.25); color: #8FD3B0; }
+  .ledger-note { margin-top: 20px; font-size: 12px; color: rgba(245,240,232,0.55); font-style: italic; line-height: 1.5; }
+  .stage-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--vyre-line); border: 1px solid var(--vyre-line); border-radius: 14px; overflow: hidden; margin-top: 48px; }
+  .stage-strip > div { background: white; padding: 28px 24px; }
+  .stage-strip .k { font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--vyre-orange); font-weight: 700; margin-bottom: 8px; }
+  .stage-strip .v { font-size: 20px; font-weight: 800; color: var(--vyre-navy); letter-spacing: -0.02em; margin-bottom: 8px; line-height: 1.15; }
+  .stage-strip .d { font-size: 14px; color: var(--vyre-muted); line-height: 1.5; }
+  .flow.products-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .flow.products-grid .products-cell { padding: 32px; min-width: 0; }
+  .flow.products-grid .t { font-size: 24px; margin-bottom: 14px; }
+  .flow.products-grid .d { font-size: 15px; line-height: 1.6; }
+  @media (max-width: 900px) { .flow.products-grid { grid-template-columns: 1fr; } .flow.products-grid .products-cell { padding: 24px; } }
+  .trust-list { list-style: none; display: grid; gap: 14px; }
+  .trust-list li { display: flex; gap: 12px; font-size: 16px; line-height: 1.55; color: var(--vyre-ink); }
+  .trust-list li::before { content: '✓'; color: var(--vyre-orange); font-weight: 700; flex-shrink: 0; }
+  .synthetic-badge { display: inline-block; padding: 6px 12px; background: rgba(232,116,60,0.14); border: 1px solid rgba(232,116,60,0.5); border-radius: 4px; font-size: 12px; color: var(--vyre-orange); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .btn-ghost.on-navy { color: var(--vyre-cream); border-color: rgba(245,240,232,.3); }
+  .btn-ghost.on-navy:hover { background: rgba(245,240,232,0.08); }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--vyre-orange); outline-offset: 2px; }
+  @media (max-width: 900px) {
+    .nav-toggle { display: inline-block; }
+    .nav-links { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; align-items: stretch; gap: 0; background: var(--vyre-cream); border-bottom: 1px solid var(--vyre-line); padding: 8px 24px 16px; }
+    .nav-links.open { display: flex; }
+    .nav-links a:not(.btn-primary) { display: block; padding: 14px 0; border-bottom: 1px solid var(--vyre-line); font-size: 16px; }
+    .nav-links .btn-primary { margin-top: 12px; text-align: center; }
+    .ledger-row { grid-template-columns: 1fr; gap: 6px; }
+    .stage-strip { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px) { .stage-strip { grid-template-columns: 1fr; } .outcome-stats { grid-template-columns: 1fr 1fr; } }
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -331,12 +370,12 @@
       "alternateName": ["Vyre HQ", "VYRE"],
       "url": "https://www.vyrehq.com/",
       "logo": "https://www.vyrehq.com/og-image.png",
-      "description": "Independent, provider-agnostic payments revenue recovery technology, headquartered in Europe and available globally. VYRE OS finds revenue leaking from a merchant's payment stack and shows how to recover it. VYRE Embedded licenses the same intelligence layer to payment gateways, PSPs and acquirers for their own merchants.",
+      "description": "Independent, AI-native payment intelligence for merchants and payment providers, headquartered in Europe and available globally. VYRE OS gives merchants read-only, provider-agnostic analysis of payment performance with prioritised advisory and outcome verification. VYRE Embedded licenses the same intelligence core to PSPs, acquirers, gateways and platforms for evidence-backed merchant advisory.",
       "email": "hello@vyrehq.com",
       "foundingDate": "2026",
       "founder": {"@id": "https://www.vyrehq.com/#founder"},
       "areaServed": "Worldwide",
-      "knowsAbout": ["payment authorisation rates", "cross-border payments", "FX spread", "payment routing", "chargebacks", "network tokenisation", "payment orchestration"],
+      "knowsAbout": ["payment authorisation rates", "decline classification", "cross-border payments", "FX spread", "payment routing", "chargebacks", "network tokenisation", "payment orchestration", "payment performance verification"],
       "sameAs": ["https://www.linkedin.com/company/vyrehq/"]
     },
     {
@@ -346,7 +385,7 @@
       "jobTitle": "Founder",
       "image": "https://www.vyrehq.com/dean-farley.jpg",
       "worksFor": {"@id": "https://www.vyrehq.com/#organization"},
-      "description": "Global payments specialist with over 11 years across acquiring, orchestration, tokenisation, FX and cross-border payments.",
+      "description": "Global payments specialist with over 12 years across acquiring, orchestration, tokenisation, FX and cross-border payments.",
       "sameAs": ["https://www.linkedin.com/in/df2024/"]
     },
     {
@@ -361,11 +400,11 @@
       "@type": "FAQPage",
       "@id": "https://www.vyrehq.com/#faq",
       "mainEntity": [
-        {"@type": "Question", "name": "What is the difference between VYRE OS and VYRE Embedded?", "acceptedAnswer": {"@type": "Answer", "text": "VYRE OS is for merchants: it reviews your own payment estate, quantifies what you are losing and shows how to recover it. VYRE Embedded is for payment providers: the same intelligence layer, licensed so a gateway, PSP or acquirer can advise its own merchants within its own remit."}},
-        {"@type": "Question", "name": "I already have a dashboard. Why do I need Vyre?", "acceptedAnswer": {"@type": "Answer", "text": "You have level 1: a dashboard that ingests your data and shows it back to you. If your provider also retries or re-routes failed transactions, that is level 2. Vyre is levels 3 and 4. Level 3 tells you what is actually wrong, what it is costing the business in pounds, and exactly how to fix it. Level 4 verifies the recovery once the fix is live. Data on its own is not a decision. There is also an incentive question: a provider's routing and retry logic is built around its own rails and margins, not your P&L. VYRE OS is fully agnostic and independent. It takes no money, referral fee or revenue share from any provider, so the recommendation only ever tracks your numbers."}},
-        {"@type": "Question", "name": "What is payment leakage?", "acceptedAnswer": {"@type": "Answer", "text": "Payment leakage is revenue a merchant should have received on transactions that were attempted, but did not receive because of avoidable declines, hidden FX spread, poor routing, missing retries, unchallenged chargebacks or absent local payment methods. Cross-border and higher-risk merchants often sit well below their vertical average authorisation rate, and the gap is frequently several points."}},
-        {"@type": "Question", "name": "Is Vyre independent?", "acceptedAnswer": {"@type": "Answer", "text": "On merchant reviews, yes. Vyre takes no fees, kickbacks or referral payments from PSPs, acquirers or orchestrators; the merchant pays, against recovery. VYRE Embedded is a separate line, licensed to payment providers for use with their own merchants, and the two are never mixed on the same engagement."}},
-        {"@type": "Question", "name": "Does Vyre change anything in my payment flow?", "acceptedAnswer": {"@type": "Answer", "text": "No. Vyre does not reroute transactions or change your stack. It validates the data, tells you what is not working, where volume should go instead, why, how to make the change and what the recovery is worth, then verifies the result once you make it."}}
+        {"@type": "Question", "name": "What is the difference between VYRE OS and VYRE Embedded?", "acceptedAnswer": {"@type": "Answer", "text": "VYRE OS is for merchants: independent, read-only analysis of your own payment performance across your existing stack, with prioritised advisory and outcome measurement. VYRE Embedded is for payment providers: the same proprietary intelligence core, licensed so a PSP, acquirer, gateway or platform can give its merchants evidence-backed advisory and verify the value delivered through its services. Both are built on one intelligence core."}},
+        {"@type": "Question", "name": "I already have a dashboard. Why do I need Vyre?", "acceptedAnswer": {"@type": "Answer", "text": "A dashboard shows you what happened. Vyre works at the next two levels: it explains what is breaking and what it may be costing, prioritises what to change, and then measures whether the change delivered incremental value. The output is a decision with evidence attached, not another view of the data."}},
+        {"@type": "Question", "name": "Is Vyre independent?", "acceptedAnswer": {"@type": "Answer", "text": "Vyre is independently owned and its technology is provider-agnostic: it is not tied to any PSP, acquirer or orchestrator and analyses whatever stack is already in place. Independence in practice means three things: provider-agnostic analysis, a transparent assessment scope stated for every engagement, and recommendations backed by evidence. On VYRE OS merchant engagements, Vyre takes no fees, referral payments or revenue share from providers. VYRE Embedded is licensed to a provider and the scope of that assessment is disclosed to its merchants."}},
+        {"@type": "Question", "name": "Does Vyre change anything in my payment flow?", "acceptedAnswer": {"@type": "Answer", "text": "No. VYRE OS is strictly read-only. It does not route, retry or process payments and does not change provider configurations. It analyses authorised operational and reporting data, recommends changes, and measures the outcome after your team implements them."}},
+        {"@type": "Question", "name": "How does Vyre use AI?", "acceptedAnswer": {"@type": "Answer", "text": "Vyre is built from the ground up as an AI-native business. Advanced reasoning supports analysis and prioritised advisory. Vyre integrates NVIDIA-powered AI reasoning to support payment analysis and advisory, with human review and approval. People review findings, approve action and retain control of any operational change."}}
       ]
     }
   ]
@@ -378,68 +417,143 @@
 <nav id="nav" aria-label="Primary">
   <div class="container nav-inner">
     <a href="/"><img class="logo-img" src="/logo.png" alt="Vyre" width="400" height="167"></a>
-    <div class="nav-links">
+    <div class="nav-links" id="nav-links">
       <a href="/os.html">VYRE OS</a>
       <a href="/embedded.html">VYRE Embedded</a>
-      <a href="/os.html#method">Methodology</a>
+      <a href="/#how-it-works">How it works</a>
+      <a href="/#trust">Trust and data</a>
       <a href="/#about">About</a>
-      <a href="/os.html#cta" class="btn-primary">Get my free diagnostic →</a>
+    </div>
+    <div class="nav-right">
+      <a href="/os.html#cta" class="btn-primary">Request a free audit →</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
     </div>
   </div>
 </nav>
 </header>
 <main>
 
-<!-- HERO: the fork -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-bg-1"></div>
   <div class="hero-bg-2"></div>
   <div class="container hero-inner">
     <div class="reveal in">
-      <div class="eyebrow">Payments revenue recovery</div>
-      <h1>Revenue doesn't lie.<br><span class="accent">Systems do.</span></h1>
-      <p class="hero-sub">VYRE OS is the intelligence layer above your payment stack. It works out what your payments should be earning, shows which decisions are costing you money, and runs monitoring and verification autonomously through agents, so every finding stays visible. You keep control of every change, and VYRE OS never reroutes a transaction.</p>
-      <p class="hero-note">Two ways in, depending on who you are.</p>
+      <div class="eyebrow">Independent payment intelligence</div>
+      <h1>The independent intelligence layer<br><span class="accent">for payments.</span></h1>
+      <p class="hero-sub"><strong style="color:var(--vyre-navy);">Built around AI. Guided by people. Accountable to results.</strong><br>VYRE helps merchants and payment providers understand where payment performance breaks down, what to change and whether those changes deliver measurable value.</p>
+      <div class="hero-ctas">
+        <a href="/os.html#cta" class="btn-primary btn-primary-lg">Request a free audit →</a>
+        <a href="/embedded.html#briefing" class="btn-ghost">Discuss VYRE Embedded</a>
+      </div>
+      <p class="hero-note">Read-only analysis. Human review. Outcomes verified after implementation.</p>
     </div>
 
     <div class="fork-grid reveal">
       <a class="fork-card" href="/os.html">
-        <div class="fork-who">I take card payments</div>
+        <div class="fork-who">VYRE OS | For merchants</div>
         <div class="fork-name">VYRE OS</div>
-        <p class="fork-line">For merchants processing £8m+ a year. A free initial audit shows what your stack is leaking across seven categories. Then a ranked fix list and a recovery you can measure.</p>
-        <span class="fork-cta">See how it works for merchants →</span>
+        <p class="fork-line">Take greater control of your cross-border payment performance. Identify potentially recoverable declines, hidden costs and missed optimisation opportunities across your existing payment stack. VYRE OS provides read-only analysis and advisory. Your team controls implementation, and VYRE measures the outcome.</p>
+        <span class="fork-cta">Request a free audit →</span>
       </a>
       <a class="fork-card navy" href="/embedded.html">
-        <div class="fork-who">I process payments for merchants</div>
+        <div class="fork-who">VYRE Embedded | For payment providers</div>
         <div class="fork-name">VYRE Embedded</div>
-        <p class="fork-line">For gateways, PSPs and acquirers. The same intelligence layer, embedded in your own offer, so you can show every merchant on your book what they are losing and help them recover it.</p>
-        <span class="fork-cta">See how it works for providers →</span>
+        <p class="fork-line">Bring VYRE's intelligence into your merchant proposition. Help your customers understand underperformance, prioritise improvements and measure the value delivered through your services.</p>
+        <span class="fork-cta">Discuss VYRE Embedded →</span>
       </a>
     </div>
-    <p class="fork-note">Not sure which you are? If payments run through you on behalf of someone else, you want Embedded. Otherwise, start with OS.</p>
+    <p class="fork-note">Not sure which you are? If payments run through you on behalf of other businesses, start with VYRE Embedded. If you take payments yourself, start with VYRE OS.</p>
   </div>
 </section>
 
-<!-- SHARED METHOD -->
-<section class="block white" id="method-summary">
+<!-- HOW IT WORKS -->
+<section class="block white" id="how-it-works">
   <div class="container">
     <div class="reveal">
-      <div class="block-eyebrow">One method behind both</div>
-      <h2 class="block-h2" style="font-size:clamp(36px,4.5vw,52px);">Detect. Quantify. Fix. Verify.</h2>
-      <p class="block-lead">Vyre never touches the payment flow. It reads what already happened, works out what should have happened, and tells you the gap in pounds, with the reason and the fix attached. Then it checks the fix landed.</p>
+      <div class="block-eyebrow">How it works</div>
+      <h2 class="block-h2" style="font-size:clamp(36px,4.5vw,52px);">Diagnose the cause. Prescribe the fix. Verify the value.</h2>
+      <p class="block-lead">Built from the ground up as an AI-native business, VYRE combines proprietary payment intelligence with advanced reasoning and human oversight to turn fragmented payment data into clear, prioritised action.</p>
     </div>
     <div class="method-mini reveal reveal-d1">
-      <div><div class="k">01</div><div class="v">Detect</div><div class="d">Seven leakage categories, read from your existing data. Nothing installed in the flow.</div></div>
-      <div><div class="k">02</div><div class="v">Quantify</div><div class="d">Every gap in pounds, benchmarked to your vertical and geography, with a confidence level.</div></div>
-      <div><div class="k">03</div><div class="v">Fix</div><div class="d">What to change, where, why and in what order. Ranked by value and time to deploy.</div></div>
-      <div><div class="k">04</div><div class="v">Verify</div><div class="d">Recovery measured against a frozen baseline once the change is live. No claimed numbers.</div></div>
+      <div><div class="k">01</div><div class="v">Diagnose</div><div class="d">Where payment performance breaks down, across your existing stack, from authorised operational and reporting data.</div></div>
+      <div><div class="k">02</div><div class="v">Prescribe</div><div class="d">What the issue may be costing, which corrective actions deserve priority, and the evidence behind each one.</div></div>
+      <div><div class="k">03</div><div class="v">Your team implements</div><div class="d">You decide what changes and when. VYRE never routes, retries or changes provider configuration.</div></div>
+      <div><div class="k">04</div><div class="v">Verify</div><div class="d">Whether the implemented change delivered measurable incremental value, measured against a frozen baseline.</div></div>
     </div>
-    <div style="margin-top:40px;"><a href="/os.html#method" class="btn-ghost">Read the full methodology →</a></div>
+
+    <div class="reveal reveal-d2" style="margin-top:56px;">
+      <div class="block-eyebrow">The evidence standard</div>
+      <p style="font-size:17px; color:var(--vyre-ink); max-width:820px; line-height:1.6;">Every finding is labelled by the stage it has reached, so an estimate is never mistaken for a result. Verification is the point: the question is not what could be recovered, but what was.</p>
+      <div class="stage-strip">
+        <div><div class="k">Stage 1</div><div class="v">Estimated opportunity</div><div class="d">A sized, evidence-rated hypothesis from the data supplied. Not a result.</div></div>
+        <div><div class="k">Stage 2</div><div class="v">Recommended action</div><div class="d">A prioritised change, with the reasoning and the trade-offs stated.</div></div>
+        <div><div class="k">Stage 3</div><div class="v">Implemented change</div><div class="d">Made by your team or your provider, with the date recorded.</div></div>
+        <div><div class="k">Stage 4</div><div class="v">Verified outcome</div><div class="d">Measured incremental value after the change, with the evidence status shown.</div></div>
+      </div>
+      <p style="margin-top:24px; font-size:15px; color:var(--vyre-muted); max-width:820px; line-height:1.6;">Human oversight remains central: people review findings, approve action and retain control.</p>
+      <div style="margin-top:32px;"><a href="/os.html#method" class="btn-ghost">Read the merchant methodology →</a></div>
+    </div>
   </div>
 </section>
 
-<!-- ABOUT (shared) -->
-<section class="block" id="about">
+<!-- ONE CORE, TWO PRODUCTS -->
+<section class="block navy" id="products">
+  <div class="container">
+    <div class="reveal">
+      <div class="block-eyebrow">One intelligence core</div>
+      <h2 class="block-h2">One proprietary intelligence core.<br>Two ways to deliver value.</h2>
+      <p class="block-lead">The same payment intelligence, reasoning and verification sit behind both products. What differs is who it is working for, and the scope of the assessment, which is stated plainly in every engagement.</p>
+    </div>
+    <div class="flow products-grid reveal reveal-d1">
+      <div class="products-cell">
+        <div class="n">VYRE OS · FOR MERCHANTS</div>
+        <div class="t">Independent payment performance intelligence</div>
+        <div class="d">For B2C cross-border e-commerce, subscriptions, travel and other cross-border businesses. Analyses authorised operational and reporting data across the existing payment stack. Identifies potentially recoverable declines, inconsistent decline classifications, hidden costs and optimisation opportunities. Provides prioritised advisory and measures outcomes following implementation. Strictly read-only. Merchants retain control over their providers and implementation decisions.</div>
+        <div style="margin-top:22px;"><a href="/os.html" class="fork-cta" style="color:var(--vyre-orange);">VYRE OS for merchants →</a></div>
+      </div>
+      <div class="products-cell">
+        <div class="n">VYRE EMBEDDED · FOR PAYMENT PROVIDERS</div>
+        <div class="t">Provider-facing intelligence, licensed</div>
+        <div class="d">Licensed to PSPs, acquirers, gateways, orchestrators and relevant platforms. Supports evidence-backed merchant advisory, payment optimisation and outcome verification, so providers can strengthen merchant relationships and demonstrate delivered value. The scope of each assessment, limited to the provider's products, rails and available data, is disclosed to the merchant.</div>
+        <div style="margin-top:22px;"><a href="/embedded.html" class="fork-cta" style="color:var(--vyre-orange);">VYRE Embedded for providers →</a></div>
+      </div>
+    </div>
+    <div class="boundary reveal reveal-d2"><strong style="color:var(--vyre-cream);">AI in a supporting role.</strong> Advanced reasoning supports analysis and prioritised advisory. VYRE integrates NVIDIA-powered AI reasoning to support payment analysis and advisory, with human review and approval. Customers retain control of operational changes.</div>
+  </div>
+</section>
+
+<!-- TRUST AND DATA -->
+<section class="block" id="trust">
+  <div class="container">
+    <div class="how-grid">
+      <div class="reveal">
+        <div class="block-eyebrow">Trust and data</div>
+        <h2 class="block-h2" style="font-size:clamp(36px,4.5vw,52px); margin-bottom:32px;">Precise about what we do with your data, and what we never do.</h2>
+        <div class="how-content">
+          <p>VYRE analyses the operational and reporting data you authorise. It never sits in the payment flow, never holds credentials that can move funds or change a provider's configuration, and never makes a change on your behalf.</p>
+          <p>Findings are reviewed by a VYRE operator before release. Where a finding rests on an assumption rather than an observation, the report says so, with the confidence level attached.</p>
+          <p class="strong">Deployment model, hosting region and the isolation controls that apply are confirmed in writing during the security review for each engagement. We describe the controls we operate, not certifications we do not hold.</p>
+        </div>
+      </div>
+      <div class="how-callout reveal reveal-d1">
+        <div class="how-callout-eb">What a security review will ask</div>
+        <h3>Controls, stated precisely.</h3>
+        <ul>
+          <li>Read-only. VYRE does not route, retry or process payments, and does not change provider configurations.</li>
+          <li>No PAN, CVV or payment tokens are ingested or stored.</li>
+          <li>Only authorised operational and reporting data, within the scope you agree.</li>
+          <li>Human review and approval before findings are released; your team retains control of every change.</li>
+          <li>Assessment scope is stated for every engagement, including any limits of a provider-funded assessment.</li>
+          <li>Security and data-handling documentation is available as part of a procurement review.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="block white" id="about">
   <div class="container">
     <div class="about-grid">
       <div class="reveal">
@@ -448,11 +562,10 @@
       </div>
       <div class="reveal reveal-d1">
         <div class="block-eyebrow">Who is behind Vyre</div>
-        <h2 class="indep-h2">Built by an operator.<br>Not an agency.</h2>
+        <h2 class="indep-h2">Built by a payments operator.<br>Run as a technology business.</h2>
         <div class="about-text">
-          <p>VYRE OS is built on more than 11 years of payments expertise: acquiring, orchestration, tokenisation and FX, applied to the leaks that cost merchants money. That method now runs as an intelligence layer that works autonomously and independently. Agents monitor your estate, flag what is leaking, and keep every finding visible, so you can see what is happening and why without chasing it. Nothing changes in your payment flow unless you decide it should.</p>
-          <p>VYRE OS puts that method to work for the merchant. VYRE Embedded puts it inside the payment providers who serve them.</p>
-          <p>Every merchant report is reviewed and signed off by Dean before it is released.</p>
+          <p>VYRE was founded by Dean Farley after more than 12 years in global payments: acquiring, orchestration, tokenisation, FX and cross-border. That experience is encoded in the intelligence core that both products run on, so the analysis asks the questions an experienced payments operator would ask, at the speed and consistency software allows.</p>
+          <p>VYRE is built from the ground up as an AI-native business. Advanced reasoning does the heavy lifting on analysis and prioritisation. People review the findings, approve the action and stay accountable for the result. Nothing changes in a customer's payment flow unless the customer decides it should.</p>
         </div>
         <div class="about-links">
           <a href="https://www.linkedin.com/in/df2024/" rel="me author">Dean Farley on LinkedIn →</a>
@@ -461,9 +574,10 @@
       </div>
       <div class="reveal reveal-d2 about-facts-col">
         <div class="about-facts">
-          <div class="about-fact"><div class="about-fact-k">Experience</div><div class="about-fact-v">11+ years in global payments: acquiring, orchestration, tokenisation, FX, cross-border.</div></div>
-          <div class="about-fact"><div class="about-fact-k">Independence</div><div class="about-fact-v">Independently owned and provider-agnostic: Vyre is not tied to any PSP, acquirer or orchestrator and works with whatever stack is already in place. On merchant reviews, no provider pays us anything; the merchant pays, against recovery. VYRE Embedded is a separate line, licensed to providers for their own merchants.</div></div>
-          <div class="about-fact"><div class="about-fact-k">Coverage</div><div class="about-fact-v">Headquartered in Europe. Available globally to any merchant or payment provider operating cross-border payments.</div></div>
+          <div class="about-fact"><div class="about-fact-k">Experience</div><div class="about-fact-v">12+ years in global payments: acquiring, orchestration, tokenisation, FX, cross-border.</div></div>
+          <div class="about-fact"><div class="about-fact-k">Independence</div><div class="about-fact-v">Independently owned, provider-agnostic technology. Not tied to any PSP, acquirer or orchestrator. The commercial scope of each engagement is stated separately and disclosed to the people relying on the findings.</div></div>
+          <div class="about-fact"><div class="about-fact-k">Human review</div><div class="about-fact-v">Findings are reviewed and approved by a VYRE operator before release, as a standing operating process.</div></div>
+          <div class="about-fact"><div class="about-fact-k">Coverage</div><div class="about-fact-v">Headquartered in Europe. Available globally to merchants and payment providers operating cross-border payments.</div></div>
           <div class="about-fact"><div class="about-fact-k">Contact</div><div class="about-fact-v"><a href="mailto:hello@vyrehq.com" style="color:var(--vyre-navy);">hello@vyrehq.com</a></div></div>
         </div>
       </div>
@@ -471,45 +585,45 @@
   </div>
 </section>
 
-<!-- FAQ (shared, cross-product) -->
-<section class="block white" id="faq">
+<!-- FAQ -->
+<section class="block" id="faq">
   <div class="container">
     <div class="block-eyebrow reveal">Common questions</div>
     <h2 class="block-h2 reveal" style="font-size:clamp(36px,4.5vw,52px);">Straight answers first.</h2>
     <div class="faq-list">
       <div class="faq-item reveal">
         <h3>What is the difference between VYRE OS and VYRE Embedded?</h3>
-        <p>VYRE OS is for merchants: it reviews your own payment estate, quantifies what you are losing and shows how to recover it. VYRE Embedded is for payment providers: the same intelligence layer, licensed so a gateway, PSP or acquirer can advise its own merchants within its own remit.</p>
+        <p>VYRE OS is for merchants: independent, read-only analysis of your own payment performance across your existing stack, with prioritised advisory and outcome measurement. VYRE Embedded is for payment providers: the same proprietary intelligence core, licensed so a PSP, acquirer, gateway or platform can give its merchants evidence-backed advisory and verify the value delivered through its services. Both are built on one intelligence core.</p>
       </div>
       <div class="faq-item reveal">
         <h3>I already have a dashboard. Why do I need Vyre?</h3>
-        <p>You have level 1: a dashboard that ingests your data and shows it back to you. If your provider also retries or re-routes failed transactions, that is level 2. Vyre is levels 3 and 4. Level 3 tells you what is actually wrong, what it is costing the business in pounds, and exactly how to fix it. Level 4 verifies the recovery once the fix is live. Data on its own is not a decision. There is also an incentive question: a provider's routing and retry logic is built around its own rails and margins, not your P&L. VYRE OS is fully agnostic and independent. It takes no money, referral fee or revenue share from any provider, so the recommendation only ever tracks your numbers.</p>
-      </div>
-      <div class="faq-item reveal">
-        <h3>What is payment leakage?</h3>
-        <p>Payment leakage is revenue a merchant should have received on transactions that were attempted, but did not receive because of avoidable declines, hidden FX spread, poor routing, missing retries, unchallenged chargebacks or absent local payment methods. Cross-border and higher-risk merchants often sit well below their vertical average authorisation rate, and the gap is frequently several points.</p>
+        <p>A dashboard shows you what happened. Vyre works at the next two levels: it explains what is breaking and what it may be costing, prioritises what to change, and then measures whether the change delivered incremental value. The output is a decision with evidence attached, not another view of the data.</p>
       </div>
       <div class="faq-item reveal">
         <h3>Is Vyre independent?</h3>
-        <p>Yes. Vyre is independently owned and provider-agnostic: not tied to any PSP, acquirer or orchestrator, and built to work with whatever stack you already run. On merchant reviews, Vyre takes no fees, kickbacks or referral payments from PSPs, acquirers or orchestrators; the merchant pays, against recovery. VYRE Embedded is a separate line, licensed to payment providers for use with their own merchants, and the two are never mixed on the same engagement.</p>
+        <p>Vyre is independently owned and its technology is provider-agnostic: it is not tied to any PSP, acquirer or orchestrator and analyses whatever stack is already in place. Independence in practice means three things: provider-agnostic analysis, a transparent assessment scope stated for every engagement, and recommendations backed by evidence. On VYRE OS merchant engagements, Vyre takes no fees, referral payments or revenue share from providers. VYRE Embedded is licensed to a provider, and the scope of that assessment is disclosed to its merchants.</p>
       </div>
       <div class="faq-item reveal">
         <h3>Does Vyre change anything in my payment flow?</h3>
-        <p>No. Vyre does not reroute transactions or change your stack. It validates the data, tells you what is not working, where volume should go instead, why, how to make the change and what the recovery is worth, then verifies the result once you make it.</p>
+        <p>No. VYRE OS is strictly read-only. It does not route, retry or process payments and does not change provider configurations. It analyses authorised operational and reporting data, recommends changes, and measures the outcome after your team implements them.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>How does Vyre use AI?</h3>
+        <p>Vyre is built from the ground up as an AI-native business. Advanced reasoning supports analysis and prioritised advisory. Vyre integrates NVIDIA-powered AI reasoning to support payment analysis and advisory, with human review and approval. People review findings, approve action and retain control of any operational change.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL FORK -->
+<!-- FINAL CTA -->
 <section class="final-cta" id="cta" style="padding:100px 0 120px;">
   <div class="container">
     <div class="reveal">
-      <h2 style="font-size:clamp(36px,5vw,64px);">Find out what the estate<br><span class="accent">should have earned.</span></h2>
-      <p class="final-cta-sub">Merchants start with a free initial audit. Providers start with a partner briefing.</p>
+      <h2 style="font-size:clamp(36px,5vw,64px);">Find out whether your business<br><span class="accent">is losing recoverable revenue.</span></h2>
+      <p class="final-cta-sub">Request a free initial audit to understand where opportunities may exist, what evidence supports them and whether further investigation is worthwhile. Findings depend on the data supplied.</p>
       <div class="hero-ctas" style="justify-content:center;">
-        <a href="/os.html#cta" class="btn-primary btn-primary-lg">Merchants: get my free diagnostic →</a>
-        <a href="/embedded.html#briefing" class="btn-ghost" style="color:var(--vyre-cream); border-color:rgba(245,240,232,.3);">Providers: book a partner briefing →</a>
+        <a href="/os.html#cta" class="btn-primary btn-primary-lg">Request a free audit →</a>
+        <a href="/embedded.html#briefing" class="btn-ghost on-navy">Discuss VYRE Embedded →</a>
       </div>
     </div>
   </div>
@@ -522,15 +636,15 @@
     <div class="footer-grid">
       <div>
         <img class="logo-img-footer" src="/logo-footer.png" alt="Vyre" width="400" height="167">
-        <p class="footer-tagline">Revenue doesn't lie. Systems do.<br>Payments revenue recovery for merchants and the providers who serve them.</p>
+        <p class="footer-tagline">Revenue doesn't lie. Systems do.<br>The independent intelligence layer for payments, for merchants and the providers who serve them.</p>
       </div>
       <div>
         <div class="footer-h">VYRE OS</div>
         <ul class="footer-links">
           <li><a href="/os.html">For merchants</a></li>
           <li><a href="/os.html#how">How it works</a></li>
-          <li><a href="/os.html#method">Methodology</a></li>
-          <li><a href="/os.html#cta">Free diagnostic</a></li>
+          <li><a href="/os.html#method">What we analyse</a></li>
+          <li><a href="/os.html#cta">Request a free audit</a></li>
         </ul>
       </div>
       <div>
@@ -538,13 +652,15 @@
         <ul class="footer-links">
           <li><a href="/embedded.html">For payment providers</a></li>
           <li><a href="/embedded.html#what">What it does</a></li>
-          <li><a href="/embedded.html#security">Security</a></li>
-          <li><a href="/embedded.html#briefing">Partner briefing</a></li>
+          <li><a href="/embedded.html#security">Security and data</a></li>
+          <li><a href="/embedded.html#briefing">Discuss VYRE Embedded</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-h">Company</div>
         <ul class="footer-links">
+          <li><a href="/#how-it-works">How it works</a></li>
+          <li><a href="/#trust">Trust and data</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#faq">FAQ</a></li>
           <li><a href="https://www.linkedin.com/company/vyrehq/" rel="noopener">LinkedIn</a></li>
@@ -554,8 +670,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© 2026 Vyre. Independent payments revenue recovery.</div>
-      <div>Headquartered in Europe. Available globally. Provider-agnostic by design.</div>
+      <div>© 2026 Vyre. Independent payment intelligence. Built around AI. Guided by people. Accountable to results.</div>
+      <div>Headquartered in Europe. Available globally. Provider-agnostic analysis.</div>
     </div>
   </div>
 </footer>
@@ -566,6 +682,15 @@
     if (window.scrollY > 8) nav.classList.add('scrolled');
     else nav.classList.remove('scrolled');
   });
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }));
+  }
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
