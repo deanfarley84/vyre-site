@@ -12,12 +12,8 @@
   --display:"Young Serif", Georgia, "Times New Roman", serif;
   --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#1c1714; --band:#231d19; --surface:#2a231f; --ink:#f2e9e1; --muted:#b5a79c; --line:#3d332d;
-  --terracotta:#d9714b; --terracotta-ink:#1c1714; --olive:#a3b46a; --azulejo:#7fb0dc; --focus:#7fb0dc; color-scheme:dark }}
-:root[data-theme="dark"]{
-  --bg:#1c1714; --band:#231d19; --surface:#2a231f; --ink:#f2e9e1; --muted:#b5a79c; --line:#3d332d;
-  --terracotta:#d9714b; --terracotta-ink:#1c1714; --olive:#a3b46a; --azulejo:#7fb0dc; --focus:#7fb0dc; color-scheme:dark }
+
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
@@ -39,8 +35,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .brand .by{font-family:var(--body);font-size:15px;color:var(--muted);margin:3px 0 0 2px}
 .brand .vy{height:22px;width:auto;display:block;margin-top:3px}
 .brand .vy-d{display:none}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand .vy-l{display:none}:root:not([data-theme="light"]) .brand .vy-d{display:block}}
-:root[data-theme="dark"] .brand .vy-l{display:none}:root[data-theme="dark"] .brand .vy-d{display:block}
+
+
 @media (max-width:420px){.brand{font-size:21px;gap:8px}.brand .vy{height:19px}}
 
 .bar-r{display:flex;align-items:center;gap:10px}
@@ -182,6 +178,19 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:14px;color:
 .ind-layer-h{margin:0 0 8px;font-size:14px;color:var(--muted)}
 .ind-layer-h b{color:var(--ink);font-size:15px;margin-right:4px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Adelante palette: warm white, sage and soft blue. Always a light experience. */
+:root{color-scheme:light;--bg:#fafbf8;--band:#f0f4ef;--surface:#ffffff;--ink:#233831;--muted:#56655f;--line:#dce5de;--terracotta:#a34d34;--terracotta-ink:#ffffff;--olive:#526d55;--azulejo:#285f78;--focus:#285f78}
+header.top{background:rgba(250,251,248,.97)}
+.arch{background:linear-gradient(155deg,#e3eee4,#edf3ee);border:1px solid #d2dfd4}
+.arch .time{color:#345846;opacity:1}
+.arch .msg{box-shadow:0 8px 25px #3654420d;border:1px solid #dce5de}
+.arch .msg + .msg{background:#e7f0f5;color:#233e4b;border-color:#d1e1e9}
+.arch .msg + .msg b{color:#285f78}
+.brand .vy-l{display:block!important}.brand .vy-d{display:none!important}
+.btn.primary:hover{background:#8b412d;border-color:#8b412d}
+.lang button[aria-pressed="true"]{background:#285f78;color:#fff}
+
 </style>
 
 <header class="top"><div class="in bar">
