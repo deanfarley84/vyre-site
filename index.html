@@ -410,7 +410,9 @@
   ]
 }
 </script>
-</head>
+<style>.adelante-link{display:inline-flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;padding:10px 17px;border:1px solid #1c526f;border-radius:8px;text-decoration:none;background:#174d68;color:#fff;box-shadow:0 3px 9px #173f6120;white-space:nowrap;transition:background .18s,box-shadow .18s}.adelante-link strong{font-size:15px;font-weight:700;line-height:1.2}.adelante-link span{font-size:11px;font-weight:500;line-height:1.25;color:#e4eef3}.adelante-link:hover{background:#103b52;box-shadow:0 4px 13px #173f6130}.adelante-link:focus-visible{outline:3px solid #df763f;outline-offset:4px}@media(min-width:901px){.nav-links{gap:16px}.nav-right{gap:10px}}@media(min-width:901px) and (max-width:1250px){.nav-links{gap:8px}.nav-links a{font-size:12px}.nav-right{gap:8px}.adelante-link{padding:9px 12px}.nav-right>.btn-primary{font-size:12px;padding:12px}}@media(max-width:560px){.nav-right{gap:8px}.nav-right>.btn-primary{display:none}.adelante-link{padding:8px 11px}.adelante-link strong{font-size:13px}.adelante-link span{font-size:10px}}</style><style>
+.hero{padding:60px 0 100px}.hero-opening{display:grid;grid-template-columns:1.03fr 1fr;gap:48px;align-items:center}.hero h1{font-size:clamp(40px,4.6vw,64px);letter-spacing:-.045em;margin-bottom:24px}.hero .eyebrow{margin-bottom:24px}.hero-sub{font-size:18px;margin-bottom:28px}.hero-ctas{gap:12px}.hero .btn-primary-lg,.hero .btn-ghost{font-size:14px;padding:15px 19px}.hero-note{font-size:12px;line-height:1.5}.product-showcase{min-width:0;background:#101d30;border:1px solid #24344d;border-radius:16px;box-shadow:0 28px 65px #14233c22;overflow:hidden;color:#fff}.showcase-top{display:flex;justify-content:space-between;padding:19px 20px;font-size:12px;color:#aebbd0}.showcase-top span:first-child{font-weight:800;color:#fff;letter-spacing:.08em}.showcase-tabs{display:flex;border-bottom:1px solid #344057;padding:0 12px;gap:5px}.showcase-tabs button{font-family:inherit;cursor:pointer;color:#abb8cb;background:none;border:0;border-bottom:2px solid transparent;font-size:12px;padding:12px 8px;line-height:1.3}.showcase-tabs button[aria-selected=true]{color:#fff;border-bottom-color:#ed7e43}.showcase-tabs button span{font-size:10px;color:#ed9b6e;display:block;margin-top:4px}.showcase-tabs button:focus-visible{outline:2px solid #f1955d;outline-offset:-2px}.showcase-panel[hidden]{display:none!important}.showcase-panel video{display:block;width:100%;aspect-ratio:16/9;background:#0f1a2e}.showcase-caption{padding:21px 22px 16px}.showcase-caption strong{font-size:17px;line-height:1.35;display:block}.showcase-caption p{font-size:13px;color:#b6c1d1;line-height:1.6;margin-top:8px}.showcase-foot{padding:13px 22px;border-top:1px solid #2b374c;color:#97a7bf;font-size:10px;letter-spacing:.03em}.dashboard-window{display:block;aspect-ratio:16/9;overflow:hidden;background:#f6f1e8}.dashboard-window img{display:block;width:100%;height:auto}.nucleus-scene{min-height:300px;padding:25px;display:flex;align-items:center;gap:24px;background:radial-gradient(ellipse at 20% 50%,#243853,#101c2e 65%)}.nucleus-orb{flex:0 0 148px;height:148px;border:1px solid #ed8b50;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;box-shadow:0 0 0 10px #ed7e4308,0 0 0 24px #ed7e4305;animation:corePulse 5s ease-in-out infinite}.nucleus-orb span{font-size:11px;color:#b1c1d5;letter-spacing:.14em}.nucleus-orb strong{font-size:21px;margin:9px 0;letter-spacing:.08em}.nucleus-orb small{font-size:10px;color:#ed9b6e}.nucleus-stages{display:grid;gap:19px}.nucleus-stages b{font-size:10px;color:#ee9b6d;letter-spacing:.1em;display:block;margin-bottom:6px}.nucleus-stages span{font-size:12px;line-height:1.45;color:#c7d0df;display:block}@keyframes corePulse{50%{box-shadow:0 0 0 16px #ed7e430d,0 0 0 30px #ed7e4306}}@media(prefers-reduced-motion:reduce){.nucleus-orb{animation:none}}@media(max-width:1050px){.hero-opening{gap:28px}.nucleus-scene{flex-direction:column}.nucleus-stages{grid-template-columns:1fr}.hero h1{font-size:48px}}@media(max-width:900px){.hero-opening{grid-template-columns:1fr}.product-showcase{max-width:680px;width:100%;margin:8px auto 0}.hero h1{font-size:clamp(38px,8vw,64px)}.nucleus-scene{flex-direction:row}.hero{padding-top:40px}}@media(max-width:480px){.hero-opening{gap:24px}.showcase-tabs button{font-size:11px;padding:11px 6px}.nucleus-scene{flex-direction:column}.nucleus-stages{gap:14px}.showcase-caption{padding:18px}.showcase-top{padding:17px}.hero-sub{font-size:17px}}
+</style></head>
 <body>
 
 <header>
@@ -426,6 +428,7 @@
       <a href="/#about">About</a>
     </div>
     <div class="nav-right">
+      <a href="/adelante/" class="adelante-link" aria-label="Explore Adelante by VYRE: business AI and automation"><strong>Adelante by VYRE</strong><span>Explore business AI &amp; automation →</span></a>
       <a href="/os.html#cta" class="btn-primary">Request a free audit →</a>
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
     </div>
@@ -439,7 +442,8 @@
   <div class="hero-bg-1"></div>
   <div class="hero-bg-2"></div>
   <div class="container hero-inner">
-    <div class="reveal in">
+    <div class="hero-opening">
+    <div class="reveal in hero-copy">
       <div class="eyebrow">Independent payment intelligence</div>
       <h1>The independent intelligence layer<br><span class="accent">for payments.</span></h1>
       <p class="hero-sub"><strong style="color:var(--vyre-navy);">Built around AI. Guided by people. Accountable to results.</strong><br>VYRE helps merchants and payment providers understand where payment performance breaks down, what to change and whether those changes deliver measurable value. An autonomous business, built and coded from the ground up, with people in control.</p>
@@ -448,6 +452,29 @@
         <a href="/embedded.html#briefing" class="btn-ghost">Discuss VYRE Embedded</a>
       </div>
       <p class="hero-note">Read-only analysis. Human review. Outcomes verified after implementation.</p>
+    </div>
+
+      <aside class="product-showcase" aria-label="Explore VYRE OS">
+        <div class="showcase-top"><span>VYRE OS</span><span>Inside the intelligence</span></div>
+        <div class="showcase-tabs" role="tablist" aria-label="VYRE OS views">
+          <button id="view-video" role="tab" aria-selected="true" aria-controls="panel-video" data-view="video">Watch overview <span>48 sec</span></button>
+          <button id="view-platform" role="tab" aria-selected="false" aria-controls="panel-platform" data-view="platform" tabindex="-1">The platform</button>
+          <button id="view-nucleus" role="tab" aria-selected="false" aria-controls="panel-nucleus" data-view="nucleus" tabindex="-1">Nucleus &amp; intelligence</button>
+        </div>
+        <div id="panel-video" class="showcase-panel" role="tabpanel" aria-labelledby="view-video">
+          <video controls playsinline preload="metadata" poster="/media/vyre-os-video-poster.jpg" aria-label="VYRE OS launch overview"><source src="https://raw.githubusercontent.com/deanfarley84/vyre-os-media/556253652637d4951e1d5d353ef3d3f3e8f6d5af/VYRE%20OS%20Launch%20Video.mp4" type="video/mp4">Your browser does not support this video. <a href="https://raw.githubusercontent.com/deanfarley84/vyre-os-media/556253652637d4951e1d5d353ef3d3f3e8f6d5af/VYRE%20OS%20Launch%20Video.mp4">Watch the MP4</a>.</video>
+          <div class="showcase-caption"><strong>See the problem. Understand the action.</strong><p>Your VYRE OS launch overview, from fragmented reporting to prioritised recommendations.</p></div>
+        </div>
+        <div id="panel-platform" class="showcase-panel" role="tabpanel" aria-labelledby="view-platform" hidden>
+          <a class="dashboard-window" href="/media/vyre-os-dashboard.png" target="_blank" rel="noopener" aria-label="Open the full VYRE OS dashboard screenshot"><img src="/media/vyre-os-dashboard.png" width="1024" height="2060" alt="VYRE OS Executive Overview with payment method performance, opportunities and provider costs"></a>
+          <div class="showcase-caption"><strong>Your payment estate, in one view.</strong><p>Actual OS screenshot using fictional test data. Select the image to inspect the full dashboard.</p></div>
+        </div>
+        <div id="panel-nucleus" class="showcase-panel" role="tabpanel" aria-labelledby="view-nucleus" hidden>
+          <div class="nucleus-scene"><div class="nucleus-orb"><span>VYRE OS</span><strong>NUCLEUS</strong><small>Payment intelligence</small></div><div class="nucleus-stages"><div><b>01 · DIAGNOSE</b><span>Analyse authorised reporting data and investigate causes.</span></div><div><b>02 · PRESCRIBE</b><span>Prioritise recommended actions with evidence attached.</span></div><div><b>03 · VERIFY</b><span>Measure outcomes after your team implements a change.</span></div></div></div>
+          <div class="showcase-caption"><strong>Intelligence with people in control.</strong><p>Illustrated workflow. Read-only analysis, human review and outcome verification.</p></div>
+        </div>
+        <div class="showcase-foot">Demonstration visuals · no live merchant data</div>
+      </aside>
     </div>
 
     <div class="fork-grid reveal">
@@ -727,5 +754,7 @@
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 
-</body>
+<script>
+(()=>{const tabs=[...document.querySelectorAll('[data-view]')];function select(t){tabs.forEach(b=>{const active=b===t;b.setAttribute('aria-selected',String(active));b.tabIndex=active?0:-1;document.getElementById('panel-'+b.dataset.view).hidden=!active});if(t.dataset.view!=='video')document.querySelector('#panel-video video').pause()}tabs.forEach((t,i)=>{t.addEventListener('click',()=>select(t));t.addEventListener('keydown',e=>{let n;if(e.key==='ArrowRight')n=(i+1)%tabs.length;else if(e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;else return;e.preventDefault();select(tabs[n]);tabs[n].focus()})})})();
+</script></body>
 </html>
