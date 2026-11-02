@@ -1,0 +1,190 @@
+<!doctype html>
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>The Adelante deep dive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .steps .card { display: grid; gap: 10px; align-content: start; }
+  .steps h3 { font-size: 1.25rem; }
+  .steps .num { font-family: var(--display); font-size: 1.6rem; color: var(--terracotta); line-height: 1; }
+  .report { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 32px; display: grid; gap: 22px; }
+  .report-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+  .report-head b { font-family: var(--display); font-weight: 500; font-size: 1.4rem; }
+  .tag-mock { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--terracotta-deep); align-self: center; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .kpis div { background: var(--cream); border: 1px solid var(--line); border-radius: 16px; padding: 14px; font-size: 0.85rem; color: var(--muted); }
+  .kpis b { display: block; font-family: var(--display); font-weight: 500; font-size: 1.5rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .table-wrap { overflow-x: auto; border-radius: 16px; border: 1px solid var(--line); }
+  table.rep { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 640px; }
+  table.rep th, table.rep td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.rep th { font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--azulejo); background: var(--cream); font-weight: 600; }
+  table.rep td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  table.rep tr.total td { font-weight: 600; background: var(--sand); }
+  .roi { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .roi .card { display: grid; gap: 8px; }
+  .phases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .phases .card { display: grid; gap: 10px; align-content: start; }
+  .phase-tag { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--azulejo); }
+  .urgency { background: var(--ink); color: var(--cream); border-radius: 24px; padding: 36px; display: grid; gap: 14px; }
+  .urgency p { color: #DCD2BF; }
+  .urgency b { color: #F6D2BF; }
+  .foot { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+  @media (max-width: 900px) {
+    .steps, .phases, .roi, .foot { grid-template-columns: 1fr; }
+    .kpis { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .kpis { grid-template-columns: 1fr; }
+  }
+</style>
+<body data-page="deep-dive">
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="brand" href="index.html" aria-label="Adelante by VYRE, home">
+      <svg width="32" height="38" viewBox="0 0 34 40" aria-hidden="true"><path d="M2 40V17a15 15 0 0 1 30 0v23" fill="none" stroke="currentColor" stroke-width="2.2"/><rect x="9" y="22" width="7" height="7" rx="1.5" fill="#B5532F"/><rect x="18" y="22" width="7" height="7" rx="1.5" fill="#1F4E79"/><rect x="9" y="31" width="7" height="7" rx="1.5" fill="#5B6B3A"/><rect x="18" y="31" width="7" height="7" rx="1.5" fill="#DCD2BF"/></svg>
+      <span>Adelante<small>by VYRE</small></span>
+    </a>
+    <div class="nav-right">
+      <select id="industry-select" class="industry-select" aria-label="Choose your industry"></select>
+      <a href="modules.html">Modules</a>
+      <a href="deep-dive.html" aria-current="page">Deep dive</a>
+      <a href="index.html#get-report">Free leak report</a>
+    </div>
+  </nav>
+
+  <header class="hero" style="grid-template-columns:1fr">
+    <div>
+      <p class="eyebrow">The Adelante deep dive</p>
+      <h1>We look at your whole business first, then we show you what to fix.</h1>
+      <p class="lead">The deep dive is a paid review of how your business really runs. It starts with an on-site visit with you and your team, and ends with a written report you can act on, whether you go ahead with Adelante or not.</p>
+      <div class="actions">
+        <a class="btn" href="index.html#calc-section">Take the free online assessment</a>
+        <a class="btn ghost" href="https://wa.me/34711018011?text=Hi%20Adelante%2C%20I%27d%20like%20to%20book%20a%20no-obligation%20call%20about%20my%20business." target="_blank" rel="noopener">Book a no-obligation call</a>
+      </div>
+    </div>
+  </header>
+
+  <section aria-labelledby="inc-h">
+    <div class="head">
+      <p class="eyebrow">What the deep dive includes</p>
+      <h2 id="inc-h">Six parts, each one tied to money or time.</h2>
+    </div>
+    <div class="steps">
+      <article class="card"><span class="num">1</span><h3>Understanding your business</h3><p class="muted">Your model, customers, revenue streams, team and the numbers you already track.</p></article>
+      <article class="card"><span class="num">2</span><h3>How you operate</h3><p class="muted">We walk the real processes on site: enquiries, bookings, orders, invoices and handovers.</p></article>
+      <article class="card"><span class="num">3</span><h3>What works and what doesn't</h3><p class="muted">Each process rated on time, cost, error rate and how much the team dislikes it.</p></article>
+      <article class="card"><span class="num">4</span><h3>Where efficiency needs to improve</h3><p class="muted">A map of hours lost and money leaking, ranked by size, so the biggest leak comes first.</p></article>
+      <article class="card"><span class="num">5</span><h3>Management and sales</h3><p class="muted">What owners and managers need to see every morning, and how we lift sales efficiency and cut the admin that gets in the way of selling.</p></article>
+      <article class="card"><span class="num">6</span><h3>Back office and costs</h3><p class="muted">The operating model for invoicing, reconciliation, supplier prices, contracts, stock and payment costs, including a pricing and cost review.</p></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="sample-h">
+    <div class="head">
+      <p class="eyebrow">A sample report</p>
+      <h2 id="sample-h">What you receive at the end of the deep dive.</h2>
+      <p class="muted">Illustrative example only. The figures below belong to a made-up business used to show the format. They are not a client result.</p>
+    </div>
+
+    <div class="report">
+      <div class="report-head">
+        <b>Adelante deep dive report, example business</b>
+        <span class="tag-mock">Illustrative, not a client</span>
+      </div>
+
+      <div class="kpis">
+        <div><b>40 hrs</b>a week of time lost across three sites and six areas</div>
+        <div><b>€22,560</b>a year in cash savings identified</div>
+        <div><b>€62,400</b>a year of time capacity at €30 an hour</div>
+        <div><b>12 weeks</b>to full implementation, in phases</div>
+      </div>
+
+      <div>
+        <p class="eyebrow">Where time and money are lost, with recommendations</p>
+        <div class="table-wrap">
+          <table class="rep">
+            <thead>
+              <tr><th>Area</th><th>What we found</th><th>Recommendation</th><th>Time back a week</th><th>Cash a year</th><th>Phase</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Management visibility</td><td>Owners learn of problems at month end, across three sites</td><td>Morning briefing, alerts and a multi-site view</td><td class="num">4 hrs</td><td class="num">Capacity only</td><td>1</td></tr>
+              <tr><td>Sales efficiency</td><td>Four reps spend about 3 hours each a week on research and admin</td><td>Targeting, call prompts, follow-up drafts</td><td class="num">12 hrs</td><td class="num">Capacity only</td><td>2</td></tr>
+              <tr><td>Customer front line</td><td>Enquiries wait while the team is busy or closed, at all three sites</td><td>Replies in the customer's language, out-of-hours intake</td><td class="num">8 hrs</td><td class="num">Capacity only</td><td>1</td></tr>
+              <tr><td>Back office</td><td>Invoices typed by hand, reconciliation at month end</td><td>Invoice capture, automatic reconciliation, contract review</td><td class="num">10 hrs</td><td class="num">Capacity only</td><td>2</td></tr>
+              <tr><td>Supplier prices and stock</td><td>Invoices above agreed prices are paid, €30,000 a month supplier spend</td><td>Price drift alerts, stock flags</td><td class="num">3 hrs</td><td class="num">€4,560</td><td>2</td></tr>
+              <tr><td>Revenue recovery and payment costs</td><td>€5,000 a month of slipped invoices, €500,000 a month cross-border volume</td><td>Recovery workflow, cross-border cost review</td><td class="num">3 hrs</td><td class="num">€18,000</td><td>3</td></tr>
+              <tr class="total"><td>Total</td><td></td><td></td><td class="num">40 hrs</td><td class="num">€22,560</td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">Illustrative three-site group. Hours at €30 an hour. Cash uses the same conservative rates as the modules page: 1% supplier drift on €30,000 a month and 1% less waste on €8,000 a month of stock; 10% of €5,000 a month slipped invoices recovered; 0.2 percentage points off €500,000 a month cross-border volume.</p>
+      </div>
+
+      <div class="roi">
+        <div class="card">
+          <p class="eyebrow">Return on investment</p>
+          <h3>Worked as a simple formula</h3>
+          <p class="muted">Return = (annual cash saving + value of time you choose to redeploy − annual cost of Adelante) ÷ annual cost of Adelante.</p>
+          <p class="muted">The cost is set out in your proposal, not on this page. Time capacity is only counted if you redeploy it to customers, sales or other work.</p>
+        </div>
+        <div class="card">
+          <p class="eyebrow">Implementation timeline</p>
+          <h3>Twelve weeks, in three phases</h3>
+          <p class="muted">Phase 1, weeks 1 to 3: management briefing, customer replies. Phase 2, weeks 4 to 8: sales efficiency and back office. Phase 3, weeks 9 to 12: revenue recovery and payment costs, then a review against the time-saved tracker.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="foot-h">
+    <div class="head">
+      <p class="eyebrow">Our foot in the door approach</p>
+      <h2 id="foot-h">Prove it in one area, then expand.</h2>
+      <p class="muted">Nobody should buy a whole operating model on trust. Adelante is modular, so you choose the parts that suit your business and budget, and we install them in phases.</p>
+    </div>
+    <div class="phases">
+      <article class="card">
+        <span class="phase-tag">Phase 1</span>
+        <h3>Start with the biggest leak</h3>
+        <p class="muted">One module, usually the one with the largest time or money loss. We measure it against the baseline from the deep dive.</p>
+      </article>
+      <article class="card">
+        <span class="phase-tag">Phase 2</span>
+        <h3>Prove the result</h3>
+        <p class="muted">You see the hours back and the cash saved in the time-saved tracker. You decide the next step with real numbers, not promises.</p>
+      </article>
+      <article class="card">
+        <span class="phase-tag">Phase 3</span>
+        <h3>Add what suits you</h3>
+        <p class="muted">Further modules are added only when you choose them, within the budget you set. Stop at any phase if the results do not justify more.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="urgent-h">
+    <div class="urgency">
+      <p class="eyebrow" style="color:#E7B39C">Why now</p>
+      <h2 id="urgent-h" style="color:var(--cream)">The best time to start was yesterday. The second best is now.</h2>
+      <p>Christmas and the busy season ahead are close. Fixes put in place now are working for those weeks. Fixes started after them arrive too late to help.</p>
+      <p><b>Inaction is a decision too.</b> While you wait, the time and money listed in the report keep leaking, every week, whether you look at it or not.</p>
+      <p>Start with the free online assessment. It takes a few minutes, and it shows what the leak could be worth for your business before you commit to anything.</p>
+      <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:6px">
+        <a class="btn" href="index.html#calc-section">Take the free online assessment</a>
+        <a class="btn ghost" href="https://wa.me/34711018011?text=Hi%20Adelante%2C%20I%27d%20like%20to%20book%20a%20no-obligation%20call%20about%20my%20business." target="_blank" rel="noopener" style="color:var(--cream);box-shadow:inset 0 0 0 1.5px var(--cream)">Book a no-obligation call</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Adelante by VYRE · Marbella</span>
+    <span>dean@vyrehq.com · vyrehq.com</span>
+  </footer>
+</div>
+<script>
+  const L = [['hospitality.html','Hospitality groups'],['restaurants.html','Bars, restaurants and chiringuitos'],['real-estate.html','Real estate'],['hotels.html','Hotels and holiday rentals'],['salons.html','Salons, barbers and clinics'],['local-services.html','Local services'],['b2b-sales.html','B2B sales and office teams']];
+  const s = document.getElementById('industry-select');
+  s.innerHTML = '<option value="">Choose your industry</option>' + L.map(([f, n]) => '<option value="' + f + '">' + n + '</option>').join('');
+  s.onchange = () => { if (s.value) location.href = s.value; };
+</script>

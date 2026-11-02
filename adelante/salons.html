@@ -1,0 +1,135 @@
+<!doctype html>
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Salons, barbers and clinics, Adelante</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<body data-industry="salons">
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="brand" href="index.html" aria-label="Adelante by VYRE, home">
+      <svg width="32" height="38" viewBox="0 0 34 40" aria-hidden="true"><path d="M2 40V17a15 15 0 0 1 30 0v23" fill="none" stroke="currentColor" stroke-width="2.2"/><rect x="9" y="22" width="7" height="7" rx="1.5" fill="#B5532F"/><rect x="18" y="22" width="7" height="7" rx="1.5" fill="#1F4E79"/><rect x="9" y="31" width="7" height="7" rx="1.5" fill="#5B6B3A"/><rect x="18" y="31" width="7" height="7" rx="1.5" fill="#DCD2BF"/></svg>
+      <span>Adelante<small>by VYRE</small></span>
+    </a>
+    <div class="nav-right">
+      <select id="industry-select" class="industry-select" aria-label="Choose your industry"></select>
+      <a href="modules.html">Modules</a>
+      <a href="#get-report">Free leak report</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Salons, barbers and clinics</p>
+      <h1>Friday, 18:00. The client doesn't show. The chair stays empty.</h1>
+      <p class="lead">Appointments are lost when the phone is in a drawer, and the cancelled slot is never offered again. The owner rebuilds next week's rota in the evening instead.</p>
+      <div class="actions">
+        <a class="btn" href="#get-report">Get my leak report, free</a>
+        <a class="btn ghost" href="#calc-section">See my numbers</a>
+      </div>
+      <p class="reassure">No contract. Your report comes within 24 hours.</p>
+    </div>
+    <figure>
+      <div class="hero-photo"><img src="images/05-barbershop.jpg" alt="Barber at work with a happy client"></div>
+      <figcaption>Salons, barbers and clinics</figcaption>
+    </figure>
+  </header>
+
+  <section aria-labelledby="prob-h">
+    <div class="head">
+      <p class="eyebrow">The problems in this industry</p>
+      <h2 id="prob-h">Three leaks in the diary and the evenings.</h2>
+    </div>
+    <div class="grid-3">
+      <article class="card">
+        <p class="problem-scene">No-shows, with no reminder and no deposit.</p>
+        <p class="muted">The client forgets, and the slot is found empty after the appointment time has passed.</p>
+        <p class="cost">Cost, worked example: <b>4 no-shows a week</b> at €45 is €180 a week, about <b>€9,000 a year</b>.</p>
+        <p class="fix"><b>Adelante:</b> sends reminders, asks for a deposit where you choose, and offers cancelled slots again.</p>
+      </article>
+      <article class="card">
+        <p class="problem-scene">Calls missed while the hands are busy.</p>
+        <p class="muted">Everyone is mid-appointment, the phone rings out, and the caller books somewhere that picked up.</p>
+        <p class="cost">Cost, worked example: <b>€8,000 to €20,000 a year</b> in appointments protected, depending on your volume.</p>
+        <p class="fix"><b>Adelante:</b> answers calls and messages while the team is with clients, and books the slot.</p>
+      </article>
+      <article class="card">
+        <p class="problem-scene">The evenings go on the rota and the reviews.</p>
+        <p class="muted">Rotas rebuilt from a WhatsApp thread, and a one-star review left unanswered for a week.</p>
+        <p class="cost">Cost, worked example: <b>5 to 8 hours a week</b> of owner time, before any cash is counted.</p>
+        <p class="fix"><b>Adelante:</b> plans rotas from bookings, swaps by message, and drafts a reply to every review.</p>
+      </article>
+    </div>
+    <p class="note">Worked examples with the assumptions shown. Not client results.</p>
+  </section>
+
+  <section aria-labelledby="flow-h">
+    <div class="head">
+      <p class="eyebrow">How Adelante resolves it</p>
+      <h2 id="flow-h">A no-show becomes a rebooked slot, the same day.</h2>
+    </div>
+    <div class="flow" role="list">
+      <div class="node" role="listitem"><span class="chan" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.6 20.4l4.2-1.1A8.5 8.5 0 1 0 12 3.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.1 8.4c.2-.3.5-.3.7.1l.7 1.5c.1.2 0 .5-.2.6l-.4.3c.4.9 1.1 1.6 2 2l.3-.4c.2-.2.4-.2.6-.1l1.5.7c.3.2.3.5.1.7-.4.5-1 .7-1.7.5-1.9-.6-3.4-2.1-4-4-.2-.7 0-1.3.6-1.7z" fill="currentColor"/></svg><svg class="ico" viewBox="0 0 24 24"><path d="M6.6 3.5h2.4l1.3 3.6-1.7 1.2a11 11 0 0 0 5.1 5.1l1.2-1.7 3.6 1.3v2.4a2 2 0 0 1-2.2 2A16 16 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><b>1. Booking made</b><span class="hint">Online, by message or by phone.</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node adel" role="listitem"><b>2. Reminder sent</b><span>And a deposit requested where you choose.</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node" role="listitem"><b>3. No-show detected</b><span>The slot is offered again to the waitlist straight away.</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node" role="listitem"><b>4. Diary filled</b><span>The rota updates, and the owner is not called in at 21:00.</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="week-h">
+    <div class="scenario">
+      <div class="card">
+        <span class="tag">A typical busy week</span>
+        <h2 id="week-h" style="font-size:2rem">The diary has gaps, and the owner finds them after closing.</h2>
+        <p class="muted">A Friday client doesn't show. Two more calls go unanswered while the team is with clients. At closing time the owner rebuilds the next week's rota from a WhatsApp thread.</p>
+      </div>
+      <ul class="modules" aria-label="Modules for salons and clinics">
+        <li><b>Fewer no-shows</b>Reminders, deposits and cancelled slots offered again.</li>
+        <li><b>Every enquiry answered, day or night</b>Calls and messages answered while staff are with clients.</li>
+        <li><b>Smarter rotas</b>Planned from bookings, with swaps handled by message.</li>
+        <li><b>Reviews answered, reputation up</b>A drafted reply for every review, ready to approve.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="calc-section" aria-labelledby="calc-h">
+    <div class="head">
+      <p class="eyebrow">Your numbers</p>
+      <h2 id="calc-h">Put in your own figures. See your leak.</h2>
+      <p class="muted">Defaults are a typical appointment business. Change any number.</p>
+    </div>
+    <div class="calc" id="calc"></div>
+  </section>
+
+  <section id="get-report" aria-labelledby="lead-h">
+    <div class="head">
+      <p class="eyebrow">Free leak report</p>
+      <h2 id="lead-h">Get your leak report.</h2>
+      <p class="muted">We send your written report within 24 hours.</p>
+    </div>
+    <div class="calc" style="grid-template-columns:1fr 1fr">
+      <div id="lead"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="others-h">
+    <p class="eyebrow" id="others-h">Other industries</p>
+    <div class="others">
+      <a href="hospitality.html">Hospitality groups</a>
+      <a href="restaurants.html">Bars, restaurants and chiringuitos</a>
+      <a href="real-estate.html">Real estate</a>
+      <a href="hotels.html">Hotels and holiday rentals</a>
+      <a href="local-services.html">Local services</a>
+      <a href="b2b-sales.html">B2B sales and office teams</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Adelante by VYRE · Marbella</span>
+    <span>dean@vyrehq.com · vyrehq.com</span>
+  </footer>
+</div>
+<script src="app.js"></script>
