@@ -96,6 +96,8 @@
           <input id="l-phone" type="tel" required autocomplete="tel"></label>
         <label>Your name <span class="hint">Optional</span>
           <input id="l-name" type="text" autocomplete="name"></label>
+        <label>What would you most like to fix? <span class="hint">Optional, a sentence or two</span>
+          <textarea id="l-overview" rows="3" placeholder="For example: we miss enquiries at weekends and invoices take my evenings."></textarea></label>
         <label class="check"><input id="l-consent" type="checkbox" required> <span>I agree that Adelante may send my leak report and contact me about it. <span class="req">*</span></span></label>
         <div class="error" id="l-error" role="alert"></div>
         <button class="btn" type="submit">Get my leak report, free</button>
@@ -134,13 +136,19 @@
         form.reset();
         btn.disabled = false;
       };
-      const payload = { _subject: 'Adelante leak report request: ' + business, industry, business, name, email, phone, page: location.pathname, _template: 'table', _captcha: 'false' };
+      const overview = $('l-overview').value.trim();
+      const payload = {
+        _subject: 'ADELANTE ENQUIRY: ' + business + ' (' + industry + ')',
+        industry, business, name, email, phone, overview: overview || '-', page: location.pathname,
+        _template: 'table', _captcha: 'false',
+        _autoresponse: `Hi${name ? ' ' + name : ''},\n\nThanks for contacting Adelante by VYRE. We have your details:\n\nBusiness: ${business}\nIndustry: ${industry}\nEmail: ${email}\nPhone: ${phone}\n\nIf you have a moment, reply to this email with a high-level overview of what you would most like to fix, and someone will get back to you shortly.\n\nIf it is urgent, message or call Dean on WhatsApp: +34 711 018 011.\n\nAdelante by VYRE, Marbella\ndean@vyrehq.com`
+      };
       btn.disabled = true;
       fetch('https://formsubmit.co/ajax/dean@vyrehq.com', {
         method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload)
       }).then(r => { if (!r.ok) throw new Error(r.status); done(); }).catch(() => {
         // Fallback: send the same details by WhatsApp so no lead is lost.
-        const text = encodeURIComponent(`Hi Adelante, I'd like my free leak report.\nIndustry: ${industry}\nBusiness: ${business}\nName: ${name || '-'}\nEmail: ${email}\nPhone: ${phone}`);
+        const text = encodeURIComponent(`Hi Adelante, I'd like my free leak report.\nIndustry: ${industry}\nBusiness: ${business}\nName: ${name || '-'}\nEmail: ${email}\nPhone: ${phone}\nWhat I'd like to fix: ${overview || '-'}`);
         done();
         conf.textContent += ' If WhatsApp opened, please press send so we receive your details.';
         window.open('https://wa.me/34711018011?text=' + text, '_blank', 'noopener');

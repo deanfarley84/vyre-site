@@ -107,3 +107,15 @@ footer { padding-block: 36px 52px; border-top: 1px solid var(--line); font-size:
   .industry-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 520px) { .industry-grid { grid-template-columns: 1fr; } }
+
+/* Contact bar */
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 10px 0 0; font-size: 0.88rem; }
+.topbar-note { color: var(--muted); }
+.topbar-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.topbar-links a { display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); text-decoration: none; color: var(--ink); font-weight: 500; white-space: nowrap; }
+.topbar-links a:hover { border-color: var(--terracotta); color: var(--terracotta-deep); }
+.topbar-links .ico { width: 18px; height: 18px; color: var(--azulejo); }
+.topbar-links a:first-child { background: #E8F5EE; border-color: #BFE3CF; }
+.topbar-links a:first-child .ico { color: #1F8A4C; }
+textarea { font: inherit; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--cream); color: var(--ink); width: 100%; resize: vertical; }
+@media (max-width: 520px) { .topbar-note { display: none; } .topbar-links a span { font-size: 0.84rem; } }
