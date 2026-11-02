@@ -119,3 +119,5 @@ footer { padding-block: 36px 52px; border-top: 1px solid var(--line); font-size:
 .topbar-links a:first-child .ico { color: #1F8A4C; }
 textarea { font: inherit; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--cream); color: var(--ink); width: 100%; resize: vertical; }
 @media (max-width: 520px) { .topbar-note { display: none; } .topbar-links a span { font-size: 0.84rem; } }
+
+.urgency { background: var(--ink); color: var(--cream); border-radius: 24px; padding: 36px; display: grid; gap: 14px; }
