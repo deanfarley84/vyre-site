@@ -1,0 +1,302 @@
+<!doctype html>
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Adelante modules, what each one gives back</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .layers { display: grid; gap: 18px; }
+  .layer { display: grid; grid-template-columns: 1fr 1.2fr; gap: 28px; align-items: start; }
+  .layer h3 { font-size: 1.6rem; }
+  .layer .pain { font-size: 0.98rem; color: var(--muted); margin-top: 10px; }
+  .mods { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .mods li { background: var(--cream); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; font-size: 0.95rem; }
+  .mods li b { font-family: var(--display); font-weight: 500; font-size: 1.05rem; display: block; }
+  .back-numbers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
+  .back-numbers div { background: var(--sand); border-radius: 14px; padding: 12px 14px; font-size: 0.85rem; color: var(--muted); }
+  .back-numbers b { display: block; font-family: var(--display); font-weight: 500; font-size: 1.35rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .table-wrap { overflow-x: auto; border-radius: 20px; border: 1px solid var(--line); background: var(--paper); }
+  table.ledger { width: 100%; border-collapse: collapse; font-size: 0.95rem; min-width: 620px; }
+  table.ledger th, table.ledger td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.ledger th { font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--azulejo); font-weight: 600; background: var(--cream); }
+  table.ledger td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  table.ledger tr.total td { font-weight: 600; background: var(--sand); }
+  .outcomes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .outcomes .card { display: grid; gap: 10px; align-content: start; }
+  .outcomes h3 { font-size: 1.2rem; }
+  .measure { background: var(--ink); color: var(--cream); border-radius: 24px; padding: 32px; display: grid; gap: 14px; }
+  .measure p { color: #DCD2BF; }
+  .measure b { color: #F6D2BF; }
+  @media (max-width: 900px) {
+    .layer { grid-template-columns: 1fr; gap: 16px; }
+    .outcomes { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .outcomes, .back-numbers { grid-template-columns: 1fr; }
+  }
+</style>
+<body data-page="modules">
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="brand" href="index.html" aria-label="Adelante by VYRE, home">
+      <svg width="32" height="38" viewBox="0 0 34 40" aria-hidden="true"><path d="M2 40V17a15 15 0 0 1 30 0v23" fill="none" stroke="currentColor" stroke-width="2.2"/><rect x="9" y="22" width="7" height="7" rx="1.5" fill="#B5532F"/><rect x="18" y="22" width="7" height="7" rx="1.5" fill="#1F4E79"/><rect x="9" y="31" width="7" height="7" rx="1.5" fill="#5B6B3A"/><rect x="18" y="31" width="7" height="7" rx="1.5" fill="#DCD2BF"/></svg>
+      <span>Adelante<small>by VYRE</small></span>
+    </a>
+    <div class="nav-right">
+      <select id="industry-select" class="industry-select" aria-label="Choose your industry"></select>
+      <a href="modules.html" aria-current="page">Modules</a>
+      <a href="deep-dive.html">Deep dive</a>
+      <a href="index.html#get-report">Free leak report</a>
+    </div>
+  </nav>
+
+  <header class="hero" style="grid-template-columns:1fr">
+    <div>
+      <p class="eyebrow">The Adelante modules</p>
+      <h1>Every module starts with a leak you already feel. Then it gives time back.</h1>
+      <p class="lead">Six layers, each tied to a pain your team already recognises. Hours come back first. Money follows, and every figure below shows its assumption.</p>
+      <div class="actions">
+        <a class="btn" href="index.html#calc-section">Take the free online assessment</a>
+        <a class="btn ghost" href="#book-call">Book a no-obligation call</a>
+      </div>
+      <p class="reassure">Worked examples, assumptions shown. Not client results.</p>
+    </div>
+  </header>
+
+  <section aria-labelledby="layers-h" id="layers">
+    <div class="head">
+      <p class="eyebrow">Six layers</p>
+      <h2 id="layers-h">The pain, the module, and what it gives back.</h2>
+      <p class="muted">Time figures are deliberately conservative. Money uses a staff cost of €30 an hour, which you replace with your own number in the audit.</p>
+    </div>
+
+    <div class="layers">
+
+      <article class="card layer">
+        <div>
+          <p class="eyebrow">1. Know your business</p>
+          <h3>The owner hears about problems at month end.</h3>
+          <p class="pain">Mornings go on checking three systems and asking the team what happened yesterday. Problems surface when they are already costly.</p>
+        </div>
+        <div>
+          <ul class="mods">
+            <li><b>Daily morning briefing</b>The last 24 hours, plus 2 to 5 actions for today.</li>
+            <li><b>Alerts on danger and deal loss</b>Warned the same day, not at month end.</li>
+            <li><b>Exec view across sites</b>One screen for owners and senior managers, web or phone.</li>
+            <li><b>People dashboard</b>Hours, absence and workload, without chasing spreadsheets.</li>
+          </ul>
+          <div class="back-numbers">
+            <div><b>2 hrs</b>owner time a week, about 20 minutes a day</div>
+            <div><b>€3,120</b>a year of time capacity at €30 an hour</div>
+            <div><b>Alerts</b>losses caught earlier. Not counted as cash.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card layer">
+        <div>
+          <p class="eyebrow">2. Sales and growth</p>
+          <h3>Reps spend the first hour researching lists nobody checked.</h3>
+          <p class="pain">Calls go to the wrong people, pitches vary from rep to rep, and good meetings wait three days for a follow-up.</p>
+        </div>
+        <div>
+          <ul class="mods">
+            <li><b>Targeting and research</b>Cleaner lists each morning, right contacts first.</li>
+            <li><b>Buyer intent scoring</b>Genuine interest separated from browsing, so managers spend time on the right buyers.</li>
+            <li><b>Caller prompter and call review</b>Live prompts for your business, every call summarised and scored.</li>
+            <li><b>Follow-up and proposal drafts</b>Sent the same day, tailored to the call.</li>
+          </ul>
+          <div class="back-numbers">
+            <div><b>6 hrs</b>a week across two reps, 3 hours each on research and admin</div>
+            <div><b>€9,360</b>a year of capacity, redeployed to customers</div>
+            <div><b>More meetings</b>not counted in money here. Use the calculator on your own figures.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card layer">
+        <div>
+          <p class="eyebrow">3. Customer front line</p>
+          <h3>Enquiries wait while the team is busy or closed.</h3>
+          <p class="pain">Messages sit unanswered during service or after hours. The same questions are answered again and again, and the caller books elsewhere.</p>
+        </div>
+        <div>
+          <ul class="mods">
+            <li><b>Replies in the customer's language</b>Within minutes, day or night.</li>
+            <li><b>Out-of-hours voice receptionist</b>Takes details, books where you allow, and passes the rest on.</li>
+            <li><b>Repeat questions handled</b>Opening times, parking, prices, check-in: answered before staff are needed.</li>
+            <li><b>Bookings and reminders</b>Fewer empty chairs and fewer no-shows.</li>
+          </ul>
+          <div class="back-numbers">
+            <div><b>3 hrs</b>of staff time a week on repeat questions and admin</div>
+            <div><b>€4,680</b>a year of capacity at €30 an hour</div>
+            <div><b>Fewer missed enquiries</b>not counted in money. Measured by your own bookings.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card layer">
+        <div>
+          <p class="eyebrow">4. Back office and admin</p>
+          <h3>Invoices typed by hand. Reconciliation at month end.</h3>
+          <p class="pain">Admin fills evenings. Contracts wait for a review nobody has time for, and stock is counted when someone remembers.</p>
+        </div>
+        <div>
+          <ul class="mods">
+            <li><b>Invoice capture and filing</b>Read from email and uploads, filed and sent to your accountant.</li>
+            <li><b>Automatic reconciliation</b>Sales matched to bank and card payouts, exceptions flagged.</li>
+            <li><b>Contract review</b>Key terms and risks flagged. You decide. Scope agreed per client.</li>
+            <li><b>Stock tracking against sales</b>Usage compared with what you sell, shortfalls flagged.</li>
+          </ul>
+          <div class="back-numbers">
+            <div><b>4 hrs</b>a week of admin returned to the team</div>
+            <div><b>€6,240</b>a year of capacity at €30 an hour</div>
+            <div><b>Fewer errors</b>not counted in money. Checked at day 30.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card layer">
+        <div>
+          <p class="eyebrow">5. Cost control and supplier prices</p>
+          <h3>Supplier prices drift up and nobody notices.</h3>
+          <p class="pain">An invoice comes in above the agreed price. It gets paid, because checking every line takes too long.</p>
+        </div>
+        <div>
+          <ul class="mods">
+            <li><b>Supplier cost drift alerts</b>Invoices compared with agreed prices, differences flagged before payment.</li>
+            <li><b>Waste and stock flags</b>Stock running down or over-ordering spotted early.</li>
+          </ul>
+          <div class="back-numbers">
+            <div><b>1 hr</b>a week of checking invoices by hand</div>
+            <div><b>€1,560</b>a year in cash. Example: 1% drift caught on €10,000 a month supplier spend (€1,200), plus 1% less waste on €3,000 a month stock (€360)</div>
+            <div><b>Assumption</b>1% is a conservative catch rate. Your own invoices will show the real figure.</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card layer">
+        <div>
+          <p class="eyebrow">6. Finance, revenue recovery and cross-border payments</p>
+          <h3>Revenue slips through invoices and payment fees nobody checks.</h3>
+          <p class="pain">Invoices go past due and are not chased. Card payments are priced above contract. Cross-border fees add up quietly, month after month.</p>
+        </div>
+        <div>
+          <ul class="mods">
+            <li><b>Slipped invoice recovery</b>Overdue items found and chased on schedule.</li>
+            <li><b>Card pricing checks</b>Charges compared with what was agreed with your provider.</li>
+            <li><b>Cross-border payment review</b>Fees and FX margins compared with your volumes. This is VYRE's payments expertise.</li>
+          </ul>
+          <div class="back-numbers">
+            <div><b>1 hr</b>a week on chasing and checking</div>
+            <div><b>€7,200</b>a year in cash. Example: 10% of €2,000 a month slipped invoices recovered (€2,400), plus 0.2 points off €200,000 a month cross-border volume (€4,800)</div>
+            <div><b>Assumption</b>Recovery and saving rates are conservative. Confirmed only by your own statements.</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section aria-labelledby="total-h">
+    <div class="head">
+      <p class="eyebrow">Put together, for one example business</p>
+      <h2 id="total-h">About €8,760 a year in cash, plus 17 hours a week of time back.</h2>
+      <p class="muted">Example: a small business with two sales reps, a shared admin load and one owner. The cash figure counts only cost and recovery savings. Time capacity is shown separately, because it becomes cash only if you redeploy it.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="ledger">
+        <thead>
+          <tr><th>Layer</th><th>Hours back a week</th><th>Capacity a year at €30/hr</th><th>Cash a year</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1. Know your business</td><td class="num">2</td><td class="num">€3,120</td><td class="num">Not counted</td></tr>
+          <tr><td>2. Sales and growth</td><td class="num">6</td><td class="num">€9,360</td><td class="num">Not counted</td></tr>
+          <tr><td>3. Customer front line</td><td class="num">3</td><td class="num">€4,680</td><td class="num">Not counted</td></tr>
+          <tr><td>4. Back office and admin</td><td class="num">4</td><td class="num">€6,240</td><td class="num">Not counted</td></tr>
+          <tr><td>5. Cost control and supplier prices</td><td class="num">1</td><td class="num">€1,560</td><td class="num">€1,560</td></tr>
+          <tr><td>6. Finance and revenue recovery</td><td class="num">1</td><td class="num">€1,560</td><td class="num">€7,200</td></tr>
+          <tr class="total"><td>Total</td><td class="num">17</td><td class="num">€26,520</td><td class="num">€8,760</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Worked example, not a promise. Capacity is hours at €30 an hour. Cash is only recovery and cost savings, using the assumptions in each layer.</p>
+  </section>
+
+  <section aria-labelledby="outcomes-h">
+    <div class="head">
+      <p class="eyebrow">What changes for you</p>
+      <h2 id="outcomes-h">Less headache. More time with the team and customers.</h2>
+      <p class="muted">These are the outcomes we design for. We measure them, we don't assume them.</p>
+    </div>
+    <div class="outcomes">
+      <article class="card">
+        <span class="tag" style="font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--azulejo)">Less headache</span>
+        <h3>Fewer chased tasks</h3>
+        <p class="muted">Fewer things waiting on you. The morning briefing replaces the search for what needs attention.</p>
+      </article>
+      <article class="card">
+        <span class="tag" style="font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--azulejo)">Your team</span>
+        <h3>More time with the team</h3>
+        <p class="muted">Admin moves off the team's plate, so managers coach and staff stop working evenings.</p>
+      </article>
+      <article class="card">
+        <span class="tag" style="font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--azulejo)">Your customers</span>
+        <h3>More time with customers</h3>
+        <p class="muted">Staff spend the hours they saved in the room with the customer, not on the keyboard.</p>
+      </article>
+      <article class="card">
+        <span class="tag" style="font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--azulejo)">You</span>
+        <h3>Time to be creative</h3>
+        <p class="muted">The owner gets time back for strategy, new offers and the work only the owner can do.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="measure-h">
+    <div class="measure">
+      <p class="eyebrow" style="color:#E7B39C">How we know it works</p>
+      <h2 id="measure-h" style="color:var(--cream)">We measure it. We don't assume it.</h2>
+      <p><b>Time saved:</b> logged in the time-saved tracker each week, so the figure is yours, not ours.</p>
+      <p><b>Headache:</b> a two-question check at day 30 and day 90, scored from 0 to 10.</p>
+      <p><b>Customer satisfaction:</b> a short post-visit or post-enquiry question, reported as it arrives. No satisfaction score is claimed until it is measured with your customers.</p>
+      <p><b>Money:</b> the cash figures above, checked against your statements at each review.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="cta-h" id="book-call">
+    <div class="head">
+      <p class="eyebrow">Find out how much you could be saving</p>
+      <h2 id="cta-h">Start with the free online assessment. Then, if useful, talk it through.</h2>
+      <p class="muted">The assessment takes a few minutes and uses your own numbers. A call is optional and carries no obligation. We use it to discuss where the savings would come from and whether Adelante fits your business.</p>
+    </div>
+    <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap">
+      <a class="btn" href="index.html#calc-section">Take the free online assessment</a>
+      <a class="btn ghost" href="https://wa.me/34711018011?text=Hi%20Adelante%2C%20I%27d%20like%20to%20book%20a%20no-obligation%20call%20about%20my%20business." target="_blank" rel="noopener">Book a no-obligation call</a>
+    </div>
+  </section>
+
+  <section aria-labelledby="others-h">
+    <p class="eyebrow" id="others-h">Industries</p>
+    <div class="others">
+      <a href="hospitality.html">Hospitality groups</a>
+      <a href="restaurants.html">Bars, restaurants and chiringuitos</a>
+      <a href="real-estate.html">Real estate</a>
+      <a href="hotels.html">Hotels and holiday rentals</a>
+      <a href="salons.html">Salons, barbers and clinics</a>
+      <a href="local-services.html">Local services</a>
+      <a href="b2b-sales.html">B2B sales and office teams</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Adelante by VYRE · Marbella</span>
+    <span>dean@vyrehq.com · vyrehq.com</span>
+  </footer>
+</div>
+<script>
+  const L = [['hospitality.html','Hospitality groups'],['restaurants.html','Bars, restaurants and chiringuitos'],['real-estate.html','Real estate'],['hotels.html','Hotels and holiday rentals'],['salons.html','Salons, barbers and clinics'],['local-services.html','Local services'],['b2b-sales.html','B2B sales and office teams']];
+  const s = document.getElementById('industry-select');
+  s.innerHTML = '<option value="">Choose your industry</option>' + L.map(([f, n]) => '<option value="' + f + '">' + n + '</option>').join('');
+  s.onchange = () => { if (s.value) location.href = s.value; };
+</script>
