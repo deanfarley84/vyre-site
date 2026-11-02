@@ -191,7 +191,7 @@
   </footer>
 </div>
 <script>
-  const L = [['hospitality.html','Hospitality groups'],['restaurants.html','Bars, restaurants and chiringuitos'],['real-estate.html','Real estate'],['hotels.html','Hotels and holiday rentals'],['salons.html','Salons, barbers and clinics'],['local-services.html','Local services'],['b2b-sales.html','B2B sales and office teams']];
+  const L = [['hospitality.html','Hospitality groups'],['restaurants.html','Bars, restaurants and chiringuitos'],['real-estate.html','Real estate'],['hotels.html','Hotels and holiday rentals'],['salons.html','Salons, barbers and clinics'],['local-services.html','Local services'],['b2b-sales.html','B2B sales and office teams'],['social-media.html','Social media and content agencies']];
   const s = document.getElementById('industry-select');
   s.innerHTML = '<option value="">Choose your industry</option>' + L.map(([f, n]) => '<option value="' + f + '">' + n + '</option>').join('');
   s.onchange = () => { if (s.value) location.href = s.value; };

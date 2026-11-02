@@ -7,7 +7,8 @@
     { slug: 'hotels', file: 'hotels.html', name: 'Hotels and holiday rentals', short: 'Hotels and rental units', d: { enq: 10, val: 600, ns: 2, nsv: 150, adm: 12, rate: 22 } },
     { slug: 'salons', file: 'salons.html', name: 'Salons, barbers and clinics', short: 'Appointment-based', d: { enq: 6, val: 50, ns: 4, nsv: 45, adm: 6, rate: 22 } },
     { slug: 'local-services', file: 'local-services.html', name: 'Local services', short: 'Trades, cleaning, maintenance', d: { enq: 5, val: 350, ns: 0, nsv: 0, adm: 8, rate: 25 } },
-    { slug: 'b2b-sales', file: 'b2b-sales.html', name: 'B2B sales and office teams', short: 'Outbound calling teams', d: { enq: 0, val: 0, ns: 0, nsv: 0, adm: 5, rate: 30 } }
+    { slug: 'b2b-sales', file: 'b2b-sales.html', name: 'B2B sales and office teams', short: 'Outbound calling teams', d: { enq: 0, val: 0, ns: 0, nsv: 0, adm: 5, rate: 30 } },
+    { slug: 'social-media', file: 'social-media.html', name: 'Social media and content agencies', short: 'Agencies, creators, community managers', d: { enq: 6, val: 900, ns: 0, nsv: 0, adm: 10, rate: 30 } }
   ];
   const current = document.body.dataset.industry || '';
   const find = slug => INDUSTRIES.find(i => i.slug === slug);
