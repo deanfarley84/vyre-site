@@ -59,8 +59,8 @@
           <div><span>No-shows prevented, half of empty slots</span><b id="c-r-ns">€0</b></div>
           <div><span>Admin time handed back, half of hours</span><b id="c-r-adm">0 h</b></div>
         </div>
-        <p class="how">Working: missed enquiries × 52 × win-back share × booking value. No-shows × 52 × 50% × slot value. Admin hours × 52 × 50% × hourly cost. An estimate from your inputs, not a guarantee. The audit tests every figure against your real records.</p>
-        <a class="btn" href="#get-report">Get my leak report, free</a>
+        <p class="how">Working: missed enquiries × 52 × win-back share × booking value. No-shows × 52 × 50% × slot value. Admin hours × 52 × 50% × hourly cost. An estimate from your inputs, not a guarantee. We discuss these assumptions in your free review; detailed validation can follow in a paid deep dive.</p>
+        <a class="btn" href="#get-report">Request my free review</a>
       </aside>`;
     const calc = () => {
       const v = id => Math.max(0, parseFloat($(id).value) || 0);
@@ -79,7 +79,7 @@
     calc();
   }
 
-  // Free leak report form. Industry, business name, email and phone are required.
+  // Free business review request form. Industry, business name, email and phone are required.
   const leadBox = $('lead');
   if (leadBox) {
     leadBox.innerHTML = `
@@ -95,14 +95,16 @@
           <input id="l-email" type="email" required autocomplete="email"></label>
         <label>Phone <span class="req">*</span>
           <input id="l-phone" type="tel" required autocomplete="tel"></label>
+        <label>Preferred days and times <span class="hint">Optional, please include your time zone</span>
+          <input id="l-time" type="text" placeholder="For example: Tuesday afternoon, Spain time"></label>
         <label>Your name <span class="hint">Optional</span>
           <input id="l-name" type="text" autocomplete="name"></label>
         <label>What would you most like to fix? <span class="hint">Optional, a sentence or two</span>
           <textarea id="l-overview" rows="3" placeholder="For example: we miss enquiries at weekends and invoices take my evenings."></textarea></label>
-        <label class="check"><input id="l-consent" type="checkbox" required> <span>I agree that Adelante may send my leak report and contact me about it. <span class="req">*</span></span></label>
+        <label class="check"><input id="l-consent" type="checkbox" required> <span>I agree that Adelante may contact me to arrange my free AI &amp; Business Efficiency Review. <span class="req">*</span></span></label>
         <div class="error" id="l-error" role="alert"></div>
-        <button class="btn" type="submit">Get my leak report, free</button>
-        <p class="hint">No contract. Your report comes within 24 hours. We don't share your details.</p>
+        <button class="btn" type="submit">Request my free review</button>
+        <p class="hint">Free 30-minute session. No obligation. We will contact you to agree a time.</p>
       </form>
       <div class="confirm" id="l-confirm" role="status"></div>`;
     const form = $('lead-form');
@@ -117,7 +119,7 @@
       if (missing.length) msg = 'Please complete industry, business name, email and phone.';
       else if (!emailOk) msg = 'Please enter a valid email address.';
       else if (!phoneOk) msg = 'Please enter a valid phone number.';
-      else if (!consent) msg = 'Please tick the consent box so we can send your report.';
+      else if (!consent) msg = 'Please tick the consent box so we can arrange your review.';
       $('l-error').textContent = msg;
       if (msg) {
         const first = missing[0] ? $(missing[0]) : (!emailOk ? $('l-email') : (!phoneOk ? $('l-phone') : $('l-consent')));
@@ -132,27 +134,35 @@
       const conf = $('l-confirm');
       const btn = form.querySelector('button[type="submit"]');
       const done = () => {
-        conf.textContent = `Thanks${name ? ', ' + name : ''}. Your leak report for ${business} will go to ${email} within 24 hours.`;
+        conf.textContent = `Thanks${name ? ', ' + name : ''}. We have received your free review request for ${business}. We will contact you at ${email} or ${phone} to agree a time. Your session is not booked until we confirm it.`;
         conf.classList.add('show');
         form.reset();
         btn.disabled = false;
       };
       const overview = $('l-overview').value.trim();
       const payload = {
-        _subject: 'ADELANTE ENQUIRY: ' + business + ' (' + industry + ')',
-        industry, business, name, email, phone, overview: overview || '-', page: location.pathname,
+        _subject: 'ADELANTE FREE AI & BUSINESS EFFICIENCY REVIEW: ' + business + ' (' + industry + ')',
+        industry, business, name, email, phone, preferred_time: $('l-time').value.trim() || '-', offer: 'Free 30-minute AI & Business Efficiency Review', overview: overview || '-', page: location.pathname,
         _template: 'table', _captcha: 'false',
-        _autoresponse: `Hi${name ? ' ' + name : ''},\n\nThanks for contacting Adelante by VYRE. We have your details:\n\nBusiness: ${business}\nIndustry: ${industry}\nEmail: ${email}\nPhone: ${phone}\n\nIf you have a moment, reply to this email with a high-level overview of what you would most like to fix, and someone will get back to you shortly.\n\nIf it is urgent, message or call Dean on WhatsApp: +34 711 018 011.\n\nAdelante by VYRE, Marbella\ndean@vyrehq.com`
+        _autoresponse: `Hi${name ? ' ' + name : ''},\n\nThanks for requesting your free 30-minute AI & Business Efficiency Review with Adelante by VYRE. We will contact you to agree a time. Your session is not booked until we confirm it. We have your details:\n\nBusiness: ${business}\nIndustry: ${industry}\nEmail: ${email}\nPhone: ${phone}\n\nIf you have a moment, reply to this email with a high-level overview of what you would most like to fix, and someone will get back to you shortly.\n\nIf it is urgent, message or call Dean on WhatsApp: +34 711 018 011.\n\nAdelante by VYRE, Marbella\ndean@vyrehq.com`
       };
       btn.disabled = true;
       fetch('https://formsubmit.co/ajax/dean@vyrehq.com', {
         method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload)
-      }).then(r => { if (!r.ok) throw new Error(r.status); done(); }).catch(() => {
+      }).then(async r => { if (!r.ok) throw new Error(r.status); const result = await r.json(); if (result.success !== true && result.success !== 'true') throw new Error('Submission was not accepted'); done(); }).catch(() => {
         // Fallback: send the same details by WhatsApp so no lead is lost.
-        const text = encodeURIComponent(`Hi Adelante, I'd like my free leak report.\nIndustry: ${industry}\nBusiness: ${business}\nName: ${name || '-'}\nEmail: ${email}\nPhone: ${phone}\nWhat I'd like to fix: ${overview || '-'}`);
-        done();
-        conf.textContent += ' If WhatsApp opened, please press send so we receive your details.';
-        window.open('https://wa.me/34711018011?text=' + text, '_blank', 'noopener');
+        const text = encodeURIComponent(`Hi Adelante, I'd like to arrange my free 30-minute AI & Business Efficiency Review.\nIndustry: ${industry}\nBusiness: ${business}\nName: ${name || '-'}\nEmail: ${email}\nPhone: ${phone}\nWhat I'd like to fix: ${overview || '-'}`);
+        btn.disabled = false;
+        conf.textContent = 'Your request could not be sent through the form. Please send it through WhatsApp below, or email dean@vyrehq.com. Your session is not booked yet.';
+        const fallback = document.createElement('a');
+        fallback.href = 'https://wa.me/34711018011?text=' + text;
+        fallback.target = '_blank';
+        fallback.rel = 'noopener';
+        fallback.className = 'btn';
+        fallback.textContent = 'Send my review request on WhatsApp';
+        conf.appendChild(document.createElement('br'));
+        conf.appendChild(fallback);
+        conf.classList.add('show');
       });
     });
   }
