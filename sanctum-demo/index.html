@@ -67,6 +67,9 @@ input[type="range"]{accent-color:#678875;width:100%}.slider-row{padding-bottom:9
 <button class="nav-btn" data-go="members"><span class="num">03</span> Member retention</button>
 <button class="nav-btn" data-go="analytics"><span class="num">04</span> Analytics & value</button>
 <button class="nav-btn" data-go="connections"><span class="num">05</span> Connections & setup</button>
+
+<button class="nav-btn" data-go="mindbody"><span class="num">06</span> Mindbody data</button>
+<button class="nav-btn" data-go="marketing"><span class="num">07</span> Email marketing</button>
 </nav>
 <div class="sidebar-note"><b>Adelante by VYRE</b><p>One calm view of enquiries, recurring bookings and business performance.</p><span style="opacity:.8">PRIVATE CUSTOMER DEMONSTRATION<br>Illustrative records only</span></div></aside>
 <main class="main"><header class="topbar"><div class="topline">THE SANCTUM SPACE / ADE­LANTE PILOT</div><div class="topactions"><span class="pill"><span class="dot"></span> Interactive preview</span><span class="pill warn">DEMO DATA · no systems connected</span></div></header>
@@ -168,6 +171,95 @@ input[type="range"]{accent-color:#678875;width:100%}.slider-row{padding-bottom:9
 <div class="card" style="margin-top:18px"><h3>Service links</h3><p><a target="_blank" rel="noopener" href="https://thesanctum.space">The Sanctum Space website ↗</a></p><p><a target="_blank" rel="noopener" href="https://www.instagram.com/thesanctum.space/">Instagram @thesanctum.space ↗</a></p><p><a target="_blank" rel="noopener" href="https://get.mndbdy.ly/vOHRfZn8H4b">Mindbody booking app ↗</a></p><p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Aloha%20Pueblo%2033%20Nueva%20Andalucia%20Marbella">Directions / Google Maps ↗</a></p><p><a target="_blank" rel="noopener" href="https://wa.me/34605268729">Studio WhatsApp ↗</a></p><p><a target="_blank" rel="noopener" href="https://vyrehq.com/adelante/">Adelante by VYRE ↗</a></p></div></div></div>
 </section>
 
+
+<section class="page" id="mindbody">
+  <div class="sectionhead"><div class="kicker">Connected intelligence / Mindbody integration</div>
+  <h1>Your Mindbody data, in one clear view.</h1>
+  <p class="lead">Keep Mindbody for reservations, classes and membership management. The private Adelante portal will read verified Mindbody records to highlight unfilled classes, return visits, expiring passes and measurable revenue recovery.</p></div>
+  <div class="note" style="margin-bottom:18px"><b>Connection status: NOT CONNECTED.</b> The numbers below are simulated examples only. Connecting Mindbody requires approval from The Sanctum Space and Mindbody, an approved API key, Site ID, permitted read access and a private, authenticated server. Live customer details must never appear in this public demo.</div>
+  <div class="grid four">
+   <div class="card"><div class="eyebrow">Classes on timetable</div><div class="metric">32</div><div class="metric-note">Example per week, unverified</div></div>
+   <div class="card"><div class="eyebrow">Booked mat places</div><div class="metric">224</div><div class="metric-note">Example last 7 days</div></div>
+   <div class="card"><div class="eyebrow">At-risk members</div><div class="metric">18</div><div class="metric-note">Demo activity-based segment</div></div>
+   <div class="card"><div class="eyebrow">Passes near expiry</div><div class="metric">7</div><div class="metric-note">Demo upcoming renewals</div></div>
+  </div>
+  <div class="section-title"><div><h2>What we will pull from Mindbody</h2><p>Read-only to start; reconcile against current source data.</p></div><span class="pill warn">No real sync yet</span></div>
+  <div class="grid two">
+    <div class="card"><h3>Bookings and class attendance</h3>
+      <div class="resultline"><span>Classes, dates, capacity, availability</span><b class="tag">Class API</b></div>
+      <div class="resultline"><span>Reservations, visits, no-shows</span><b class="tag">Client visits</b></div>
+      <div class="resultline"><span>First visit vs repeat attendance</span><b class="tag">Derived</b></div>
+      <div class="resultline"><span>Potential spare mats per class</span><b class="tag">Derived</b></div>
+      <p class="small">Access to specific class-roster data and permissions must be verified with Mindbody.</p>
+    </div>
+    <div class="card"><h3>Memberships and revenue</h3>
+      <div class="resultline"><span>Active contracts / memberships</span><b class="tag">Contracts</b></div>
+      <div class="resultline"><span>Available/expiring class passes</span><b class="tag">Client services</b></div>
+      <div class="resultline"><span>Sales and amounts</span><b class="tag">Sales API</b></div>
+      <div class="resultline"><span>Member renewal and reactivation</span><b class="tag">Derived</b></div>
+      <p class="small">Marketing permission must be verified separately: a booking record is not automatically permission to receive marketing emails.</p>
+    </div>
+  </div>
+  <div class="section-title"><div><h2>Demo: Membership follow-up queue</h2><p>Preview the audience segments that will populate after an authorised sync.</p></div></div>
+  <div class="card">
+  <div class="tabs" id="mindbody-segment-tabs">
+    <button class="tab active" data-segment="first">First visits</button>
+    <button class="tab" data-segment="inactive">Inactive clients</button>
+    <button class="tab" data-segment="passes">Expiring passes</button>
+    <button class="tab" data-segment="attendance">Low-attendance classes</button>
+  </div>
+  <div id="mindbody-segment-output" class="note"></div>
+  <div class="detail-buttons"><button class="btn primary" data-go="members">Review demo follow-ups →</button><a class="btn" href="https://developers.mindbodyonline.com/ui/documentation/ui/PublicDocumentation/V6" target="_blank" rel="noopener">Mindbody API documentation ↗</a></div>
+  </div>
+  <div class="section-title"><div><h2>Connection and refresh design</h2></div></div>
+  <div class="grid three">
+    <div class="card"><div class="eyebrow">01 / Authorise</div><h3>Owner + Mindbody approval</h3><p class="muted">Confirm Site ID and permitted API use. Store keys in a private server secret store, never the Lovable website or public demo JavaScript.</p></div>
+    <div class="card"><div class="eyebrow">02 / Import</div><h3>Backfill & validate</h3><p class="muted">Read existing records once, map stable client and booking IDs, remove duplicates and compare sampled figures to the Mindbody dashboard.</p></div>
+    <div class="card"><div class="eyebrow">03 / Keep current</div><h3>Webhooks + reconciliation</h3><p class="muted">Use approved event subscriptions for near-real-time changes and scheduled rechecks; show the last successful sync timestamp and failures in the private portal.</p></div>
+  </div>
+  <div class="note" style="margin-top:18px">Safeguard: limit client-level data to authorised Eudo/Sarah accounts; public demo receives only fictional records. Booking links and checkout remain in Mindbody until separate write permissions are tested.</div>
+</section>
+
+<section class="page" id="marketing">
+  <div class="sectionhead"><div class="kicker">Hostinger / Email marketing integration</div><h1>Fill classes and welcome members back.</h1><p class="lead">Use The Sanctum Space's Hostinger-managed domain for on-brand campaigns, backed by permission-based Mindbody audiences, while keeping ordinary customer replies in a dedicated business mailbox.</p></div>
+  <div class="note" style="margin-bottom:18px"><b>Hostinger connection: NOT CONNECTED.</b> Managing a domain at Hostinger does not prove the mailbox is hosted there. Confirm existing MX/DNS records first. This page previews the campaign-management workflow; no subscribers are imported and no emails can be sent from this demo.</div>
+  <div class="grid four">
+    <div class="card"><div class="eyebrow">Marketing platform</div><div class="metric" style="font-size:24px">Reach</div><div class="metric-note">Hostinger Reach · proposed</div></div>
+    <div class="card"><div class="eyebrow">Verified subscribers</div><div class="metric">—</div><div class="metric-note">Awaiting actual consent records</div></div>
+    <div class="card"><div class="eyebrow">Campaigns sent</div><div class="metric">0</div><div class="metric-note">From this demonstration</div></div>
+    <div class="card"><div class="eyebrow">Sending domain</div><div class="metric" style="font-size:21px">Pending</div><div class="metric-note">DNS / SPF / DKIM / DMARC</div></div>
+  </div>
+  <div class="section-title"><div><h2>Campaigns to configure</h2><p>Owner-approved copy, segment criteria and suppression rules.</p></div><span class="pill">Demo · nothing sends</span></div>
+  <div class="split">
+    <div class="card"><h3>Choose a campaign</h3>
+      <div class="tabs" id="campaign-tabs">
+        <button class="tab active" data-campaign="first">First class follow-up</button>
+        <button class="tab" data-campaign="renewal">Renewal reminder</button>
+        <button class="tab" data-campaign="return">Welcome back</button>
+        <button class="tab" data-campaign="workshop">Workshop interest</button>
+      </div>
+      <div class="eyebrow">Audience eligibility</div><p class="muted" id="campaign-criteria"></p>
+      <div class="note">Send only to appropriately subscribed clients, with a lawful basis, verified marketing preferences and functioning unsubscribe. No sensitive treatment details are put into mailing tags.</div>
+    </div>
+    <div class="card"><div class="eyebrow">Draft campaign preview</div><h3 id="campaign-title"></h3><p class="small" id="campaign-subject"></p><div class="draft" id="campaign-body"></div>
+      <div class="detail-buttons"><button id="campaign-review" class="btn primary">Mark draft reviewed (demo)</button><a href="https://hpanel.hostinger.com/" class="btn" target="_blank" rel="noopener">Hostinger hPanel ↗</a></div>
+      <p class="small" style="margin-top:14px">A live integration would create approved segments in Hostinger Reach through its API, with campaigns managed in Reach. No current API permission or sending identity has been granted.</p>
+    </div>
+  </div>
+  <div class="section-title"><div><h2>How we connect Hostinger</h2></div></div>
+  <div class="grid three">
+   <div class="card"><div class="eyebrow">01 / Domain</div><h3>Verify sending identity</h3><p class="muted">In Hostinger Reach, connect thesanctum.space or an approved marketing subdomain. Confirm SPF, DKIM, DMARC and current MX before making any DNS changes.</p></div>
+   <div class="card"><div class="eyebrow">02 / Subscribers</div><h3>Sync consented clients</h3><p class="muted">Use Reach's public API to add/update permitted contacts and audience segments from authorised Mindbody-derived activity. Never market to all bookings by default.</p></div>
+   <div class="card"><div class="eyebrow">03 / Measure</div><h3>Clicks to actual bookings</h3><p class="muted">Use tagged Mindbody booking links, track campaigns, and reconcile downstream bookings. Opens alone are not proof of recovered revenue.</p></div>
+  </div>
+  <div class="card" style="margin-top:17px"><h3>Connection roles and security</h3><div class="resultline"><span>Domain & DNS administrator</span><b class="tag urgent">Owner permission needed</b></div>
+  <div class="resultline"><span>Hostinger Reach account</span><b class="tag urgent">Owner permission needed</b></div>
+  <div class="resultline"><span>Actual email mailbox provider</span><b class="tag urgent">Verify MX / login</b></div>
+  <div class="resultline"><span>Mindbody customer consent</span><b class="tag urgent">Map / verify</b></div>
+  <div class="resultline"><span>Draft, approval & unsubscribe workflow</span><b class="tag">To implement privately</b></div>
+  <p class="small" style="margin:15px 0 0"><a href="https://www.hostinger.com/support/hostinger-reach-how-to-use-the-reach-public-api/" target="_blank" rel="noopener">Reach contact/segment API guide ↗</a> · <a href="https://www.hostinger.com/support/11534612-hostinger-reach-connect-your-domain/" target="_blank" rel="noopener">Domain connection guide ↗</a></p></div>
+</section>
+
 <footer class="footer"><span>The Sanctum Space × Adelante by VYRE · 5 November 2026</span><span>All customer records and results are fictional. No live platform, booking, inbox or CRM is connected.</span></footer>
 </main></div><div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
@@ -220,5 +312,25 @@ document.getElementById('overview-revenue').textContent=euro(total);document.get
 }
 document.querySelectorAll('input[type=range]').forEach(function(e){e.addEventListener('input',calc)});
 renderInbox();renderMembers();calc();
+
+var mindbodySeg={
+first:['First visits without a recorded return class','Recommended: check attendance and future bookings, then draft a gentle return-class invitation.','Source fields: first visit date, class attendance, next reservation; suppress duplicates.'],
+inactive:['Members with no recent attendance','Recommended: flag 14–21 days of inactivity (tunable). Check account status and marketing permissions before a check-in.','Source fields: membership status, recent visits, scheduled classes; exclude cancelled accounts.'],
+passes:['Passes and contracts due to expire','Recommended: remind consenting members ahead of an accurately verified end date. Do not claim extensions or discounts.','Source fields: services/pass expiry, contract dates, actual purchase/renewal records.'],
+attendance:['Classes with available spaces','Recommended: compare capacity against verified reservations, then promote relevant classes to opted-in audiences.','Source fields: class schedule, capacity, reservation count, waitlists; do not invent available places.']
+};
+function chooseMindbodySegment(key){var rows=mindbodySeg[key]||mindbodySeg.first;document.getElementById('mindbody-segment-output').innerHTML='<strong>'+esc(rows[0])+'</strong><p style="margin:8px 0 4px">'+esc(rows[1])+'</p><small>'+esc(rows[2])+'</small>';document.querySelectorAll('[data-segment]').forEach(function(e){e.classList.toggle('active',e.getAttribute('data-segment')===key)})}
+document.querySelectorAll('[data-segment]').forEach(function(e){e.addEventListener('click',function(){chooseMindbodySegment(e.getAttribute('data-segment'))})});
+var campaigns={
+first:{name:'Come back to your mat',subject:'Would you like to join us again?',criteria:'Completed a first class, no later reservation, marketing preference verified and approved for studio follow-up.',body:'Hello from The Sanctum Space,\n\nThank you for joining us for your first class. We hope you enjoyed your time here. If you would like to visit again, you can browse upcoming yoga sessions and reserve directly through Mindbody.\n\nWe would love to welcome you back whenever it feels right.\n\nWarm wishes,\nThe Sanctum Space'},
+renewal:{name:'Keep your practice going',subject:'A gentle membership reminder',criteria:'Verified paid pass or membership approaching end date, no existing replacement purchase, valid permission to contact.',body:'Hello from The Sanctum Space,\n\nA little reminder to check your membership or class-pass dates in Mindbody. You can see the current options and choose what works best for your practice.\n\nIf you have any questions, please reach out to our studio team.\n\nWarm wishes,\nThe Sanctum Space'},
+return:{name:'A place for you at Sanctum',subject:'We would love to see you again',criteria:'Previously attending member, recent inactivity, no already-planned future booking and suitable marketing permission.',body:'Hello from The Sanctum Space,\n\nWe hope you are doing well. We wanted to share a gentle hello and let you know the studio is here whenever you feel like returning.\n\nYou can check the latest classes in Mindbody, or ask us if you would like help choosing a session.\n\nWarm wishes,\nThe Sanctum Space'},
+workshop:{name:'Space to discover',subject:'Upcoming studio workshops',criteria:'A separate opt-in interest list for events and workshops, with clear unsubscribe preference.',body:'Hello from The Sanctum Space,\n\nWe sometimes host special workshops, sound experiences and community sessions. You can explore the latest events through our website or Mindbody as they are announced.\n\nWarm wishes,\nThe Sanctum Space'}
+};
+function chooseCampaign(key){var c=campaigns[key]||campaigns.first;document.getElementById('campaign-criteria').textContent=c.criteria;document.getElementById('campaign-title').textContent=c.name;document.getElementById('campaign-subject').textContent='Subject: '+c.subject;document.getElementById('campaign-body').textContent=c.body;document.querySelectorAll('[data-campaign]').forEach(function(e){e.classList.toggle('active',e.getAttribute('data-campaign')===key)})}
+document.querySelectorAll('[data-campaign]').forEach(function(e){e.addEventListener('click',function(){chooseCampaign(e.getAttribute('data-campaign'))})});
+document.getElementById('campaign-review').addEventListener('click',function(){toast('Demo: campaign draft marked reviewed. No mailing list or Hostinger account was accessed; no emails sent.')});
+chooseMindbodySegment('first');chooseCampaign('first');
+
 })();
 </script></body></html>
