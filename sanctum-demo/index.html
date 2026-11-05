@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Sanctum Space | Adelante Growth & Operations Demo</title>
+<meta name="description" content="An interactive, fictional-data customer demonstration of a unified enquiry, booking recovery, membership retention and analytics portal for The Sanctum Space.">
+<style>
+:root{--bg:#f6f5ef;--ivory:#fdfcf8;--sage:#718878;--deep:#273d36;--ink:#22332b;--muted:#738278;--border:#dce3d9;--pale:#edf2e9;--gold:#b98b55;--mint:#d2e6d4;--rose:#f4e3d9;--shadow:0 12px 35px rgba(30,54,40,.05)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+a{color:inherit}button,input{font:inherit}button{cursor:pointer}h1,h2,h3,p{margin-top:0}
+h1,h2,h3,.brandmark{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.025em}h1{font-size:clamp(32px,4vw,52px);line-height:1.12;margin-bottom:12px}h2{font-size:31px;line-height:1.22;margin-bottom:12px}h3{font-size:22px;margin-bottom:9px}
+small,.small{font-size:12px;color:var(--muted)}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #d6b886;outline-offset:2px}
+.layout{display:flex;min-height:100vh}.sidebar{width:258px;flex-shrink:0;background:var(--deep);color:#e7eee7;padding:31px 19px;display:flex;flex-direction:column;gap:24px}
+.logo{padding:0 10px 12px}.brandmark{font-size:31px;line-height:1.05}.brandmark em{font-style:normal;color:#bcd2be}.brand-sub{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:#bfd0c2;margin-top:12px}
+.nav-btn{width:100%;display:flex;align-items:center;gap:12px;border:0;border-radius:12px;padding:12px 14px;background:transparent;color:#d6e1d8;text-align:left;font-size:14px}.nav-btn:hover,.nav-btn.active{background:#436054;color:#fff}.nav-btn .num{font-size:11px;color:#afc4b3;min-width:20px}
+.sidebar-note{margin-top:auto;border-top:1px solid #4c6356;padding:18px 10px;font-size:12px;color:#c6d6c9}
+.main{flex:1;min-width:0;padding:30px clamp(18px,3vw,52px) 46px;max-width:1600px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:37px}.topline{font-size:10px;text-transform:uppercase;letter-spacing:.22em;font-weight:700;color:var(--muted)}
+.topactions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.pill{display:inline-flex;align-items:center;gap:7px;background:var(--pale);border:1px solid var(--border);color:#3c5847;padding:7px 11px;border-radius:100px;font-size:11px;font-weight:700}
+.pill.warn{background:#fff0df;border-color:#f0d9b6;color:#886135}.dot{width:7px;height:7px;border-radius:100%;background:#81ae86;display:inline-block}
+.btn{border:1px solid #b4c7b9;background:#fff;color:var(--deep);padding:11px 16px;border-radius:10px;font-size:13px;font-weight:700;line-height:1.2;text-decoration:none;display:inline-flex;align-items:center;gap:7px;justify-content:center}
+.btn:hover{background:#f1f7ef}.btn.primary{border-color:var(--deep);background:var(--deep);color:#fff}.btn.primary:hover{background:#466052}
+.btn.ghost{background:transparent;border-color:var(--border)}
+.kicker{text-transform:uppercase;letter-spacing:.19em;font-size:11px;color:#6f886f;font-weight:750;margin-bottom:13px}
+.lead{font-size:16px;line-height:1.65;color:#5a6c61;max-width:760px}
+.hero{background:linear-gradient(105deg,#eaf0e6 0%,#f9f6ec 83%);border:1px solid #e1e7db;border-radius:24px;padding:clamp(25px,3.3vw,48px);position:relative;overflow:hidden;margin-bottom:21px}
+.hero:after{content:"✳";font-family:Georgia,serif;position:absolute;right:35px;top:30px;font-size:152px;color:rgba(105,134,113,.10);pointer-events:none}
+.hero>*{position:relative;z-index:1}.hero .lead{margin-bottom:22px;max-width:710px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.grid{display:grid;gap:17px}.grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{background:var(--ivory);border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:var(--shadow);min-width:0}.card .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:#6e8073;font-weight:750;margin-bottom:10px}
+.metric{font-size:34px;line-height:1.1;letter-spacing:-.04em;font-family:Georgia,serif;color:var(--deep)}.metric-note{font-size:12px;color:#728277;margin-top:8px}
+.section-title{display:flex;justify-content:space-between;align-items:end;gap:20px;margin:28px 0 15px}.section-title h2{margin:0}.section-title p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.bar-group{margin-bottom:20px}.bar-label{display:flex;justify-content:space-between;font-size:13px;color:#496153;margin-bottom:9px}.bar-track{height:11px;border-radius:10px;background:#e7ece4;overflow:hidden}.bar-fill{background:#78937f;border-radius:10px;height:100%}
+.activity{display:flex;gap:13px;align-items:flex-start;padding:14px 0;border-top:1px solid #e5eae1}.activity:first-child{border-top:none}.iconbox{border-radius:12px;width:37px;height:37px;background:#eaf2e9;display:grid;place-items:center;flex-shrink:0;color:#52725a;font-size:17px}
+.activity strong{font-size:13px}.activity p{font-size:12px;color:#738277;margin:3px 0 0}
+.page{display:none}.page.active{display:block}
+.sectionhead{margin-bottom:23px}.sectionhead .lead{margin-bottom:0}
+.tabs{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}.tab{border:1px solid var(--border);border-radius:99px;background:#fff;padding:8px 13px;font-size:12px;color:#607367}.tab.active{background:var(--deep);color:#fff}
+.split{display:grid;grid-template-columns:minmax(310px,1.05fr) minmax(350px,1fr);gap:18px;align-items:start}
+.listrow{width:100%;padding:16px 12px;display:flex;gap:12px;align-items:flex-start;text-align:left;border:0;background:transparent;border-bottom:1px solid #e7eae3;border-radius:8px}.listrow:hover,.listrow.active{background:#edf2e9}.avatar{display:grid;place-items:center;width:35px;height:35px;flex-shrink:0;background:#d9e7d9;color:#48634c;border-radius:99px;font-size:12px;font-weight:800}
+.row-title{display:flex;justify-content:space-between;gap:10px;font-size:13px;font-weight:750}.row-sub{font-size:12px;color:#768579;margin:4px 0}.tag{display:inline-block;padding:3px 8px;border-radius:99px;font-size:10px;font-weight:750;background:#e8eee5;color:#5b735f}
+.tag.urgent{background:#f9e6dc;color:#a56549}.tag.done{background:#d8e8df;color:#417253}
+.message{background:#edf2e9;padding:14px;border-radius:14px 14px 14px 3px;font-size:13px;line-height:1.65;margin:16px 0}
+.draft{border:1px dashed #c3d1c2;background:#fbfcf8;padding:16px;border-radius:12px;line-height:1.7;font-size:13px;white-space:pre-line;margin-top:11px}
+.detail-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.detail-buttons{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}
+.muted{color:#697f70}.note{padding:14px 16px;border-radius:13px;background:#f0f2e9;font-size:12px;line-height:1.6;color:#57705b;border:1px solid #dfe8d9}
+.record{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:17px 0;border-top:1px solid #e6ebe5}.record:first-child{border:0}
+.record-head{font-size:14px;font-weight:750}.record small{display:block;margin-top:4px}.record-action{flex-shrink:0}
+input[type="range"]{accent-color:#678875;width:100%}.slider-row{padding-bottom:9px}.slider-row label{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#4d6656;margin-bottom:8px}.slider-row label b{color:var(--deep);font-size:14px}
+.bigstat{font-size:39px;color:var(--deep);font-family:Georgia,serif;letter-spacing:-.04em;margin-top:3px}
+.resultbox{background:#eef3e8;border:1px solid #d7e6d7;border-radius:18px;padding:23px}
+.resultline{display:flex;justify-content:space-between;gap:14px;font-size:13px;padding:12px 0;border-bottom:1px solid #dbe5d8}.resultline:last-child{border:0}
+.connection{border:1px solid var(--border);background:#fffdfa;border-radius:12px;padding:16px;margin-bottom:12px;display:flex;gap:14px;align-items:flex-start}.conn-n{width:27px;height:27px;border-radius:50%;background:#e2ece1;display:grid;place-items:center;font-size:12px;font-weight:800;color:#4b7350;flex-shrink:0}.connection strong{font-size:14px}.connection p{font-size:12px;color:#65796c;margin:5px 0}
+.price-table{width:100%;border-collapse:collapse;font-size:13px}.price-table th,.price-table td{text-align:left;border-bottom:1px solid #e3e9df;padding:12px 9px}.price-table th{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#78907b}.price-table th:last-child,.price-table td:last-child{text-align:right}
+.faq-item{display:flex;gap:10px;padding:12px;border-bottom:1px solid var(--border);font-size:13px}.faq-item:last-child{border:0}
+.footer{color:#829084;font-size:11px;margin-top:34px;border-top:1px solid var(--border);padding-top:18px;display:flex;justify-content:space-between;gap:13px;flex-wrap:wrap}
+.toast{position:fixed;bottom:20px;right:22px;padding:15px 18px;color:white;background:var(--deep);border-radius:12px;box-shadow:0 12px 50px #0003;z-index:99;font-size:13px;display:none;max-width:min(400px,90vw)}
+@media(max-width:1160px){.grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}.split{grid-template-columns:1fr}}
+@media(max-width:800px){.layout{display:block}.sidebar{width:100%;padding:14px;gap:8px}.sidebar .logo{padding:0 8px}.sidebar .brandmark{font-size:24px}.brand-sub,.sidebar-note{display:none}.sidebar nav{display:flex;overflow:auto;gap:5px}.nav-btn{min-width:max-content;padding:10px}.main{padding:20px 16px 34px}.topbar{margin-bottom:20px}.grid.two,.grid.three{grid-template-columns:1fr}.hero:after{font-size:80px}.split{grid-template-columns:1fr}}
+@media(max-width:520px){.grid.four{grid-template-columns:1fr 1fr;gap:9px}.card{padding:16px}.metric{font-size:27px}.topline{font-size:9px}.pill{font-size:10px}.main{padding:14px 12px}.hero{padding:22px}.record{align-items:flex-start;flex-direction:column}.record-action{align-self:flex-end}}
+@media print{.sidebar,.topbar,.toast,.hero-actions,.btn,.tabs{display:none!important}.main{padding:0}.page{display:block!important;page-break-before:always}.page:first-child{page-break-before:auto}.card{box-shadow:none}.hero{background:#f0f3ee}}
+</style></head>
+<body><div class="layout"><aside class="sidebar"><div class="logo"><div class="brandmark">the sanctum<br><em>space.</em></div><div class="brand-sub">wellness · marbella</div></div>
+<nav aria-label="Demo sections">
+<button class="nav-btn active" data-go="overview"><span class="num">01</span> Overview</button>
+<button class="nav-btn" data-go="enquiries"><span class="num">02</span> Booking rescue</button>
+<button class="nav-btn" data-go="members"><span class="num">03</span> Member retention</button>
+<button class="nav-btn" data-go="analytics"><span class="num">04</span> Analytics & value</button>
+<button class="nav-btn" data-go="connections"><span class="num">05</span> Connections & setup</button>
+</nav>
+<div class="sidebar-note"><b>Adelante by VYRE</b><p>One calm view of enquiries, recurring bookings and business performance.</p><span style="opacity:.8">PRIVATE CUSTOMER DEMONSTRATION<br>Illustrative records only</span></div></aside>
+<main class="main"><header class="topbar"><div class="topline">THE SANCTUM SPACE / ADE­LANTE PILOT</div><div class="topactions"><span class="pill"><span class="dot"></span> Interactive preview</span><span class="pill warn">DEMO DATA · no systems connected</span></div></header>
+
+<section class="page active" id="overview">
+<div class="hero"><div class="kicker">Your studio. In balance.</div><h1>More people on the mat.<br>More members coming back.</h1><p class="lead">A personalised operations portal for Eudo and Sarah. Capture more studio enquiries, follow up on first visits, bring inactive members back and see what is actually contributing to revenue. Mindbody remains the booking system.</p><div class="hero-actions"><button class="btn primary" data-go="enquiries">Explore booking recovery →</button><button class="btn" data-go="analytics">See the value model</button></div></div>
+<div class="grid four">
+<div class="card"><div class="eyebrow">Enquiries to follow up</div><div class="metric">14</div><div class="metric-note">Illustrative open opportunities</div></div>
+<div class="card"><div class="eyebrow">Members to reconnect</div><div class="metric">8</div><div class="metric-note">Based on sample segments</div></div>
+<div class="card"><div class="eyebrow">Estimated monthly recovery</div><div class="metric" id="overview-revenue">€485</div><div class="metric-note">Scenario only, not actual sales</div></div>
+<div class="card"><div class="eyebrow">Staff capacity regained</div><div class="metric" id="overview-hours">8h</div><div class="metric-note">Illustrative hours per month</div></div></div>
+<div class="section-title"><div><h2>Know where new bookings come from</h2><p>The channel mix you reported, not an audited measurement.</p></div><span class="pill">Google + website · Instagram</span></div>
+<div class="grid two">
+<div class="card"><div class="eyebrow">Reported source mix of bookings</div><div class="bar-group"><div class="bar-label"><b>Website & Google / Maps</b><b>60%</b></div><div class="bar-track"><div class="bar-fill" style="width:60%"></div></div></div><div class="bar-group"><div class="bar-label"><b>Instagram</b><b>40%</b></div><div class="bar-track"><div class="bar-fill" style="width:40%;background:#b6c6ac"></div></div></div><div class="note">Use tracked links from the Google Business Profile, website and Instagram bio/DMs. Google Business Profile's old native chat was discontinued. A WhatsApp option may be supported for eligible profiles.</div></div>
+<div class="card"><div class="eyebrow">Today's priority list · sample</div>
+<div class="activity"><div class="iconbox">↗</div><div><strong>Reply to a first-visit class enquiry</strong><p>Ask whether they would like a Mindbody booking link. Route to Sarah.</p></div></div>
+<div class="activity"><div class="iconbox">↻</div><div><strong>Follow up with clients after trial classes</strong><p>Send an approved return-class invitation, not an unsolicited campaign.</p></div></div>
+<div class="activity"><div class="iconbox">◇</div><div><strong>Check studio-hire request</strong><p>Sarah verifies space and sound restrictions before any offer.</p></div></div></div></div>
+<div class="section-title"><div><h2>How Adelante helps</h2><p>Two fast-to-implement modules plus a management overview.</p></div></div>
+<div class="grid three">
+<div class="card"><div class="kicker">Module 01</div><h3>Booking Rescue</h3><p class="muted">Website, Google-origin traffic, Instagram and email enquiries together. Timely draft answers, follow-ups and verified booking links.</p><button class="btn ghost" data-go="enquiries">Open inbox →</button></div>
+<div class="card"><div class="kicker">Module 02</div><h3>Return & Renew</h3><p class="muted">Spot first-timers who never returned, members going quiet and expiring passes, then prepare respectful rebooking messages.</p><button class="btn ghost" data-go="members">View follow-ups →</button></div>
+<div class="card"><div class="kicker">Management layer</div><h3>Owner overview</h3><p class="muted">Track source, response time, bookings attributed and reactivation; revenue is reconciled against Mindbody, not assumed from messages.</p><button class="btn ghost" data-go="analytics">Explore reporting →</button></div></div>
+</section>
+
+<section class="page" id="enquiries"><div class="sectionhead"><div class="kicker">Module 01 / Enquiry-to-booking rescue</div><h1>One inbox. Fewer missed opportunities.</h1><p class="lead">See how website, Google Maps visitors, Instagram DMs and email can be triaged. Every customer reply below is only a draft; clicking approve changes this demo, not a live messaging account.</p></div>
+<div class="grid three" style="margin-bottom:17px"><div class="card"><div class="eyebrow">Website / Google</div><div class="metric">60%</div><div class="metric-note">Reported share of bookings</div></div><div class="card"><div class="eyebrow">Instagram</div><div class="metric">40%</div><div class="metric-note">Reported share of bookings</div></div><div class="card"><div class="eyebrow">Human approval</div><div class="metric" style="font-size:30px">On</div><div class="metric-note">Pilot control</div></div></div>
+<div class="split"><div class="card"><div class="detail-head"><h3>Enquiries</h3><span class="tag">Fictional examples</span></div><div id="inbox"></div></div>
+<div class="card"><div class="detail-head"><h3 id="contact-name">Enquiry details</h3><span id="contact-status" class="tag urgent">Needs reply</span></div><div class="small" id="contact-source">Website</div><div class="message" id="customer-message"></div><div class="eyebrow">Suggested assistant reply · requires approval</div><div class="draft" id="draft-reply"></div><div class="detail-buttons"><button class="btn primary" id="approve-btn">Approve draft in demo</button><a class="btn" href="https://get.mndbdy.ly/vOHRfZn8H4b" target="_blank" rel="noopener">Open Mindbody ↗</a><button class="btn ghost" id="escalate-btn">Send to human queue</button></div><p class="small" style="margin:15px 0 0">No messages are sent. Only a successful Mindbody reservation reference may be recorded as a confirmed booking in production.</p></div></div>
+<div class="section-title"><h2>What the assistant knows</h2></div>
+<div class="grid three">
+<div class="card"><div class="eyebrow">Try a class</div><h3>€15</h3><p class="muted">Trial class. Drop-in €20. Real-time availability comes from Mindbody.</p></div>
+<div class="card"><div class="eyebrow">Private bodywork</div><h3>€120 / €190</h3><p class="muted">90-min studio Somatic Massage (€120) and 90-min Signature Bodywork (€190) are distinct offerings.</p></div>
+<div class="card"><div class="eyebrow">Private rental</div><h3>€50 / €80</h3><p class="muted">90 minutes or 2.5 hours, subject to Sarah confirming actual availability.</p></div></div>
+</section>
+
+<section class="page" id="members"><div class="sectionhead"><div class="kicker">Module 02 / return & renewal</div><h1>Turn one visit into a habit.</h1><p class="lead">A proactive but low-pressure retention queue. In production, it reads permitted Mindbody data, respects marketing preferences and drafts contact for owner approval.</p></div>
+<div class="grid three" style="margin-bottom:19px">
+<div class="card"><div class="eyebrow">First visits</div><div class="metric">3</div><div class="metric-note">Demo clients without a return class</div></div><div class="card"><div class="eyebrow">Inactive members</div><div class="metric">3</div><div class="metric-note">Demo clients above inactivity threshold</div></div><div class="card"><div class="eyebrow">Renewal / pass alerts</div><div class="metric">2</div><div class="metric-note">Demo accounts to review</div></div></div>
+<div class="split"><div class="card"><h3>Follow-up opportunities</h3><p class="small">Sample records · no real customer profiles used</p><div id="members-list"></div></div>
+<div class="card"><div class="eyebrow">Suggested follow-up</div><h3 id="member-title">First visit follow-up</h3><p class="small" id="member-meta"></p><div class="draft" id="member-draft"></div><div class="detail-buttons"><button class="btn primary" id="member-approve">Mark reviewed in demo</button><button class="btn ghost" data-go="analytics">See retention potential →</button></div><p class="small" style="margin-top:18px">Production gating: consent, verified booking records, opt-out, quiet hours, suppression of duplicates, and human escalation.</p></div></div>
+<div class="section-title"><h2>Example automation triggers</h2></div>
+<div class="grid three"><div class="card"><div class="eyebrow">Day 5–10</div><h3>First class → return class</h3><p class="muted">Identify first-time visitors with no subsequent class booked. Send a friendly, optional follow-up with a Mindbody link.</p></div><div class="card"><div class="eyebrow">Day 14+</div><h3>Quiet member → check-in</h3><p class="muted">Flag low attendance and ask whether they want support finding a suitable class, not a hard-sell message.</p></div><div class="card"><div class="eyebrow">Before expiry</div><h3>Pass → renewal reminder</h3><p class="muted">Check the real pass/membership date first. Offer verified options; never extend a pass automatically.</p></div></div>
+</section>
+
+<section class="page" id="analytics"><div class="sectionhead"><div class="kicker">Management / value calculator</div><h1>See what recovered bookings could mean.</h1><p class="lead">Change the assumptions below to reflect actual monthly Mindbody and enquiry data. Every number is an illustrative forecast, not a measured result, audited profit or guarantee.</p></div>
+<div class="split"><div class="card"><h3>Your assumptions</h3>
+<div class="slider-row"><label>Monthly inbound enquiries <b id="v-enquiries"></b></label><input aria-label="Monthly inbound enquiries" id="enquiries-volume" type="range" min="30" max="400" value="120" step="10"></div>
+<div class="slider-row"><label>Unanswered / unconverted enquiry share <b id="v-missed"></b></label><input aria-label="Unanswered enquiry share" id="missed" type="range" min="5" max="50" value="20"></div>
+<div class="slider-row"><label>Follow-up engagement rate <b id="v-rescue"></b></label><input aria-label="Follow-up engagement rate" id="rescue" type="range" min="10" max="70" value="35"></div>
+<div class="slider-row"><label>Engaged enquiries converting to booking <b id="v-booked"></b></label><input aria-label="Enquiries converting to booking" id="booked" type="range" min="10" max="80" value="50"></div>
+<div class="slider-row"><label>Average first booking € <b id="v-ticket"></b></label><input aria-label="Average first booking euro" id="ticket" type="range" min="15" max="60" value="20" step="1"></div>
+<div class="slider-row"><label>At-risk members / month <b id="v-risk"></b></label><input aria-label="At risk members" id="risk" type="range" min="0" max="80" value="18"></div>
+<div class="slider-row"><label>Members successfully retained <b id="v-retain"></b></label><input aria-label="Retention success percentage" id="retain" type="range" min="5" max="50" value="25"></div>
+<div class="slider-row"><label>Monthly recurring spend per retained member € <b id="v-membervalue"></b></label><input aria-label="Average member monthly spend euro" id="membervalue" type="range" min="40" max="140" value="89"></div>
+<div class="slider-row"><label>Admin hours saved / month <b id="v-hours"></b></label><input aria-label="Monthly hours saved" id="hours" type="range" min="0" max="30" value="8"></div>
+<div class="slider-row"><label>Notional staff time value €/hour <b id="v-wage"></b></label><input aria-label="Hourly staff time value" id="wage" type="range" min="10" max="35" value="15"></div>
+</div><div><div class="resultbox"><div class="eyebrow">Monthly potential · scenario</div><div class="bigstat" id="total-opportunity">€485</div><p class="small">Gross booking & recurring-revenue preservation opportunity only, before payment fees, taxes, margins or other delivery costs.</p>
+<div class="resultline"><span>Recovered class bookings</span><b id="result-bookings"></b></div>
+<div class="resultline"><span>Extra first bookings · gross €</span><b id="result-first"></b></div>
+<div class="resultline"><span>Retained members · expected</span><b id="result-retained"></b></div>
+<div class="resultline"><span>Preserved recurring revenue · €</span><b id="result-preserved"></b></div>
+<div class="resultline"><span>Monthly Adelante support (indicative)</span><b>€79</b></div>
+<div class="resultline"><span>Revenue opportunity after support (not profit)</span><b id="result-after"></b></div>
+</div><div class="card" style="margin-top:16px"><div class="eyebrow">Staff time capacity</div><div class="bigstat" id="time-value"></div><p class="small" id="time-text"></p><div class="note">Saved staff time is *capacity*, not a verified cash saving. It is shown separately from recovered revenue to avoid double counting.</div></div>
+<div class="card" style="margin-top:16px"><h3>What needs measuring</h3><div class="faq-item"><span>01</span><span>Mindbody-confirmed new bookings and revenue, tagged by source.</span></div><div class="faq-item"><span>02</span><span>New enquiries, response times and the percentage converting.</span></div><div class="faq-item"><span>03</span><span>30/60-day attendance and renewals versus a comparable baseline.</span></div><div class="faq-item"><span>04</span><span>Staff admin time measured before and after rollout.</span></div></div></div></div>
+<div class="section-title"><h2>Indicative implementation price</h2><p>Business proposal, not a software vendor rate card</p></div>
+<div class="card"><table class="price-table"><thead><tr><th>Workstream</th><th>Scope</th><th>Est. hours</th><th>Standalone guide</th></tr></thead><tbody>
+<tr><td><b>01. Booking Rescue</b></td><td>Lovable form, tagged links, shared inbox and approved drafts</td><td>4–7h</td><td>€450–€750</td></tr>
+<tr><td><b>02. Return & Renew</b></td><td>Mindbody export, segments, retention drafts</td><td>5–8h</td><td>€500–€800</td></tr>
+<tr><td><b>Management analytics</b></td><td>Simple owner dashboard + daily summary</td><td>3–5h</td><td>€250–€500</td></tr>
+<tr><td><b>Original Sanctum pilot offer</b></td><td>Discounted combined basic pilot</td><td>12–20h</td><td><b>€1,250 once + €79/mo</b></td></tr></tbody></table><p class="small" style="margin-top:13px">The original commercial figure is an offer estimate, not a contractual quote. Prices exclude VAT, third-party costs and production-grade Mindbody/Meta API buildout. Full official WhatsApp + Instagram + Mindbody production integration may add 10–25+ hours depending on access and approvals.</p></div>
+</section>
+
+<section class="page" id="connections"><div class="sectionhead"><div class="kicker">Integration map / owners & permissions</div><h1>One portal. Their existing systems stay.</h1><p class="lead">Connect the tools around Mindbody. Adelante becomes the operational intelligence and enquiry layer, not a replacement for the website, accounts or scheduling software.</p></div>
+<div class="grid two"><div class="card"><h3>Recommended connection sequence</h3>
+<div class="connection"><span class="conn-n">1</span><div><strong>Lovable website</strong><p>Add a Chatwoot website widget or existing form webhook and event tagging; keep booking links pointing to Mindbody. Needs website administrator access.</p></div></div>
+<div class="connection"><span class="conn-n">2</span><div><strong>Google Business Profile & Maps</strong><p>Tag links to the studio site and track inbound click journeys. Old native Google Business chat is not available. Optional WhatsApp contact link if eligible.</p></div></div>
+<div class="connection"><span class="conn-n">3</span><div><strong>Instagram, WhatsApp & email</strong><p>Use approved Meta professional-account channels and official WhatsApp Business Platform if authorised. Email can feed the shared inbox. Permissions and fees to verify.</p></div></div>
+<div class="connection"><span class="conn-n">4</span><div><strong>Shared inbox · Chatwoot Community</strong><p>One team queue with ownership: routine approved FAQs, Eudo for bodywork, Sarah for rentals/events and humans for sensitive issues.</p></div></div>
+<div class="connection"><span class="conn-n">5</span><div><strong>Mindbody, read-only first</strong><p>Use scheduled authorised reports/exports for early pilot; upgrade to API/webhooks after credentials, subscription and privacy approval. Never self-confirm a booking.</p></div></div>
+<div class="connection"><span class="conn-n">6</span><div><strong>Make / Activepieces + Adelante owner portal</strong><p>Prepare replies and renewal segments, update verified results and create a daily management digest. Secure EU hosting, access controls and backups.</p></div></div>
+</div><div><div class="card"><h3>Connection status</h3>
+<div class="resultline"><span>Website / Lovable account</span><b class="tag urgent">Permission pending</b></div>
+<div class="resultline"><span>Google Business Profile</span><b class="tag urgent">Permission pending</b></div>
+<div class="resultline"><span>Instagram professional account</span><b class="tag urgent">Permission pending</b></div>
+<div class="resultline"><span>WhatsApp Business Platform</span><b class="tag urgent">Type to verify</b></div>
+<div class="resultline"><span>Email inbox / domain</span><b class="tag urgent">Permission pending</b></div>
+<div class="resultline"><span>Mindbody</span><b class="tag urgent">API / export pending</b></div>
+<div class="resultline"><span>Adelante preview</span><b class="tag done">Demo only</b></div>
+<div class="note" style="margin-top:17px">Mac-friendly: the browser demo works on any Mac. Live cloud workflows require an always-on, secured server; leaving a laptop open is not a reliable production setup.</div></div>
+<div class="card" style="margin-top:18px"><h3>Where the cost sits</h3>
+<div class="resultline"><span>Original setup</span><b>€1,250 one-off</b></div>
+<div class="resultline"><span>Optional maintenance</span><b>€79/month</b></div>
+<div class="resultline"><span>Self-hosted inbox software</span><b>€0 licence</b></div>
+<div class="resultline"><span>Hosting + automation + AI</span><b>Budget €25–€95/month</b></div>
+<div class="resultline"><span>Mindbody & Meta charges</span><b>As applicable</b></div>
+<p class="small" style="margin:13px 0 0">Third-party hosting and messaging are estimates, not verified vendor quotes. Confirm if included within support. The €79 support fee does not automatically include all infrastructure or production integration charges.</p></div>
+<div class="card" style="margin-top:18px"><h3>Service links</h3><p><a target="_blank" rel="noopener" href="https://thesanctum.space">The Sanctum Space website ↗</a></p><p><a target="_blank" rel="noopener" href="https://www.instagram.com/thesanctum.space/">Instagram @thesanctum.space ↗</a></p><p><a target="_blank" rel="noopener" href="https://get.mndbdy.ly/vOHRfZn8H4b">Mindbody booking app ↗</a></p><p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Aloha%20Pueblo%2033%20Nueva%20Andalucia%20Marbella">Directions / Google Maps ↗</a></p><p><a target="_blank" rel="noopener" href="https://wa.me/34605268729">Studio WhatsApp ↗</a></p><p><a target="_blank" rel="noopener" href="https://vyrehq.com/adelante/">Adelante by VYRE ↗</a></p></div></div></div>
+</section>
+
+<footer class="footer"><span>The Sanctum Space × Adelante by VYRE · 5 November 2026</span><span>All customer records and results are fictional. No live platform, booking, inbox or CRM is connected.</span></footer>
+</main></div><div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+'use strict';
+var enquiries=[
+{id:'A01',name:'Demo guest A',src:'Website / Google Maps',status:'Needs reply',badge:'urgent',topic:'First yoga class',msg:'Hi! I found you on Google Maps. I have never tried yoga. Which class should I start with and how do I book?',reply:'Hello! Welcome to The Sanctum Space. We offer a €15 trial class, and Hatha Yoga may be a good starting point depending on what you enjoy. You can view live classes and book through our Mindbody link. If you would like, tell us what day works for you and we can help you choose a class. Warm wishes, The Sanctum Space.',owner:'Sarah'},
+{id:'A02',name:'Demo guest B',src:'Instagram DM',status:'Needs reply',badge:'urgent',topic:'Somatic massage',msg:'Is your 90-minute massage €120 or €190? Is there anything available this weekend?',reply:'Hello, thanks for getting in touch. We offer two different 90-minute services: Somatic Massage at the studio (€120) and our Somatic Bodywork Signature (€190). They are distinct appointments. Eudo can advise which option is appropriate for your enquiry, and the current appointment availability can be checked in Mindbody. Would you like the booking link?',owner:'Eudo'},
+{id:'A03',name:'Demo guest C',src:'Instagram DM',status:'Needs reply',badge:'urgent',topic:'Aerial yoga',msg:'I would love to try aerial yoga. Are there spaces in the next session?',reply:'Hello! We would be delighted to welcome you to The Sanctum Space. Our aerial classes have a smaller capacity, so please check the live schedule and available spaces in Mindbody. Here is the booking link. If a session is full, we can help you look at another option.',owner:'Sarah'},
+{id:'A04',name:'Demo guest D',src:'Email',status:'Needs reply',badge:'urgent',topic:'Studio workshop hire',msg:'We are organising a sound bath workshop on a Sunday afternoon. Can we rent the studio for 2.5 hours?',reply:'Hello, thank you for considering our space. The previously quoted studio rental rates are €50 for 90 minutes or €80 for 2.5 hours. Weekend afternoons may be possible, subject to the class schedule. Sarah will confirm the exact availability and event requirements before we can offer a booking.',owner:'Sarah'},
+{id:'A05',name:'Demo guest E',src:'Website',status:'Human review',badge:'urgent',topic:'Cancellation request',msg:'I had to cancel and was charged a fee. I would like a refund.',reply:'Thank you for letting us know. I am sorry you have had an inconvenience. I am passing this to our studio team to review against the current booking terms. We will not promise a refund or apply a charge without their confirmation.',owner:'Sarah'}
+];
+var selected=0;
+var members=[
+{id:'M01',label:'Demo client A',type:'First visit, no return',when:'Trial attended 8 days ago · no next class',owner:'Sarah',draft:'Hello! It was lovely to have you at The Sanctum Space. If you would like to come back, you can find the latest classes in Mindbody. Is there a style or time you are curious about? No pressure at all.',done:false},
+{id:'M02',label:'Demo client B',type:'Inactive monthly member',when:'No class attendance in 21 days',owner:'Sarah',draft:'Hello! Just a little check-in from The Sanctum Space. We noticed it has been a while since your last visit and wanted to make sure you have the class information you need. You can browse the latest schedule in Mindbody whenever you are ready.',done:false},
+{id:'M03',label:'Demo client C',type:'Pass nearing end',when:'10-class pass needs review within 12 days',owner:'Sarah',draft:'Hello! A quick note that your class pass may be nearing its expiry date. Please check the exact validity in Mindbody, where you can also find current pass and membership options. We are happy to help with any questions.',done:false},
+{id:'M04',label:'Demo client D',type:'First visit, no return',when:'Trial attended 10 days ago',owner:'Sarah',draft:'Hello! Thanks again for visiting The Sanctum Space. We would love to welcome you back if the timing is right. The latest class schedule is available in Mindbody.',done:false},
+{id:'M05',label:'Demo client E',type:'Inactive monthly member',when:'No class attendance in 19 days',owner:'Sarah',draft:'Hello! Just checking in. If you would like help finding a class that works for your routine, we are here to help. You can also see the latest timetable in Mindbody.',done:false}
+];
+var selectedMember=0;
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function toast(s){var e=document.getElementById('toast');e.textContent=s;e.style.display='block';clearTimeout(window.toastTimer);window.toastTimer=setTimeout(function(){e.style.display='none'},4300)}
+function go(id){document.querySelectorAll('.page').forEach(function(e){e.classList.toggle('active',e.id===id)});document.querySelectorAll('.nav-btn').forEach(function(e){e.classList.toggle('active',e.getAttribute('data-go')===id)});window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('[data-go]').forEach(function(e){e.addEventListener('click',function(){go(e.getAttribute('data-go'))})});
+function renderInbox(){
+var html='';enquiries.forEach(function(x,i){html+='<button class="listrow '+(selected===i?'active':'')+'" data-enq="'+i+'"><span class="avatar">'+x.id+'</span><span style="flex:1;min-width:0"><span class="row-title"><span>'+esc(x.topic)+'</span><span class="tag '+(x.badge==='urgent'?'urgent':x.badge==='done'?'done':'')+'">'+esc(x.status)+'</span></span><span class="row-sub">'+esc(x.name)+' · '+esc(x.src)+'</span><span class="small">Owner: '+esc(x.owner)+'</span></span></button>'});document.getElementById('inbox').innerHTML=html;
+document.querySelectorAll('[data-enq]').forEach(function(e){e.addEventListener('click',function(){selected=Number(e.getAttribute('data-enq'));renderInbox()})});
+var x=enquiries[selected];document.getElementById('contact-name').textContent=x.topic;document.getElementById('contact-status').textContent=x.status;document.getElementById('contact-status').className='tag '+(x.badge==='urgent'?'urgent':'done');document.getElementById('contact-source').textContent=x.name+' · '+x.src+' · owner '+x.owner;document.getElementById('customer-message').textContent=x.msg;document.getElementById('draft-reply').textContent=x.reply;
+}
+document.getElementById('approve-btn').addEventListener('click',function(){var x=enquiries[selected];x.status='Draft approved';x.badge='done';renderInbox();toast('Demo: draft approved for '+x.id+'. No message was sent. A real implementation would require the channel connector and audit log.')});
+document.getElementById('escalate-btn').addEventListener('click',function(){var x=enquiries[selected];x.status='Human review';x.badge='urgent';renderInbox();toast('Demo: escalated to '+x.owner+'. No external action was taken.')});
+function renderMembers(){var h='';members.forEach(function(x,i){h+='<button class="listrow '+(i===selectedMember?'active':'')+'" data-member="'+i+'"><span class="avatar">'+x.id+'</span><span style="flex:1"><span class="row-title"><span>'+esc(x.label)+'</span><span class="tag '+(x.done?'done':'urgent')+'">'+(x.done?'Reviewed':'Needs review')+'</span></span><span class="row-sub">'+esc(x.type)+'</span><span class="small">'+esc(x.when)+'</span></span></button>'});document.getElementById('members-list').innerHTML=h;
+document.querySelectorAll('[data-member]').forEach(function(e){e.addEventListener('click',function(){selectedMember=Number(e.getAttribute('data-member'));renderMembers()})});var m=members[selectedMember];document.getElementById('member-title').textContent=m.type;document.getElementById('member-meta').textContent=m.label+' · '+m.when+' · owner '+m.owner;document.getElementById('member-draft').textContent=m.draft}
+document.getElementById('member-approve').addEventListener('click',function(){members[selectedMember].done=true;renderMembers();toast('Demo: follow-up reviewed. No personal data or message was processed.')});
+function euro(n){return new Intl.NumberFormat('en-IE',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n)}
+function one(n){return new Intl.NumberFormat('en-IE',{maximumFractionDigits:1}).format(n)}
+function v(id){return Number(document.getElementById(id).value)}
+function calc(){
+var ids=['enquiries-volume','missed','rescue','booked','ticket','risk','retain','membervalue','hours','wage'];
+var labels=['enquiries','missed','rescue','booked','ticket','risk','retain','membervalue','hours','wage'];
+ids.forEach(function(id,i){var n=v(id);document.getElementById('v-'+labels[i]).textContent=([1,2,3,6].includes(i)?n+'%':(i===4||i===7||i===9?'€'+n:n))});
+var recover=v('enquiries-volume')*v('missed')/100*v('rescue')/100*v('booked')/100;
+var first=recover*v('ticket');var retained=v('risk')*v('retain')/100;var rec=retained*v('membervalue');var total=first+rec;
+document.getElementById('result-bookings').textContent=one(recover)+' expected / month';document.getElementById('result-first').textContent=euro(first);
+document.getElementById('result-retained').textContent=one(retained)+' expected / month';document.getElementById('result-preserved').textContent=euro(rec);
+document.getElementById('total-opportunity').textContent=euro(total);document.getElementById('result-after').textContent=euro(total-79);
+document.getElementById('time-value').textContent=euro(v('hours')*v('wage'))+' / month';document.getElementById('time-text').textContent=one(v('hours'))+' staff hours potentially freed at an assumed €'+v('wage')+' per hour.';
+document.getElementById('overview-revenue').textContent=euro(total);document.getElementById('overview-hours').textContent=one(v('hours'))+'h';
+}
+document.querySelectorAll('input[type=range]').forEach(function(e){e.addEventListener('input',calc)});
+renderInbox();renderMembers();calc();
+})();
+</script></body></html>
