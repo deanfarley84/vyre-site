@@ -53,7 +53,7 @@
     pending = import(SDK_URL);
     try {
       const sdk = await pending;
-      const analytics = sdk.analytics || (sdk.default && sdk.default.analytics);
+      const analytics = sdk.analytics || (sdk.default && sdk.default.analytics) || (sdk.default && typeof sdk.default.init === 'function' ? sdk.default : null);
       if (!analytics || typeof analytics.init !== 'function') {
         throw new Error('HeyCatch analytics export not found');
       }
@@ -85,7 +85,10 @@
     }
     const dialog = document.getElementById('adelante-analytics-choice');
     if (dialog) dialog.remove();
-    if (enabled) start();
+    if (enabled) {
+      if (client && typeof client.optInCapturing === 'function') client.optInCapturing();
+      else start();
+    }
   }
   function showChoices() {
     if (document.getElementById('adelante-analytics-choice')) return;
