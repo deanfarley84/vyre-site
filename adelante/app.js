@@ -134,6 +134,7 @@
       const conf = $('l-confirm');
       const btn = form.querySelector('button[type="submit"]');
       const done = () => {
+        document.dispatchEvent(new Event('adelante:lead-success'));
         conf.textContent = `Thanks${name ? ', ' + name : ''}. We have received your free review request for ${business}. We will contact you at ${email} or ${phone} to agree a time. Your session is not booked until we confirm it.`;
         conf.classList.add('show');
         form.reset();
