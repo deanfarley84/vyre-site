@@ -23,3 +23,10 @@ Founder's profile: https://www.linkedin.com/in/df2024/
 Contact: dean@vyrehq.com
 
 Published examples are illustrative unless explicitly labelled as an approved, verified client result. Paid work is scoped and agreed in writing after the free review.
+
+Spanish-language Adelante (es-ES):
+- Main page: https://www.vyrehq.com/adelante/es/
+- Industry hub: https://www.vyrehq.com/adelante/es/industries.html
+- Spanish modules: https://www.vyrehq.com/adelante/es/modules.html
+- Spanish free-review example: https://www.vyrehq.com/adelante/es/sample-review.html
+- Spanish pages for each industry use the same filenames under /adelante/es/ as their English counterparts.
