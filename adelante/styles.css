@@ -152,3 +152,12 @@ textarea { font: inherit; padding: 12px 14px; border: 1px solid var(--line); bor
  input, select, textarea { max-width:100%; }
  .audit-footer-founder { width:100%; }
 }
+
+.audit-hero-example { min-width:0; }
+.audit-sample-preview { border:1px solid var(--line);background:#fff;border-radius:18px;padding:clamp(20px,3vw,32px);box-shadow:0 10px 30px rgba(20,29,42,.08); }
+.audit-sample-preview>strong { display:block;font-size:1.15rem; }
+.audit-sample-preview .audit-preview-num { font-size:clamp(2rem,4vw,3.1rem);color:var(--terracotta-deep);margin:12px 0;line-height:1.08; }
+.audit-sample-preview p { line-height:1.55;margin:8px 0; }
+.audit-sample-preview a { color:var(--terracotta-deep);display:inline-block;margin-top:8px; }
+.audit-hero-example figcaption { font-size:.83rem;color:var(--muted);margin-top:12px; }
+@media(max-width:400px) { .audit-sample-preview { padding:17px; } }
