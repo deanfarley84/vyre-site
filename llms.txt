@@ -4,6 +4,7 @@ Adelante by VYRE helps businesses on the Costa del Sol, Spain reduce missed enqu
 
 Official pages:
 - Home and free review: https://www.vyrehq.com/adelante/
+- Illustrative free-review output: https://www.vyrehq.com/adelante/sample-review.html
 - Practical modules: https://www.vyrehq.com/adelante/modules.html
 - What the deep dive involves: https://www.vyrehq.com/adelante/deep-dive.html
 - Hospitality groups: https://www.vyrehq.com/adelante/hospitality.html
