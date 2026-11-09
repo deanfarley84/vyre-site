@@ -121,3 +121,34 @@ textarea { font: inherit; padding: 12px 14px; border: 1px solid var(--line); bor
 @media (max-width: 520px) { .topbar-note { display: none; } .topbar-links a span { font-size: 0.84rem; } }
 
 .urgency { background: var(--ink); color: var(--cream); border-radius: 24px; padding: 36px; display: grid; gap: 14px; }
+
+/* HeyCatch audit improvements: founder, examples, clarity and mobile */
+.audit-block { padding: 48px 0; border-top: 1px solid var(--line); }
+.audit-block h2 { font-size: clamp(1.7rem,4vw,2.5rem); line-height: 1.12; margin: 10px 0 18px; }
+.audit-block p { max-width: 860px; line-height: 1.65; }
+.audit-block a, .leak-teaser a { color: var(--terracotta-deep); text-underline-offset: 3px; }
+.founder-card { display:grid;grid-template-columns:190px minmax(0,1fr);gap:26px;align-items:start;max-width:880px; }
+.founder-card img { width:190px;height:238px;object-fit:cover;object-position:center top;border-radius:12px; }
+.founder-card p { margin:12px 0; }
+.leak-teaser { font-size:1rem;max-width:680px;margin-top:14px; }
+.audit-not-for,.audit-integration-note { margin:24px 0;padding:16px 20px;border-left:3px solid var(--terracotta);background:var(--paper);line-height:1.6; }
+.sample-ledger { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0; }
+.sample-ledger>div { min-width:0;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--paper); }
+.sample-ledger b { display:block;font-weight:600;margin-bottom:10px; }
+.sample-ledger p { margin:0; }
+.audit-footer-founder { display:flex;align-items:center;gap:12px; }
+.audit-footer-founder img { width:44px;height:44px;object-fit:cover;object-position:center top;border-radius:50%; }
+.audit-footer-links { display:flex;align-items:center;flex-wrap:wrap;gap:12px; }
+.audit-footer-links a { color:inherit;text-underline-offset:3px; }
+@media(max-width:600px) {
+ .founder-card { grid-template-columns:1fr;gap:12px; }
+ .founder-card img { width:116px;height:145px; }
+ .sample-ledger { grid-template-columns:1fr; }
+ .audit-block { padding:32px 0; }
+ .hero { gap:24px; }
+ .hero .actions { gap:10px; }
+ .hero .actions .btn { max-width:100%;white-space:normal;text-align:center; }
+ .calc, .result, .card { min-width:0; }
+ input, select, textarea { max-width:100%; }
+ .audit-footer-founder { width:100%; }
+}
