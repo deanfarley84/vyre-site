@@ -1,3 +1,18 @@
+# OpenAI access for VYRE and Adelante by VYRE (including /adelante/es/).
+# OAI-SearchBot: ChatGPT search discovery.
+User-agent: OAI-SearchBot
+Allow: /
+
+# GPTBot: OpenAI foundation-model training crawler.
+User-agent: GPTBot
+Allow: /
+
+# ChatGPT-User: user-initiated page retrieval.
+User-agent: ChatGPT-User
+Allow: /
+
+# Public marketing pages remain open to other crawlers.
 User-agent: *
 Allow: /
+
 Sitemap: https://www.vyrehq.com/sitemap.xml
