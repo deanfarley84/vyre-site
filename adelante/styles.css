@@ -174,3 +174,11 @@ textarea { font: inherit; padding: 12px 14px; border: 1px solid var(--line); bor
 .language-switch a{color:var(--ink);padding:6px 7px;text-decoration:underline;text-underline-offset:3px}
 .language-switch a[aria-current="true"]{font-weight:700;text-decoration:none;color:var(--terracotta-deep)}
 @media(max-width:600px){.seo-related ul{grid-template-columns:1fr}.language-switch{font-size:.82rem}}
+
+/* Homepage coastline banner, shared by English and Spanish. */
+.coast-banner { margin: 0 0 12px; border-radius: 24px; overflow: hidden; background: var(--sand); }
+.coast-banner img { display: block; width: 100%; height: clamp(260px, 31vw, 370px); object-fit: cover; object-position: center 57%; }
+@media (max-width: 600px) {
+  .coast-banner { border-radius: 16px; margin-bottom: 0; }
+  .coast-banner img { height: auto; aspect-ratio: 16 / 10; object-position: 60% center; }
+}
