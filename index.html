@@ -412,6 +412,60 @@
 </script>
 <style>.adelante-link{display:inline-flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;padding:10px 17px;border:1px solid #1c526f;border-radius:8px;text-decoration:none;background:#174d68;color:#fff;box-shadow:0 3px 9px #173f6120;white-space:nowrap;transition:background .18s,box-shadow .18s}.adelante-link strong{font-size:15px;font-weight:700;line-height:1.2}.adelante-link span{font-size:11px;font-weight:500;line-height:1.25;color:#e4eef3}.adelante-link:hover{background:#103b52;box-shadow:0 4px 13px #173f6130}.adelante-link:focus-visible{outline:3px solid #df763f;outline-offset:4px}@media(min-width:901px){.nav-links{gap:16px}.nav-right{gap:10px}}@media(min-width:901px) and (max-width:1250px){.nav-links{gap:8px}.nav-links a{font-size:12px}.nav-right{gap:8px}.adelante-link{padding:9px 12px}.nav-right>.btn-primary{font-size:12px;padding:12px}}@media(max-width:560px){.nav-right{gap:8px}.nav-right>.btn-primary{display:none}.adelante-link{padding:8px 11px}.adelante-link strong{font-size:13px}.adelante-link span{font-size:10px}}</style><style>
 .hero{padding:60px 0 100px}.hero-opening{display:grid;grid-template-columns:1.03fr 1fr;gap:48px;align-items:center}.hero h1{font-size:clamp(40px,4.6vw,64px);letter-spacing:-.045em;margin-bottom:24px}.hero .eyebrow{margin-bottom:24px}.hero-sub{font-size:18px;margin-bottom:28px}.hero-ctas{gap:12px}.hero .btn-primary-lg,.hero .btn-ghost{font-size:14px;padding:15px 19px}.hero-note{font-size:12px;line-height:1.5}.product-showcase{min-width:0;background:#101d30;border:1px solid #24344d;border-radius:16px;box-shadow:0 28px 65px #14233c22;overflow:hidden;color:#fff}.showcase-top{display:flex;justify-content:space-between;padding:19px 20px;font-size:12px;color:#aebbd0}.showcase-top span:first-child{font-weight:800;color:#fff;letter-spacing:.08em}.showcase-tabs{display:flex;border-bottom:1px solid #344057;padding:0 12px;gap:5px}.showcase-tabs button{font-family:inherit;cursor:pointer;color:#abb8cb;background:none;border:0;border-bottom:2px solid transparent;font-size:12px;padding:12px 8px;line-height:1.3}.showcase-tabs button[aria-selected=true]{color:#fff;border-bottom-color:#ed7e43}.showcase-tabs button span{font-size:10px;color:#ed9b6e;display:block;margin-top:4px}.showcase-tabs button:focus-visible{outline:2px solid #f1955d;outline-offset:-2px}.showcase-panel[hidden]{display:none!important}.showcase-panel video{display:block;width:100%;aspect-ratio:16/9;background:#0f1a2e}.showcase-caption{padding:21px 22px 16px}.showcase-caption strong{font-size:17px;line-height:1.35;display:block}.showcase-caption p{font-size:13px;color:#b6c1d1;line-height:1.6;margin-top:8px}.showcase-foot{padding:13px 22px;border-top:1px solid #2b374c;color:#97a7bf;font-size:10px;letter-spacing:.03em}.dashboard-window{display:block;aspect-ratio:16/9;overflow:hidden;background:#f6f1e8}.dashboard-window img{display:block;width:100%;height:auto}.nucleus-scene{min-height:300px;padding:25px;display:flex;align-items:center;gap:24px;background:radial-gradient(ellipse at 20% 50%,#243853,#101c2e 65%)}.nucleus-orb{flex:0 0 148px;height:148px;border:1px solid #ed8b50;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;box-shadow:0 0 0 10px #ed7e4308,0 0 0 24px #ed7e4305;animation:corePulse 5s ease-in-out infinite}.nucleus-orb span{font-size:11px;color:#b1c1d5;letter-spacing:.14em}.nucleus-orb strong{font-size:21px;margin:9px 0;letter-spacing:.08em}.nucleus-orb small{font-size:10px;color:#ed9b6e}.nucleus-stages{display:grid;gap:19px}.nucleus-stages b{font-size:10px;color:#ee9b6d;letter-spacing:.1em;display:block;margin-bottom:6px}.nucleus-stages span{font-size:12px;line-height:1.45;color:#c7d0df;display:block}@keyframes corePulse{50%{box-shadow:0 0 0 16px #ed7e430d,0 0 0 30px #ed7e4306}}@media(prefers-reduced-motion:reduce){.nucleus-orb{animation:none}}@media(max-width:1050px){.hero-opening{gap:28px}.nucleus-scene{flex-direction:column}.nucleus-stages{grid-template-columns:1fr}.hero h1{font-size:48px}}@media(max-width:900px){.hero-opening{grid-template-columns:1fr}.product-showcase{max-width:680px;width:100%;margin:8px auto 0}.hero h1{font-size:clamp(38px,8vw,64px)}.nucleus-scene{flex-direction:row}.hero{padding-top:40px}}@media(max-width:480px){.hero-opening{gap:24px}.showcase-tabs button{font-size:11px;padding:11px 6px}.nucleus-scene{flex-direction:column}.nucleus-stages{gap:14px}.showcase-caption{padding:18px}.showcase-top{padding:17px}.hero-sub{font-size:17px}}
+
+/* VYRE OS 3D flow (Nucleus & intelligence panel) */
+.nx{--nx-line:#2b374c;--nx-text:#fff;--nx-text-2:#c7d0df;--nx-text-3:#97a7bf;--nx-accent:#ed7e43;--nx-accent-soft:#ee9b6d;--nx-ok:#5fd3a0;--nx-bad:#ef6a60;--font-body:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;color:#fff}
+.nx *,.nx *::after{box-sizing:border-box}.nx h3,.nx p,.nx dl,.nx dt,.nx dd{margin:0}
+.nx{background:radial-gradient(ellipse at 50% 34%,#22344f,#101c2e 68%)}
+.nx-stage{position:relative;height:460px;user-select:none;-webkit-user-select:none}
+.nx-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y;cursor:grab;outline:none}
+.nx-canvas:active{cursor:grabbing}
+.nx-canvas:focus-visible{outline:2px solid #f1955d;outline-offset:-3px}
+.nx-chip{position:absolute;top:12px;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;padding:5px 8px;border-radius:999px;border:1px solid #3a4862;color:var(--nx-text-3);background:rgba(15,26,46,.6);pointer-events:none;transition:opacity .5s}
+.nx-chip.left{left:12px}
+.nx-chip.right{right:12px;color:var(--nx-accent-soft);border-color:#6a4a3b}
+
+.nx-rail{display:grid;grid-template-columns:3fr 2fr 2fr;gap:8px;padding:4px 16px 0}
+.nx-group{display:grid;gap:7px;min-width:0}
+.nx-group > b{font-size:9px;letter-spacing:.07em;white-space:nowrap;color:var(--nx-text-3);font-weight:700;transition:color .3s}
+.nx-group.on > b{color:var(--nx-accent-soft)}
+.nx-steps{display:flex;gap:5px}
+.nx-step{flex:1;min-width:0;height:40px;border-radius:10px;border:1px solid #33415a;background:rgba(255,255,255,.03);color:var(--nx-text-2);font:600 12px var(--font-body);font-variant-numeric:tabular-nums;cursor:pointer;position:relative;overflow:hidden;transition:border-color .25s,background .25s,color .25s}
+.nx-step:hover{border-color:#566784}
+.nx-step.done{color:#fff;border-color:#4a5a78;background:rgba(255,255,255,.07)}
+.nx-step[aria-current="step"]{color:#fff;border-color:var(--nx-accent);background:rgba(237,126,67,.16)}
+.nx-step::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--nx-accent);transform-origin:left;transform:scaleX(0)}
+.nx-step[aria-current="step"]::after{transform:scaleX(var(--p,1))}
+.nx-step:focus-visible,.nx-ctl:focus-visible{outline:2px solid #f1955d;outline-offset:2px}
+
+.nx-copy{padding:18px 18px 4px;display:grid;gap:10px;min-height:264px;align-content:start}
+.nx-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.nx-phase{font-size:10px;letter-spacing:.1em;color:var(--nx-accent-soft);font-weight:700}
+.nx-ctls{display:flex;gap:6px}
+.nx-ctl{width:36px;height:36px;border-radius:50%;border:1px solid #3a4862;background:none;color:var(--nx-text-2);display:grid;place-items:center;cursor:pointer}
+.nx-ctl:hover{border-color:#6c7da0;color:#fff}
+.nx-ctl svg{width:13px;height:13px;fill:currentColor}
+.nx-title{color:#fff;font-size:19px;line-height:1.25;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
+.nx-body{font-size:13.5px;line-height:1.55;color:var(--nx-text-2);max-width:62ch}
+.nx-facts{display:grid;gap:0;margin-top:2px;border-top:1px solid var(--nx-line)}
+.nx-facts div{display:grid;grid-template-columns:104px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--nx-line);font-size:12px;line-height:1.4}
+.nx-facts dt{color:var(--nx-text-3)}
+.nx-facts dd{color:#fff;font-weight:500;font-variant-numeric:tabular-nums}
+
+.nx-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px 16px 4px}
+.nx-tile{border:1px solid var(--nx-line);border-radius:12px;padding:10px 10px 9px;background:rgba(255,255,255,.025);min-width:0}
+.nx-tile span{display:block;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--nx-text-3)}
+.nx-tile strong{display:block;font-size:20px;line-height:1.2;margin:5px 0 3px;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.nx-tile small{display:block;font-size:10px;color:var(--nx-text-3);line-height:1.3;min-height:1.3em}
+.nx-tile.ok strong,.nx-tile.ok small{color:var(--nx-ok)}
+.nx-tile.warn strong{color:var(--nx-bad)}
+.nx-tile.proj strong{color:var(--nx-accent-soft)}
+
+@media (min-width:600px){
+  .nx-stage{height:430px}
+  .nx-copy{min-height:214px}
+  .nx-facts div{grid-template-columns:150px 1fr}
+}
 </style></head>
 <body>
 
@@ -470,8 +524,54 @@
           <div class="showcase-caption"><strong>Your payment estate, in one view.</strong><p>Actual OS screenshot using fictional test data. Select the image to inspect the full dashboard.</p></div>
         </div>
         <div id="panel-nucleus" class="showcase-panel" role="tabpanel" aria-labelledby="view-nucleus" hidden>
-          <div class="nucleus-scene"><div class="nucleus-orb"><span>VYRE OS</span><strong>NUCLEUS</strong><small>Payment intelligence</small></div><div class="nucleus-stages"><div><b>01 · DIAGNOSE</b><span>Analyse authorised reporting data and investigate causes.</span></div><div><b>02 · PRESCRIBE</b><span>Prioritise recommended actions with evidence attached.</span></div><div><b>03 · VERIFY</b><span>Measure outcomes after your team implements a change.</span></div></div></div>
-          <div class="showcase-caption"><strong>Intelligence with people in control.</strong><p>Illustrated workflow. Read-only analysis, human review and outcome verification.</p></div>
+          <div class="nx" id="nx">
+      <div class="nx-stage">
+        <canvas class="nx-canvas" id="nx-canvas" tabindex="0" role="img" aria-label="Animated 3D scene. Payments flow from four merchant stores to four acquirers. VYRE OS sits beside the flow, reads the data, finds a failing route and models a better one."></canvas>
+        <div class="nx-chip left" id="nx-hint">Drag to rotate</div>
+        <div class="nx-chip right">Modelled scenario</div>
+      </div>
+
+      <div class="nx-rail" role="group" aria-label="Steps">
+        <div class="nx-group" data-phase="0"><b>01 · DIAGNOSE</b><div class="nx-steps">
+          <button class="nx-step" type="button" data-step="0" aria-label="Step 1, Connect">1</button>
+          <button class="nx-step" type="button" data-step="1" aria-label="Step 2, Detect">2</button>
+          <button class="nx-step" type="button" data-step="2" aria-label="Step 3, Diagnose">3</button>
+        </div></div>
+        <div class="nx-group" data-phase="1"><b>02 · PRESCRIBE</b><div class="nx-steps">
+          <button class="nx-step" type="button" data-step="3" aria-label="Step 4, Predict">4</button>
+          <button class="nx-step" type="button" data-step="4" aria-label="Step 5, Advise">5</button>
+        </div></div>
+        <div class="nx-group" data-phase="2"><b>03 · VERIFY</b><div class="nx-steps">
+          <button class="nx-step" type="button" data-step="5" aria-label="Step 6, Implement">6</button>
+          <button class="nx-step" type="button" data-step="6" aria-label="Step 7, Verify">7</button>
+        </div></div>
+      </div>
+
+      <div class="nx-copy" aria-live="polite">
+        <div class="nx-head">
+          <span class="nx-phase" id="nx-phase">STEP 1 OF 7 · CONNECT</span>
+          <div class="nx-ctls">
+            <button class="nx-ctl" type="button" id="nx-prev" aria-label="Previous step"><svg viewBox="0 0 12 12"><path d="M9 1 3 6l6 5z"/></svg></button>
+            <button class="nx-ctl" type="button" id="nx-play" aria-label="Pause"><svg viewBox="0 0 12 12" id="nx-play-icon"><path d="M2 1h3v10H2zM7 1h3v10H7z"/></svg></button>
+            <button class="nx-ctl" type="button" id="nx-next" aria-label="Next step"><svg viewBox="0 0 12 12"><path d="m3 1 6 5-6 5z"/></svg></button>
+          </div>
+        </div>
+        <h3 class="nx-title" id="nx-title">Connect to the payment estate</h3>
+        <p class="nx-body" id="nx-body">VYRE OS reads authorised reporting data from every store, route and acquirer. It sits in the data flow, never the payment flow.</p>
+        <dl class="nx-facts" id="nx-facts">
+          <div><dt>Access</dt><dd>Read-only</dd></div>
+          <div><dt>Card data</dt><dd>No card numbers taken in</dd></div>
+          <div><dt>Routes watched</dt><dd>5 live routes, 4 acquirers</dd></div>
+        </dl>
+      </div>
+
+      <div class="nx-tiles">
+        <div class="nx-tile" id="nx-t1"><span>Auth rate</span><strong>—</strong><small>Reading data</small></div>
+        <div class="nx-tile proj" id="nx-t2"><span>Projected</span><strong>—</strong><small>&nbsp;</small></div>
+        <div class="nx-tile" id="nx-t3"><span>Recovered</span><strong>—</strong><small>&nbsp;</small></div>
+      </div>
+    </div>
+          <div class="showcase-caption"><strong>Intelligence with people in control.</strong><p>Modelled scenario. Read-only analysis and human review. Your team makes the change, then VYRE verifies the outcome.</p></div>
         </div>
         <div class="showcase-foot">Demonstration visuals · no live merchant data</div>
       </aside>
@@ -756,5 +856,359 @@
 
 <script>
 (()=>{const tabs=[...document.querySelectorAll('[data-view]')];function select(t){tabs.forEach(b=>{const active=b===t;b.setAttribute('aria-selected',String(active));b.tabIndex=active?0:-1;document.getElementById('panel-'+b.dataset.view).hidden=!active});if(t.dataset.view!=='video')document.querySelector('#panel-video video').pause()}tabs.forEach((t,i)=>{t.addEventListener('click',()=>select(t));t.addEventListener('keydown',e=>{let n;if(e.key==='ArrowRight')n=(i+1)%tabs.length;else if(e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;else return;e.preventDefault();select(tabs[n]);tabs[n].focus()})})})();
+</script>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const cv = $('nx-canvas'), ctx = cv.getContext('2d'), stage = cv.parentElement;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const C = { cream:'245,240,232', blue:'174,187,208', orange:'237,126,67', ok:'95,211,160', bad:'239,106,96' };
+  const rgba = (c, a) => `rgba(${c},${Math.max(0, Math.min(1, a))})`;
+
+  /* ---------- story ---------- */
+  const STEPS = [
+    { name:'CONNECT', phase:0, dur:6,
+      title:'Connect to the payment estate',
+      body:'VYRE OS reads authorised reporting data from every store, route and acquirer. It sits in the data flow, never the payment flow.',
+      facts:[['Access','Read-only'],['Card data','No card numbers taken in'],['Routes watched','5 live routes, 4 acquirers']] },
+    { name:'DETECT', phase:0, dur:6,
+      title:'Find the failures',
+      body:'Declines cluster on one corridor. Cards from the LATAM store, routed to Acquirer B, fail far more often than the rest of the estate.',
+      facts:[['Corridor','LATAM store to Acquirer B'],['Auth rate','78.2%'],['Attempted volume','€4.0m a month']] },
+    { name:'DIAGNOSE', phase:0, dur:7,
+      title:'Work out why it failed',
+      body:'Brazilian-issued cards are being sent cross-border to a European acquirer. Issuers decline a large share of them.',
+      facts:[['Cause','Cross-border routing'],['Top decline code','05 · Do not honour'],['Evidence','Declines by BIN country and acquirer']] },
+    { name:'PREDICT', phase:1, dur:7,
+      title:'Model the reroute before anything changes',
+      body:'VYRE OS projects the result of sending the same traffic to Acquirer C, which acquires locally in Brazil. Nothing has been changed yet.',
+      facts:[['Projected auth rate','84.6%'],['Confidence','92%'],['Changes made','None']] },
+    { name:'ADVISE', phase:1, dur:7,
+      title:'Advise what to change, where and when',
+      body:'One prioritised action, with the evidence attached, ready for your payments lead to review.',
+      facts:[['What','Route BR-issued cards to Acquirer C'],['Where','Routing rule in your orchestrator'],['When','Start at 20% of traffic, then full']] },
+    { name:'IMPLEMENT', phase:2, dur:7,
+      title:'Your team makes the change',
+      body:'A person approves it and your team applies the rule in your own stack. VYRE never routes or touches a payment.',
+      facts:[['Approved by','Your Head of Payments'],['Applied in','Your orchestrator'],['VYRE access','Still read-only']] },
+    { name:'VERIFY', phase:2, dur:9,
+      title:'Verify the value',
+      body:'VYRE OS measures the outcome against the frozen baseline and reports the verified result to finance.',
+      facts:[['Auth rate','78.2% to 84.3%'],['Uplift','+6.1 points'],['Revenue recovered','€244,000 a month']] }
+  ];
+  const BASE = 78.2, PROJ = 84.6, VER = 84.3, REC = 244000; // 4.0m attempted x 6.1 points = 244,000
+
+  /* ---------- scene ---------- */
+  const MER = ['EU store','UK store','US store','LATAM store'].map((n, i) => ({ n, side:-1, u:-1 + i * 2 / 3, z:[-.7,.55,-.45,.75][i], flash:0, ph:i * .23 }));
+  const ACQ = ['Acquirer A','Acquirer B','Acquirer C','Acquirer D'].map((n, i) => ({ n, side:1, u:-1 + i * 2 / 3, z:[.6,-.7,.7,-.5][i], flash:0, ph:.5 + i * .19 }));
+  const NODES = MER.concat(ACQ);
+  // route 4 is the failing corridor, route 5 is the modelled reroute
+  const ROUTES = [[0,0],[1,0],[1,1],[2,3],[3,1],[3,2]].map(([m, a]) => ({ m, a, c:[0,0,0] }));
+  let NUC = [0,0,0];
+  const NR = .62;
+  const SPH = []; { const N = 150; for (let i = 0; i < N; i++) { const y = 1 - 2 * (i + .5) / N, r = Math.sqrt(1 - y * y), th = i * 2.39996; SPH.push([Math.cos(th) * r, y, Math.sin(th) * r]); } }
+  const RINGS = [{ r:.80, tx:1.15, tz:.35, sp:.9 }, { r:.88, tx:.35, tz:-.9, sp:-.65 }, { r:.96, tx:1.45, tz:1.2, sp:.45 }];
+
+  let W = 0, H = 0, unit = 80, portrait = true, dpr = 1;
+  let yaw = 0, pitch = .2, yawOff = 0, pitchOff = 0;
+  let T = 0, step = 0, stepT = 0, playing = !reduced, running = false, visible = !('IntersectionObserver' in window), last = 0, raf = 0;
+  const parts = [], bursts = [], acc = [0,0,0,0,0];
+
+  function layout() {
+    NODES.forEach(nd => { nd.p = portrait ? [nd.u * 1.3, -nd.side * 1.95, nd.z * .6] : [nd.side * 2.45, -nd.u * 1.12, nd.z * .55]; });
+    NUC = portrait ? [0,0,0] : [0,.62,0];
+    ROUTES.forEach(r => {
+      const a = MER[r.m].p, b = ACQ[r.a].p, zc = (a[2] + b[2]) * .7;
+      if (portrait) { const s = (MER[r.m].u + ACQ[r.a].u) >= 0 ? 1 : -1; r.c = [s * 1.95, 0, zc]; }
+      else r.c = [0, -1.95, zc];
+    });
+  }
+  function resize() {
+    const w = stage.clientWidth, h = stage.clientHeight;
+    if (!w || !h) return;
+    W = w; H = h; dpr = Math.min(2, window.devicePixelRatio || 1);
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    portrait = W < 560;
+    unit = portrait ? Math.min(W / 3.75, H / 5.35) : Math.min(W / 6.5, H / 4.35);
+    layout();
+    if (reduced || !running) draw();
+  }
+  function proj(p) {
+    const cy = Math.cos(yaw), sy = Math.sin(yaw), cp = Math.cos(pitch), sp = Math.sin(pitch);
+    const x1 = p[0] * cy + p[2] * sy, z1 = -p[0] * sy + p[2] * cy;
+    const y1 = p[1] * cp - z1 * sp, z2 = p[1] * sp + z1 * cp;
+    const f = 8 / (8 + z2);
+    return { x: W / 2 + x1 * f * unit, y: H / 2 - y1 * f * unit, f, z: z2 };
+  }
+  const bez = (a, c, b, t) => { const k = 1 - t; return [k*k*a[0] + 2*k*t*c[0] + t*t*b[0], k*k*a[1] + 2*k*t*c[1] + t*t*b[1], k*k*a[2] + 2*k*t*c[2] + t*t*b[2]]; };
+  const rpt = (r, t) => bez(MER[r.m].p, r.c, ACQ[r.a].p, t);
+
+  /* ---------- particles ---------- */
+  function spawn(ri, ghost, t0) {
+    const pf = ri === 4 ? .22 : ri === 5 ? .157 : .07;
+    parts.push({ r:ri, t:t0 || 0, v:.27 + Math.random() * .1, ghost:!!ghost, fail:!ghost && Math.random() < pf, failAt:.8 + Math.random() * .12 });
+  }
+  function latamRoute() {
+    if (step < 5) return 4;
+    if (step === 5) return Math.random() < Math.min(1, .2 + .8 * (stepT / 5)) ? 5 : 4;
+    return 5;
+  }
+  const FLOWS = [[1.5, () => 0], [1.7, () => Math.random() < .5 ? 1 : 2], [1.4, () => 3], [2.0, latamRoute], [1.3, () => 5]];
+  function update(dt) {
+    FLOWS.forEach((fl, i) => {
+      if (i === 4 && step !== 3 && step !== 4) { acc[4] = 0; return; }
+      acc[i] += fl[0] * dt;
+      while (acc[i] > 1) { acc[i]--; spawn(fl[1](), i === 4); }
+    });
+    for (let i = parts.length - 1; i >= 0; i--) {
+      const p = parts[i]; p.t += p.v * dt;
+      if (p.ghost && step !== 3 && step !== 4) { parts.splice(i, 1); continue; }
+      if (p.fail && p.t >= p.failAt) {
+        if (p.r === 4 && step >= 1) bursts.push({ p: rpt(ROUTES[4], p.failAt), age:0 });
+        parts.splice(i, 1); continue;
+      }
+      if (p.t >= 1) { if (!p.ghost) ACQ[ROUTES[p.r].a].flash = 1; parts.splice(i, 1); }
+    }
+    for (let i = bursts.length - 1; i >= 0; i--) { bursts[i].age += dt; if (bursts[i].age > .7) bursts.splice(i, 1); }
+    NODES.forEach(n => { n.flash = Math.max(0, n.flash - dt * 2.5); });
+  }
+  function seed() {
+    parts.length = 0; bursts.length = 0;
+    for (let k = 0; k < 9; k++) FLOWS.forEach((fl, i) => { if (i === 4 && step !== 3 && step !== 4) return; spawn(fl[1](), i === 4, Math.random() * .78); });
+  }
+
+  /* ---------- drawing ---------- */
+  function nodeState(nd) {
+    if (nd === ACQ[1] && step >= 1 && step <= 4) return C.bad;
+    if (nd === ACQ[2]) { if (step === 3 || step === 4) return C.orange; if (step >= 5) return C.ok; }
+    if (nd === MER[3]) { if (step >= 1 && step <= 4) return C.orange; if (step >= 5) return C.ok; }
+    return null;
+  }
+  function path(pts) { ctx.beginPath(); pts.forEach((q, i) => i ? ctx.lineTo(q.x, q.y) : ctx.moveTo(q.x, q.y)); }
+  function tag(p3, text, col, dy) {
+    let q = proj(p3);
+    if (portrait) { const c = proj(NUC); q = { x: c.x, y: c.y - NR * unit * c.f * 1.2 }; dy = -22; }
+    ctx.font = '600 10.5px ' + getComputedStyle(document.body).fontFamily;
+    const tw = ctx.measureText(text).width, w = tw + 16, h = 22;
+    const x = Math.max(8, Math.min(W - w - 8, q.x - w / 2)), y = Math.max(34, Math.min(H - h - 8, q.y + dy - h / 2));
+    ctx.beginPath(); ctx.roundRect(x, y, w, h, 11);
+    ctx.fillStyle = 'rgba(13,22,40,.92)'; ctx.fill();
+    ctx.strokeStyle = rgba(col, .85); ctx.lineWidth = 1; ctx.stroke();
+    ctx.fillStyle = rgba(col, 1); ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+    ctx.fillText(text, x + 8, y + h / 2 + .5);
+  }
+  function drawNucleus() {
+    const c = proj(NUC), R = NR * unit * c.f, hot = step === 2 ? 1 : step === 3 ? .7 : .35;
+    const pulse = .5 + .5 * Math.sin(T * (1.4 + hot * 2));
+    let g = ctx.createRadialGradient(c.x, c.y, R * .15, c.x, c.y, R * 2.2);
+    g.addColorStop(0, rgba(C.orange, .16 + hot * .16 + pulse * .05)); g.addColorStop(1, rgba(C.orange, 0));
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(c.x, c.y, R * 2.2, 0, 7); ctx.fill();
+    const spin = T * (.35 + hot * .5), cs = Math.cos(spin), sn = Math.sin(spin), ct = Math.cos(.42), st = Math.sin(.42);
+    const rings = RINGS.map(rg => {
+      const pts = [], cx = Math.cos(rg.tx), sx = Math.sin(rg.tx), cz = Math.cos(rg.tz), sz = Math.sin(rg.tz);
+      const at = a => { const x = Math.cos(a) * rg.r * NR, z0 = Math.sin(a) * rg.r * NR, y = -z0 * sx, z = z0 * cx; return proj([NUC[0] + x * cz - y * sz, NUC[1] + x * sz + y * cz, NUC[2] + z]); };
+      for (let i = 0; i <= 56; i++) pts.push(at(i / 56 * Math.PI * 2));
+      return { pts, e: at(T * rg.sp) };
+    });
+    const ringPass = front => rings.forEach(rg => {
+      ctx.lineWidth = 1;
+      for (let i = 0; i < 56; i++) {
+        const a = rg.pts[i], b = rg.pts[i + 1];
+        if ((a.z < c.z) !== front) continue;
+        ctx.strokeStyle = rgba(C.orange, front ? .5 : .16);
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+      }
+      if ((rg.e.z < c.z) === front) { ctx.fillStyle = rgba(C.orange, front ? 1 : .4); ctx.beginPath(); ctx.arc(rg.e.x, rg.e.y, 2.4 * rg.e.f, 0, 7); ctx.fill(); }
+    });
+    ringPass(false);
+    const dots = SPH.map((s, i) => {
+      const x = s[0] * cs + s[2] * sn, z = -s[0] * sn + s[2] * cs, y = s[1] * ct - z * st, z2 = s[1] * st + z * ct;
+      return { q: proj([NUC[0] + x * NR, NUC[1] + y * NR, NUC[2] + z2 * NR]), i };
+    });
+    dots.forEach(d => { if (d.q.z >= c.z) { ctx.fillStyle = rgba(C.blue, .22); ctx.beginPath(); ctx.arc(d.q.x, d.q.y, 1.1, 0, 7); ctx.fill(); } });
+    g = ctx.createRadialGradient(c.x, c.y, 0, c.x, c.y, R * .62);
+    g.addColorStop(0, rgba(C.orange, .85)); g.addColorStop(.35, rgba(C.orange, .3 + pulse * .12)); g.addColorStop(1, rgba(C.orange, 0));
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(c.x, c.y, R * .62, 0, 7); ctx.fill();
+    dots.forEach(d => { if (d.q.z < c.z) { ctx.fillStyle = d.i % 5 === 0 ? rgba(C.orange, .95) : rgba(C.cream, .85); ctx.beginPath(); ctx.arc(d.q.x, d.q.y, d.i % 5 === 0 ? 1.9 : 1.4, 0, 7); ctx.fill(); } });
+    ringPass(true);
+    const ff = getComputedStyle(document.body).fontFamily;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+    const ly = c.y + R * 1.18 + 20;
+    ctx.fillStyle = 'rgba(13,22,40,.7)'; ctx.beginPath(); ctx.roundRect(c.x - 44, ly - 13, 88, 31, 8); ctx.fill();
+    ctx.font = '800 12px ' + ff; ctx.fillStyle = '#fff'; ctx.fillText('VYRE OS', c.x, ly);
+    ctx.font = '500 9px ' + ff; ctx.fillStyle = rgba(C.orange, 1); ctx.fillText('Payment intelligence', c.x, ly + 12);
+  }
+  function drawNode(nd, q) {
+    const st = nodeState(nd), k = Math.max(.85, Math.min(1.25, unit / 80)), r = 6 * q.f * k, isM = nd.side < 0;
+    if (st || nd.flash > 0) {
+      const col = st || C.cream, a = st ? .22 + .1 * Math.sin(T * 4) : nd.flash * .25;
+      ctx.fillStyle = rgba(col, a); ctx.beginPath(); ctx.arc(q.x, q.y, r * 2.5, 0, 7); ctx.fill();
+    }
+    ctx.beginPath();
+    if (isM) ctx.roundRect(q.x - r, q.y - r, r * 2, r * 2, r * .45); else ctx.arc(q.x, q.y, r * 1.05, 0, 7);
+    ctx.fillStyle = '#172640'; ctx.fill();
+    ctx.lineWidth = 1.5; ctx.strokeStyle = st ? rgba(st, 1) : rgba(isM ? C.cream : C.blue, .9); ctx.stroke();
+    ctx.beginPath(); ctx.arc(q.x, q.y, r * .32, 0, 7); ctx.fillStyle = st ? rgba(st, 1) : rgba(C.cream, .9); ctx.fill();
+    ctx.font = (st ? '700 ' : '500 ') + '10px ' + getComputedStyle(document.body).fontFamily;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillStyle = st ? '#fff' : rgba(C.blue, .95);
+    const alt = (NODES.indexOf(nd) % 2) * 13;
+    const ly = portrait ? q.y + (isM ? -r - 11 - alt : r + 12 + alt) : q.y + r + 12;
+    ctx.fillText(nd.n, Math.max(32, Math.min(W - 32, q.x)), ly);
+  }
+  function draw() {
+    if (!W) return;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+    yaw = yawOff + (reduced ? .3 : (portrait ? .3 : .42) * Math.sin(T * .22));
+    pitch = Math.max(-.5, Math.min(.7, .2 + pitchOff + (reduced ? 0 : .05 * Math.sin(T * .17))));
+    const ff = getComputedStyle(document.body).fontFamily;
+    const nq = proj(NUC);
+
+    // data tethers: read-only reporting data flowing into Nucleus
+    NODES.forEach(nd => {
+      const q = proj(nd.p), st = nodeState(nd), hot = st && (step === 2 || step === 3 || step === 6);
+      ctx.setLineDash(hot ? [] : [2, 5]); ctx.lineWidth = hot ? 1.4 : 1;
+      ctx.strokeStyle = hot ? rgba(st, .55) : rgba(C.blue, .13);
+      ctx.beginPath(); ctx.moveTo(q.x, q.y); ctx.lineTo(nq.x, nq.y); ctx.stroke();
+      const n = hot ? 3 : 1;
+      for (let j = 0; j < n; j++) {
+        const t = (T * (hot ? .55 : .3) + nd.ph + j / n) % 1;
+        ctx.fillStyle = hot ? rgba(st, .95) : rgba(C.blue, .55);
+        ctx.beginPath(); ctx.arc(q.x + (nq.x - q.x) * t, q.y + (nq.y - q.y) * t, hot ? 2 : 1.3, 0, 7); ctx.fill();
+      }
+    });
+    ctx.setLineDash([]);
+
+    // payment routes
+    ROUTES.forEach((r, i) => {
+      if (i === 5 && step < 3) return;
+      const pts = []; for (let k = 0; k <= 30; k++) pts.push(proj(rpt(r, k / 30)));
+      let col = C.blue, a = .26, lw = 1.2, dash = null;
+      if (i === 4) { if (step >= 1 && step <= 4) { col = C.bad; a = .8; lw = 1.8; } else if (step === 5) { col = C.bad; a = .35; dash = [3, 5]; } else if (step === 6) { a = .1; dash = [3, 5]; } }
+      if (i === 5) { if (step === 3) { col = C.orange; a = .8; lw = 1.6; dash = [6, 6]; } else if (step === 4) { col = C.orange; a = 1; lw = 2.2; dash = [6, 6]; } else { col = C.ok; a = .9; lw = 2; } }
+      if (i === 4 || i === 5) { ctx.strokeStyle = rgba(col, a * .16); ctx.lineWidth = lw + 6; path(pts); ctx.stroke(); }
+      ctx.setLineDash(dash || []); ctx.lineDashOffset = -T * 26;
+      ctx.strokeStyle = rgba(col, a); ctx.lineWidth = lw; path(pts); ctx.stroke(); ctx.setLineDash([]);
+    });
+
+    // transactions
+    parts.forEach(p => {
+      const r = ROUTES[p.r], q = proj(rpt(r, p.t)), k = Math.max(.85, Math.min(1.25, unit / 80));
+      let col = C.cream, a = Math.min(1, p.t * 8);
+      if (p.ghost) { ctx.strokeStyle = rgba(C.orange, .9 * a); ctx.lineWidth = 1.2; ctx.beginPath(); ctx.arc(q.x, q.y, 2.6 * q.f * k, 0, 7); ctx.stroke(); return; }
+      if (p.r === 5 && step >= 5) col = C.ok;
+      if (p.fail) { if (p.r === 4 && step >= 1) { if (p.t > .4) col = C.bad; } else a *= Math.max(0, Math.min(1, (p.failAt - p.t) / .18)); }
+      ctx.fillStyle = rgba(col, .16 * a); ctx.beginPath(); ctx.arc(q.x, q.y, 5 * q.f * k, 0, 7); ctx.fill();
+      ctx.fillStyle = rgba(col, a); ctx.beginPath(); ctx.arc(q.x, q.y, 2 * q.f * k, 0, 7); ctx.fill();
+    });
+    bursts.forEach(b => {
+      const q = proj(b.p), t = b.age / .7;
+      ctx.strokeStyle = rgba(C.bad, 1 - t); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(q.x, q.y, 3 + t * 16, 0, 7); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(q.x - 3, q.y - 3); ctx.lineTo(q.x + 3, q.y + 3); ctx.moveTo(q.x + 3, q.y - 3); ctx.lineTo(q.x - 3, q.y + 3); ctx.stroke();
+    });
+
+    // nodes and Nucleus, far to near
+    const items = NODES.map(nd => ({ z: proj(nd.p).z, f: () => drawNode(nd, proj(nd.p)) }));
+    items.push({ z: nq.z, f: drawNucleus });
+    items.sort((a, b) => b.z - a.z).forEach(it => it.f());
+
+    // scanning ring while diagnosing
+    if (step === 2) { const q = proj(ACQ[1].p), t = (T * .8) % 1; ctx.strokeStyle = rgba(C.orange, 1 - t); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(q.x, q.y, 8 + t * 22, 0, 7); ctx.stroke(); }
+
+    // group labels
+    ctx.font = '700 9px ' + ff; ctx.fillStyle = rgba(C.blue, .6); ctx.textBaseline = 'middle';
+    if (!portrait) { ctx.textAlign = 'left'; ctx.fillText('M E R C H A N T S', 18, H - 16); ctx.textAlign = 'right'; ctx.fillText('A C Q U I R E R S', W - 18, H - 16); }
+
+    // step callout
+    const up = portrait ? -24 : -22;
+    if (step === 1) tag(rpt(ROUTES[4], .62), '78.2% authorised', C.bad, up);
+    if (step === 2) tag(rpt(ROUTES[4], .62), '05 · Do not honour', C.bad, up);
+    if (step === 3) tag(rpt(ROUTES[5], .5), '84.6% projected · 92% confidence', C.orange, up);
+    if (step === 4) tag(rpt(ROUTES[5], .5), 'Proposed: BR cards to Acquirer C', C.orange, up);
+    if (step === 5) tag(rpt(ROUTES[5], .5), 'Approved · applied by your team', C.ok, up);
+    if (step === 6) tag(rpt(ROUTES[5], .5), '+6.1 pts · €244,000 a month', C.ok, up);
+  }
+
+  /* ---------- HUD ---------- */
+  const btns = [...document.querySelectorAll('.nx-step')], groups = [...document.querySelectorAll('.nx-group')];
+  const t1 = $('nx-t1'), t2 = $('nx-t2'), t3 = $('nx-t3');
+  const setTile = (el, v, s, cls) => { el.children[1].textContent = v; el.children[2].textContent = s || ' '; el.className = 'nx-tile' + (cls ? ' ' + cls : ''); };
+  const ease = x => 1 - Math.pow(1 - Math.max(0, Math.min(1, x)), 3);
+  function renderCopy() {
+    const s = STEPS[step];
+    $('nx-phase').textContent = `STEP ${step + 1} OF 7 · ${s.name}`;
+    $('nx-title').textContent = s.title; $('nx-body').textContent = s.body;
+    $('nx-facts').innerHTML = s.facts.map(f => `<div><dt>${f[0]}</dt><dd>${f[1]}</dd></div>`).join('');
+    btns.forEach((b, i) => { b.classList.toggle('done', i < step); if (i === step) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current'); });
+    groups.forEach(g => g.classList.toggle('on', +g.dataset.phase === s.phase));
+  }
+  function renderHud() {
+    btns[step].style.setProperty('--p', playing ? Math.min(1, stepT / STEPS[step].dur) : 1);
+    if (step === 0) setTile(t1, '—', 'Reading data');
+    else if (step < 5) setTile(t1, BASE.toFixed(1) + '%', 'LATAM corridor', 'warn');
+    else if (step === 5) setTile(t1, (BASE + (VER - BASE) * ease(stepT / 5)).toFixed(1) + '%', 'Change going live');
+    else setTile(t1, VER.toFixed(1) + '%', '+6.1 pts', 'ok');
+    if (step < 3) setTile(t2, '—', '', 'proj'); else setTile(t2, PROJ.toFixed(1) + '%', '92% confidence', 'proj');
+    if (step < 6) setTile(t3, '—', step === 5 ? 'Measuring' : '');
+    else setTile(t3, '€' + Math.round(REC * ease(stepT / 2.2) / 1000) + 'k', 'a month', 'ok');
+  }
+  function go(i, auto) {
+    step = (i + 7) % 7; stepT = reduced ? 99 : 0;
+    if (!auto) setPlaying(false);
+    renderCopy(); renderHud();
+    if (reduced) { seed(); draw(); }
+  }
+  function setPlaying(v) {
+    playing = v && !reduced;
+    $('nx-play').setAttribute('aria-label', playing ? 'Pause' : 'Play');
+    $('nx-play-icon').innerHTML = playing ? '<path d="M2 1h3v10H2zM7 1h3v10H7z"/>' : '<path d="m3 1 8 5-8 5z"/>';
+    renderHud();
+  }
+  btns.forEach(b => b.addEventListener('click', () => go(+b.dataset.step)));
+  $('nx-prev').addEventListener('click', () => go(step - 1));
+  $('nx-next').addEventListener('click', () => go(step + 1));
+  $('nx-play').addEventListener('click', () => { if (reduced) return go(step + 1); if (!playing && stepT > STEPS[step].dur) stepT = 0; setPlaying(!playing); });
+
+  /* ---------- interaction ---------- */
+  let drag = null;
+  cv.addEventListener('pointerdown', e => { drag = { x:e.clientX, y:e.clientY, id:e.pointerId }; });
+  cv.addEventListener('pointermove', e => {
+    if (!drag || drag.id !== e.pointerId) return;
+    const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (!drag.on && Math.abs(dx) > 6 && Math.abs(dx) > Math.abs(dy)) { drag.on = true; try { cv.setPointerCapture(e.pointerId); } catch (_) {} $('nx-hint').style.opacity = 0; }
+    if (e.pointerType === 'mouse') drag.on = true;
+    if (!drag.on) return;
+    yawOff += dx * .008; if (e.pointerType === 'mouse') pitchOff = Math.max(-.5, Math.min(.5, pitchOff + dy * .005));
+    drag.x = e.clientX; drag.y = e.clientY;
+    if (reduced) draw();
+  });
+  const end = () => { drag = null; };
+  cv.addEventListener('pointerup', end); cv.addEventListener('pointercancel', end);
+  cv.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') yawOff -= .15; else if (e.key === 'ArrowRight') yawOff += .15; else return;
+    e.preventDefault(); $('nx-hint').style.opacity = 0; if (reduced) draw();
+  });
+
+  /* ---------- loop ---------- */
+  function frame(now) {
+    if (!running) return;
+    const dt = Math.min(.05, (now - last) / 1000); last = now; T += dt; stepT += dt;
+    if (playing && stepT > STEPS[step].dur) go(step + 1, true);
+    update(dt); draw(); renderHud();
+    raf = requestAnimationFrame(frame);
+  }
+  function setRunning() {
+    const want = !reduced && visible && !document.hidden;
+    if (want && !running) { running = true; last = performance.now(); raf = requestAnimationFrame(frame); }
+    if (!want && running) { running = false; cancelAnimationFrame(raf); }
+  }
+  if ('IntersectionObserver' in window) new IntersectionObserver(es => { visible = es[0].isIntersecting; setRunning(); }).observe(stage);
+  document.addEventListener('visibilitychange', setRunning);
+  if ('ResizeObserver' in window) new ResizeObserver(resize).observe(stage); else addEventListener('resize', resize);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if (!running) draw(); });
+
+  if (!ctx.roundRect) CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) { this.moveTo(x + r, y); this.arcTo(x + w, y, x + w, y + h, r); this.arcTo(x + w, y + h, x, y + h, r); this.arcTo(x, y + h, x, y, r); this.arcTo(x, y, x + w, y, r); this.closePath(); };
+  layout(); resize(); seed(); renderCopy(); renderHud(); draw(); setRunning();
+})();
 </script></body>
 </html>
