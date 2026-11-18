@@ -52,7 +52,7 @@
           <input id="c-rec" type="range" min="0" max="80" value="30"><span class="hint">Our assumption. Lower it to test a cautious case.</span></label>
       </form>
       <aside class="result" aria-live="polite">
-        <h3 style="font-family:var(--body);font-size:1rem;font-weight:600;color:#F6D2BF">Estimated leak you could recover, per year</h3>
+        <h3 style="font-family:var(--body);font-size:1rem;font-weight:600;color:#E1EBD3">Estimated leak you could recover, per year</h3>
         <div class="big" id="c-total">€0</div>
         <div class="rows">
           <div><span>Bookings won back from missed enquiries</span><b id="c-r-enq">€0</b></div>
