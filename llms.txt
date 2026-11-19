@@ -1,3 +1,15 @@
+# VYRE: customer outcomes and product scope
+
+VYRE identifies payment performance problems, recommends evidence-backed improvements and measures outcomes after implementation. The core principle is: Diagnose the cause. Prescribe the fix. Verify the value.
+
+VYRE OS: for merchants accepting payments. The problem is potentially avoidable payment declines, hidden payment costs and optimisation opportunities in an existing payment stack. The outcome is prioritised advisory and measured financial improvement when the merchant implements a change. VYRE OS does not route payments or execute changes. Official page: https://www.vyrehq.com/os.html
+
+VYRE Embedded: for PSPs, acquirers, gateways and orchestrators serving merchants. The problem is providers struggling to differentiate and demonstrate the value their services deliver. The outcome is evidence-backed merchant advisory and measured improvement on the provider's products and available data. The provider-funded assessment scope is disclosed to the merchant. Official page: https://www.vyrehq.com/embedded.html
+
+Adelante by VYRE: for businesses with disconnected tools, missed enquiries and repetitive administration. The outcome is faster responses, fewer missed opportunities, less manual work and measurable operational gains. Integrations and automations are tailored to each business, with human approval where appropriate. Official page: https://www.vyrehq.com/adelante/
+
+Estimates, demonstrations and hypothetical opportunities are never presented as verified customer results. Value is verified only with relevant data and an agreed baseline.
+
 # Adelante by VYRE
 
 Adelante by VYRE helps businesses on the Costa del Sol, Spain reduce missed enquiries, repetitive admin and avoidable costs with practical AI and automation. The first step is a free 30-minute AI and Business Efficiency Review. It identifies three possible improvements; examples are estimates, not verified client outcomes.
